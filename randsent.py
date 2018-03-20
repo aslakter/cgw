@@ -66,7 +66,7 @@ def generate(rules, rand):
 # as defined in the grammar file
 def chooseRuleWithProbability(rules, word, rand):
   cumulativeSum = 0
-  print ("in choose: ", rules[word])
+  # print ("in choose: ", rules[word])
   for (rhs, prob) in rules[word]:
     cumulativeSum += float(prob)
   threshold = rand.uniform(0, 1)
@@ -80,9 +80,9 @@ def chooseRuleWithProbability(rules, word, rand):
   # chosen rule
 
   for (rhs, prob) in rules[word]:
-    print (rhs, prob)
+    # print (rhs, prob)
     runningSum += (float(prob) / float(cumulativeSum))
-    print (runningSum, threshold)
+    # print (runningSum, threshold)
     if runningSum > threshold:
       return (rhs, prob)
 

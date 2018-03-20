@@ -106,6 +106,7 @@
 # Simple (standard) sentences (for this grammar it's past tense unless in a question)
 1   SS  PASTST'
 1   SS  PASTST
+1   SS  PRESST
 
 1   PASTST'  NP  PASTVP
 1   PASTST   NP  PASTIVP
