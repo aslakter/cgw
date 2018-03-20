@@ -1,3 +1,4 @@
+# trivial change for testing
 # This grammar uses a convention that
 #    - terminals are lowercase          (president)
 #    - preterminals are capitalized     (Noun)
