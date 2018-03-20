@@ -1,0 +1,39 @@
+# This is a very, very, very simple grammar to get you started.
+
+1	S1	NP VP END
+1   S   NP VP 
+1   S1  do S ?
+1   S1  CMD VP_BASE END
+1   S1  when S , S END
+1   S1  why does NP VP_BASE ?
+1   S1  what does NP Verb_Present ?
+1   S1  who does NP Verb_Present ?
+
+1   END .
+1   END ! 
+
+1   CMD do
+1   CMD do not
+
+1	VP	VerbT NP
+1   VP  VP_BASE
+1   VP  VP_PRESENT
+1   VP  VP_PAST
+1   VP  VerbT NP Adv
+1   VP  Verb  PP Adv
+
+
+1   VP_BASE     Verb_Base NP
+1   VP_PRESENT  Verb_Present NP
+1   VP_PAST     Verb_Past NP
+
+20	NP	Det Nbar
+1	NP	Proper
+1   NP  Adj Proper
+
+
+20	Nbar	Noun
+1   Nbar    Adj Nbar
+1	Nbar	Nbar PP
+
+1	PP	Prep NP
