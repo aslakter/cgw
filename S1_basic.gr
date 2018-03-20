@@ -1,0 +1,25 @@
+# This is a very, very, very simple grammar to get you started.
+
+1	S1	NP VP .
+1   S1  NP VP !
+1   S1  do S ?
+
+1	VP	VerbT NP
+1   VP  VP_BASE
+1   VP  VP_PRESENT
+1   VP  VP_PAST
+
+1   VP_BASE
+1   VP_PRESENT
+1   VP_PAST
+
+20	NP	Det Nbar
+1	NP	Proper
+1   NP  Adj Proper
+
+
+20	Nbar	Noun
+1   Nbar    Adj Nbar
+1	Nbar	Nbar PP
+
+1	PP	Prep NP
