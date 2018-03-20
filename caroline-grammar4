@@ -1,0 +1,276 @@
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+#
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - You should follow this convention unless you have a good reason
+#      not to.
+#
+#    - But your *program* should still work with grammars that don't
+#      follow this convention.  It should not pay any attention to
+#      upper/lower case.  From your program's point of view,
+#      if there is at least one rule for rewriting a symbol, then
+#      that symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+1  START   ROOT
+1  ROOT    ST .
+1  ROOT    ST !
+1  ROOT    is it true that ST ?     # mixing terminals and nonterminals is ok.
+1  ROOT    Q ?
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#    Q = Question
+#    WHEREQ = where question
+#    WHOQ = who question without did or will
+#    WHOWHATQ = who or what question including did or will
+#    YNQ = yes no question sentence
+#    ST = sentence type (disregard tense)
+#    PRESST = present tense sentence type (at least for the first clause)
+#    S  = simple sentence
+#    CPS = Complex sentence
+#    CP = conjunction phrase
+#    NP = noun phrase
+#    NAP = noun 'and' phrase
+#    VP = verb phrase (disregard tense)
+#    PRESVP = present tense verb phrase
+#    PASTVP = past tesnse verb phrase
+#    VAP = verb 'and' phrase
+#    IVP = intransitive verb phrase
+#    IVerb = intransitive verb
+#    CVerb = a verb that can support a conjunctive phrase as the direct object
+#    PresVerb = a verb in the present tense
+#    PastVerb = a verb in the past tense
+#    PP = prepositional phrase
+#    AP = adjective phrase
+#    Det = determiner (sometimes called "article")
+#    Prep = preposition
+#    Adj = adjective
+#    Adv = adverb
+#    C = conjunction
+#    CMPNDP = compound phrase (a clause starting with "and" or "but")
+#    Cmpnd = compounding words (like "and" or "but")
+#    Cnp = conjunction for noun phrases (like "that")
+#    PASTVPWNP = "past verb phrase with noun phrase"
+#       the set of past tense verb phrases that require a noun phrase to come after them
+#    THATASNPST = "that as a noun phrase sentence type"
+#       sentence (inside a dependent clause) that has a conjunctive phrase on the lefthand side
+#    NOTE: who and what did/will questions are treated as their own category of questions
+#       that I'm calling WHOWHATDID
+#    WHOWHATDIDST = "who what did sentence type":
+#       the sentence types that can be included in who/what did/will questions
+#    WHOWHATDIDPRESVP = "who what did present tense verb phrase"
+#       the present tense verb phrases that can occur in who/what did/will questions
+
+# Questions:
+1   Q   YNQ
+1   Q   WHOQ
+1   Q   WHEREQ
+1   Q   WHOWHATQ # who/what did/will questions
+
+# Yes/No questions involving did/will
+1   YNQ        YNQStart PRESST
+
+# Where/Who/What did/will questions
+1   WHEREQ     where YNQ
+1   WHOWHATQ   WhoWhat YNQStart PRESVP
+1   WHOWHATQ   WhoWhat YNQStart WHOWHATDIDST
+
+# Who questions without did/will
+1   WHOQ       who PASTVP
+
+# Sentence Types
+1   ST     SS CMPNDP
+1   ST     SS
+1   ST     CP' PASTVPWNP
+
+# The structures of the "sentences" that can follow what/who did/will
+# aka: "who what did sentence types"
+1    WHOWHATDIDST  NP WHOWHATDIDPRESVP
+# Want is special cased as it cannot "normally" be followed by a prepositional phrase
+1    WHOWHATDIDST  NP  want PP
+
+# Conjunction (compound) phrases
+1   CP     CP'
+1   CP     CMPNDP
+# stringing two independent clauses together using and or but
+1   CMPNDP  Cmpnd SS
+1   CMPNDP  Cmpnd THATASNPST
+# Create a subordinate clause using "that" followed by a simple sentence
+# functions as an alternate type of noun phrase (in a sense)
+1   CP'    Cnp SS
+
+# Simple (standard) sentences (for this grammar it's past tense unless in a question)
+1   SS  PASTST'
+1   SS  PASTST
+
+1   PASTST'  NP  PASTVP
+1   PASTST   NP  PASTIVP
+
+# Sentence structure for present tense sentences (only used within questions)
+1   PRESST  NP PRESVP
+1   PRESST  NP PRESIVP
+
+# Special case sentence structure for when conjunctive phrases are used as the subject
+# of a second clause (complex compound sentences)
+1   THATASNPST    Cnp SS PASTVPWNP
+
+# Set for intransitive verbs
+1   PASTIVP   PastIVerb
+1   PRESIVP   PresIVerb
+
+# The full set of present tense verb phrases
+1   PRESVP     PresVerb NP
+1   PRESVP     PRESVP PRESVAP
+1   PRESVAP    Cmpnd PRESVP
+1   PRESVAP    Cmpnd PRESST
+1   PRESVP     WHOWHATDIDPRESVP
+# The subset of verb phrases supported for who/what did/will questions
+1   WHOWHATDIDPRESVP  PresVerb NP Prep
+1   WHOWHATDIDPRESVP  PresCVerb CP'
+1   WHOWHATDIDPRESVP  PresPrepVerb PP
+1   WHOWHATDIDPRESVP  PresAllVerb
+1   WHOWHATDIDPRESVP  PresCVerb
+1   WHOWHATDIDPRESVP  WHOWHATDIDPRESVP WHOPRESVAP
+1   WHOPRESVAP        Cmpnd WHOWHATDIDPRESVP
+1   WHOPRESVAP        Cmpnd WHOWHATDIDST
+
+# Special case for what can have a conjunctive clause as its subject
+1   PASTVPWNP VerbFollowingThatClause NP
+# Normal rules for past tense verb
+1   PASTVP    PastVerb NP
+1   PASTVP    PastCVerb CP'
+1   PASTVP    PastPrepVerb PP
+1   PASTVP    PastPrepVerb
+1   PASTVP    PastAllVerb
+1   PASTVP    PastCVerb
+# Can create compound sentences by following a VP with a compounding word (and/but)
+# and a sentence
+# Can also string verb phrases together using either and or but
+1   PASTVP    PASTVP PASTVAP
+1   PASTVAP   Cmpnd PASTVP
+1   PASTVAP   Cmpnd PASTST
+
+# Noun Phrase rules:
+1    NP     Det Noun
+0.5  NP     ProperNoun
+1    NP     AP ProperNoun
+0.2  NP     NP PP
+0.2  NP     NP NAP
+# You can string lists of noun phrases together with and, but not with but
+1    NAP    and NP
+
+# Prepositional phrase rules:
+1      PP  Prep NP
+0.05   PP  Prep
+
+# Nouns can have adjective phrases including adverbs and adjectives
+# there must always be an adjective between and adverb and a terminal Noun
+2.5  Noun  AP Noun
+
+1   AP  Adj
+1   AP  Adv AP
+
+# Vocabulary.  Your program can see that "ate" is a terminal
+# symbol because there exists no rule for rewriting it.
+# Any symbol that can rewrite as a terminal (or a string of
+# terminals, like "chief of staff") is called a "preterminal."  Notice
+# that a preterminal is a special kind of nonterminal.
+
+
+1   PastAllVerb PastVerb
+1   PastAllVerb PastIVerb
+
+# Past tense "normal" verbs.
+1   PastVerb    wanted
+1   PastVerb    pickled
+1   PastVerb    perplexed
+1   PastVerb    understood
+
+1   PastVerb    PastPrepVerb
+
+# Past tense verbs that can support prepositional phrases on their right hand side
+1   PastPrepVerb    kissed
+1   PastPrepVerb    worked
+1   PastPrepVerb    ate
+
+# Past tense intransitive verbs
+1   PastIVerb   sighed
+
+# Verbs that can support conjunctive phrases on their lefthand side (as their agent)
+1   VerbFollowingThatClause perplexed
+
+# Present tense verbs
+1   PresAllVerb PresVerb
+1   PresAllVerb PresIVerb
+
+1   PresVerb    want
+1   PresVerb    pickle
+1   PresVerb    perplex
+
+1   PresVerb    PresPrepVerb
+
+# Present tense verbs that can support prepositional phrases on their right hand side
+1   PresPrepVerb    kiss
+1   PresPrepVerb    work
+1   PresPrepVerb    eat
+
+# Present tense intransitive verbs
+1   PresIVerb    sigh
+
+# Verbs that can support conjuntive phrases (that X) as direct objects
+1   PastCVerb    thought
+1   PastCVerb    understood
+
+1   PresCVerb    think
+1   PresCVerb    understand
+
+# Determiners
+4     Det  the
+2     Det  a
+0.33  Det  every
+1     Det  that
+
+# "Normal" Nouns
+1   Noun   president
+1   Noun   sandwich
+1   Noun   pickle
+1   Noun   chief of staff
+1   Noun   floor
+1   Noun   proposal
+1   Noun   desk
+
+# Proper Nouns
+1   Noun    ProperNoun
+1   ProperNoun    Sally
+
+# Adjectives
+1    Adj  fine
+1    Adj  delicious
+0.2  Adj  perplexed
+0.5  Adj  pickled
+
+# Prepositions
+1   Prep  with
+1   Prep  on
+1   Prep  under
+1   Prep  in
+
+# Connective words
+1   C   Cnp
+1   C   Cmpnd
+1   Cmpnd   but
+1   Cmpnd   and
+1   Cnp   that
+
+# Adverbs
+1   Adv very
+
+# Question words
+1   YNQStart     did
+1   YNQStart     will
+1   WhoWhat      who
+1   WhoWhat      what
