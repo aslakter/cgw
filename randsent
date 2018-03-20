@@ -1,0 +1,206 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+import argparse
+import random
+import bisect
+
+# Parse arguments.  You should not need to modify this.
+parser = argparse.ArgumentParser()
+parser.add_argument("grammar", help="path to grammar file")
+parser.add_argument("count", type=int, help="number of sentences to generate", nargs='?', default=1)
+parser.add_argument("-t", "--tree", action='store_true', help="pretty-print tree form instead of printing sentence")
+parser.add_argument("--seed", type=int, default=0, help="RNG seed")
+args = parser.parse_args()
+
+# Create a random generator.
+rng = random.Random(args.seed)
+
+# Here's how to access the args.  (You won't print them in your actual program.)
+# print 'path to grammar file:', args.grammar
+# print 'count:', args.count
+# print 'print tree?', args.tree
+# print 'RNG seed:', args.seed
+
+class ParseTree:
+    def __init__(self):
+        self.nodes = {}
+
+    def add_node(self, key):
+        self.nodes[key] = Children()
+
+    def add_child(self, key, child, weight=1.0):
+        children = self.get_children(key)
+        children.add_child(child, weight)
+
+    def get_children(self, key):
+        return self.nodes[key]
+
+    def is_nonterm(self, key):
+        return key in self.nodes
+
+    def generate_random_tree(self):
+        root = Node("START", terminal=False)
+
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            if node.terminal:
+                continue
+            for child in self.get_children(node.key).select_random_child():
+                child = child.copy()
+                node.add_child(child)
+                child.parent = node
+                stack.append(child)
+
+        return root
+
+    def generate_random_sentence(self, parse_tree=False):
+        tree = self.generate_random_tree()
+        if parse_tree:
+            print_tree(tree)
+        return tree.sentence_rep()
+
+    def __str__(self):
+        out = ""
+        for n in sorted(list(self.nodes.keys())):
+            out += n + ":" + str(self.get_children(n)) + "\n"
+        return out.strip()
+
+
+class Children:
+    def __init__(self):
+        self.children = []
+        self.weights = []
+
+    def add_child(self, children, weight=1.0):
+        self.children.append(children)
+        self.weights.append(weight)
+
+    def select_random_child(self):
+        cum_weights = reduce(lambda c, x: c + [c[-1] + x], self.weights, [0])[1:]
+        idx = random.random() * cum_weights[-1]
+        i = bisect.bisect(cum_weights, idx)
+        return self.children[i]
+
+    def __str__(self):
+        out = ""
+        for c, w in zip(self.children, self.weights):
+            c_s = "[" + ",".join([str(x) for x in c]) + "]"
+            out += "(" + c_s + "," + str(w) + ") "
+        return out.strip()
+
+
+class Node:
+    def __init__(self, key, terminal=False):
+        self.key = key
+        self.parent = None
+        self.children = []
+        self.terminal = terminal
+
+    def copy(self):
+        return Node(self.key, terminal=self.terminal)
+
+    def add_child(self, n):
+        self.children.append(n)
+
+    def tree_rep(self, level=0):
+        if self.terminal:
+            return "\t" * level + self.key + "\n"
+
+        ret = "\t" * level + "(" + self.key + "\n"
+        for child in self.children:
+            ret += child.tree_rep(level + 1)
+        return ret.rstrip() + ")" + "\n"
+
+    def sentence_rep(self):
+        if self.terminal:
+            return self.key
+        return " ".join([c.sentence_rep() for c in self.children])
+
+    def __str__(self):
+        return self.key + ("(T)" if self.terminal else "(N)")
+
+
+def iterate_grammar():
+    with open(args.grammar, 'r') as grammar_file:
+        for line in grammar_file:
+            line = line.partition('#')[0]
+            line = line.rstrip().split()
+            if len(line) == 0:
+                continue
+            yield line
+
+
+def build_tree():
+    terminals = set(map(lambda x: x[1], iterate_grammar()))
+    p = ParseTree()
+    for t in terminals:
+        p.add_node(t)
+
+    for l in iterate_grammar():
+        w = l[0]
+        root = l[1]
+        LHS = l[2:]
+        children = []
+        child = ""
+        for x in LHS:
+            if p.is_nonterm(x):
+                if len(child) > 0:
+                    children.append(Node(child.strip(), True))
+                    child = ""
+                children.append(Node(x, False))
+            else:
+                child += x + " "
+        if len(child) > 0:
+            children.append(Node(child.strip(), True))
+
+        p.add_child(root, children, float(w))
+    return p
+
+
+def print_tree(current_node, indent="", last='updown'):
+    # source: https://stackoverflow.com/questions/30893895/how-to-print-a-tree-in-python
+    # also implemented my own functions for printing, but this one is prettier
+    nb_children = lambda node: sum(nb_children(child) for child in node.children) + 1
+
+    children = current_node.children
+    i = len(children) // 2
+    up = children[:i]
+    down = children[i:]
+
+    """ Printing of "up" branch. """
+    for child in up:
+        next_last = 'up' if up.index(child) is 0 else ''
+        next_indent = '{0}{1}{2}'.format(indent, ' ' if 'up' in last else '│', " " * len(current_node.key))
+        print_tree(child, indent=next_indent, last=next_last)
+
+    """ Printing of current node. """
+    if last == 'up':
+        start_shape = '┌'
+    elif last == 'down':
+        start_shape = '└'
+    elif last == 'updown':
+        start_shape = ' '
+    else:
+        start_shape = '├'
+
+    if up:
+        end_shape = '┤'
+    elif down:
+        end_shape = '┐'
+    else:
+        end_shape = ''
+
+    print '{0}{1}{2}{3}'.format(indent, start_shape, current_node.key, end_shape)
+
+    """ Printing of "down" branch. """
+    for child in down:
+        next_last = 'down' if down.index(child) is len(down) - 1 else ''
+        next_indent = '{0}{1}{2}'.format(indent, ' ' if 'down' in last else '│', " " * len(current_node.key))
+        print_tree(child, indent=next_indent, last=next_last)
+
+
+p = build_tree()
+for _ in range(args.count):
+    print(p.generate_random_sentence(args.tree))
+
