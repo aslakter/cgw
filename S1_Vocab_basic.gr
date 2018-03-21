@@ -137,7 +137,7 @@
 1	CC[start,positive]	either
 1	CC[end,negative]	nor
 1	CC[start,negative]	neither
-1	CC	so # TODO: definitely needs to be special cased
+1	CC[explanatory]	so # TODO: definitely needs to be special cased
 
 # Numbers.
 1	Adj[plur]	eight

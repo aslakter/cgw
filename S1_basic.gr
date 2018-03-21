@@ -12,7 +12,12 @@
 1   S   S[sing]
 1   S   S[plur]
 
-# sentences wrapped by CCs
+# Compound / complex sentence structures: TODO: maybe LHS should be S?
+1   S1   S CC[positive] S
+1   S1   S CC[negative] S
+1   S1   S CC[explanatory] S #TODO: MAKE SURE TENSES OF SENTENCES MAKE SENSE
+
+# sentences wrapped by CCs (either/or neither/nor)
 1   S_CC    CC[start,positive] S CC[end,positive] S
 1   S_CC    CC[start,negative] S CC[end,negative] S
 
