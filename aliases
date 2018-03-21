@@ -1,3 +1,4 @@
 alias buildGrammar='cat Top.gr S1_basic.gr S1_Vocab_basic.gr S2.gr S2_Vocab.gr > testGrammar.gr'
 alias genGrammar='./randsent testGrammar.gr 10'
 alias testGrammar='buildGrammar | genGrammar'
+alias parseGrammar='./parse -g testGrammar.gr -i data/base-set.sen'
