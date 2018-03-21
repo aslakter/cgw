@@ -151,11 +151,11 @@
 1	Misc	there
 
 # Subordinating conjunctions.
-1	SC	that
-1	SC	so
-1	SC	while
-1	SC	because
-1	SC	if
+1	SC	that # TODO: "the horse that wanted the crown VP" (IS NEEDED!!)
+1	SC	so # TODO: can always occur at end of a VP? (acting as "so that" aka: in order to)
+1	SC	while   # TODO: can always occur at end of a VP?
+1	SC	because # TODO: can always occur at end of a VP?
+1	SC	if # TODO: can always occur at end of a VP?
 
 # Modals.
 1	Misc	can
@@ -256,17 +256,19 @@
 # TODO: simplifying assumption that all SCs work like "that")
 
 # Verbs (base form).
-1	Verb_Base	have
-1	Verb_Base	speak
-1	Verb_Base	cover
+1	Verb_Base	have        # that (iff participle) _ NONE
+1	Verb_Base	speak       # NONE _ that (if speak == say), if(?x) (if speak == "fortells")
+1	Verb_Base	cover       # NONE? _ that, if, while? (covering a period of time like "Arthur covers while Gwen eats in his lecture")
+# be: that, if (if Arthur rides is a good question.), because (because Arthur rides is a reason), while (while Arthur rides is when we go)
+# be: _ NONE?
 1	Verb_Base	be
-1	Verb_Base	ride
-1	Verb_Base	drink
-1	Verb_Base	grow
-1	Verb_Base	carry
-1	Verb_Base	suggest
-1	Verb_Base	migrate
-1	Verb_Base	know
+1	Verb_Base	ride        # NONE _ NONE
+1	Verb_Base	drink       # NONE _ NONE
+1	Verb_Base	grow        # that? ("(silent "the idea") that Arthur rode grew on her") _ NONE  (??? because, if, while, so [that] (aka: in order to))   (NOT: that)
+1	Verb_Base	carry       # NONE _ (so [that] (enabling), if (condition for carry): if the direct object is dropped)
+1	Verb_Base	suggest     # that (NOT: because, if, so, while) _ that (No others) TODO: I think this requires 'that', but can be silent/dropped
+1	Verb_Base	migrate     # NONE _ NONE? (while, if, so, so that, because) (NOT: that)
+1	Verb_Base	know        # NONE _ that, if (NOT: knows X because/so/while --> no)
 
 # Verbs (past tense).
 1	Verb_Past	had
