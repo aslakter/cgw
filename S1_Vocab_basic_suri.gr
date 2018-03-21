@@ -1,0 +1,400 @@
+# This is a hand-generated set of preterminal rules.
+# It specifies a simple tag set which will be handled by the S2
+# grammar and which can (though doesn't necessarily need to be)
+# handled by the S1 grammar.
+#
+# The weights given here may be changed, but no new vocabulary
+# items are to be added.
+
+# Miscellaneous items that don't fit into any of our simple tags are
+# given to Misc.  You will want to develop your own tags for these!
+
+
+# Singular and mass nouns.  Notice that only the
+# ones that start with consonants get our Noun tag.
+1	Noun[sing]	castle
+1	Noun[sing]	king
+1	Noun[sing]	defeater
+1	Noun[sing]	sovereign
+1	Noun[sing]	servant
+1	Noun[sing]	corner
+1	Noun[sing]	land
+1	Noun[sing]	quest
+1	Noun[sing]	chalice
+1	Noun[sing]	master
+1	Noun[sing]	horse
+1	Noun[sing]	fruit
+1	Noun[sing]	swallow
+1	Noun[sing]	sun
+1	Noun[sing]	winter
+1	Noun[sing]	coconut
+1	Noun[sing]	pound
+1	Noun[sing]	husk
+1	Noun[sing]	home
+1	Noun[sing]	weight
+1	Noun[sing]	story
+
+# Plural nouns.
+1	Noun[plur]	coconuts
+1	Noun[plur]	halves
+1	Noun[plur]	snows
+1	Noun[plur]	mountains
+1	Noun[plur]	areas
+1	Noun[plur]	strangers
+1	Noun[plur]	inches
+1	Noun[plur]	snakes
+1	Noun[plur]	ants
+1	Noun[plur]	nights
+
+# Determiners.
+1	Det[sing]	a
+1	Det[sing]	another
+1	Det[sing]	any
+1	Det[sing]	each
+1	Det[sing]	every
+1	Det[sing]	no
+1	Det[sing]	that
+1	Det[sing]	the
+1	Det[sing]	this
+
+1	Det[plur]	the
+1	Det[plur]	no
+1   Det[plur]   those
+1   Det[plur]   many
+
+
+# Prepositions.
+1	Prep	above
+1	Prep	across
+1	Prep	at
+1	Prep	below
+1	Prep	by
+1	Prep	for
+1	Prep	from
+1	Prep	into
+1	Prep	near
+1	Prep	of
+1	Prep	on
+1	Prep	over
+1	Prep	through
+1	Prep	with
+
+# Proper nouns.  Note that our Proper tag is just for people.
+1	Proper[sing]	Arthur
+1	Proper[sing]	Guinevere
+1	Proper[sing]	Sir Lancelot
+1	Proper[sing]	Sir Bedevere
+1	Proper[sing]	Zoot
+1	Proper[sing]	Dingo
+1	Proper[sing]	Patsy
+1	Proper[sing]	Uther Pendragon
+
+# More proper nouns, not people.
+
+1	Proper[sing]	Camelot
+1	Proper[sing]	England
+1	Proper[sing]	Holy Grail
+1	Proper[sing]	Round Table
+
+# Plural proper nouns.
+1	Proper[plur]	Britons
+1	Proper[plur]	Saxons
+
+
+# Verbs (third person singular present).
+# Note that only transitive verbs get our VerbT tag,
+# and some of those could also function as intransitives!
+1	VerbT[pres,sing,3rd]	has
+1	VerbT[pres,sing,3rd]	covers
+1	VerbT[pres,sing,3rd]	is
+1	VerbT[pres,sing,3rd]	drinks
+1	VerbT[pres,sing,3rd]	carries
+1	VerbT[pres,sing,3rd]	rides
+
+1	VerbI[pres,sing,3rd]	drinks
+
+# Verbs that take two objects 
+1   VerbT[2object,pres,sing,3rd]       carries 
+1   VerbT[2object,pres,sing,3rd]       rides 
+
+
+# End-of-sentence.
+1	Misc	!
+1	Misc	.
+1	Misc	?
+
+# Pauses.
+1	Misc	,
+1	Misc	...
+1	Misc	--
+1	Misc	;
+1	Misc	:
+
+# Coordinating conjunctions.
+1	Misc	and
+1	Misc	but
+1	Misc	or
+1	Misc	either
+1	Misc	nor
+1	Misc	neither
+1	Misc	so
+
+# Numbers.
+1	Adj[plur]	eight
+1	Adj[plur]	five
+1	Adj[sing]	one
+1	Adj[plur]	5.5
+1	Adj[plur]	sixty
+1	Adj[plur]	5,000
+
+# Expletive.
+1	Misc	there
+
+# Subordinating conjunctions.
+1	Misc	that
+1	Misc	so
+1	Misc	while
+1	Misc	because
+1	Misc	if
+
+# Modals. Don't require s in 3rd person singular present
+1	VerbT[pres,sing,3rd]	can
+1	VerbT[pres,plur,3rd]	can
+1	VerbT[pres,sing,3rd]	could
+1	VerbT[pres,plur,3rd]	could
+1	VerbT[pres,sing,3rd]	may
+1	VerbT[pres,plur,3rd]	may
+1	VerbT[pres,sing,3rd]	might
+1	VerbT[pres,plur,3rd]	might
+1	VerbT[pres,sing,3rd]	must
+1	VerbT[pres,plur,3rd]	must
+1	VerbT[pres,sing,3rd]	ought
+1	VerbT[pres,plur,3rd]	ought
+1	VerbT[pres,sing,3rd]	shall
+1	VerbT[pres,plur,3rd]	shall
+1	VerbT[pres,sing,3rd]	should
+1	VerbT[pres,plur,3rd]	should
+1	VerbT[pres,sing,3rd]	will
+1	VerbT[pres,plur,3rd]	will
+1	VerbT[pres,sing,3rd]	would
+1	VerbT[pres,plur,3rd]	would
+
+
+# Adjectives.
+1	Adj[gen]    bloody
+1	Adj[gen]	   weary
+1	Adj[gen]	   unable
+1	Adj[gen]	   trusty
+1	Adj[gen]	   further
+1	Adj[gen]	   sacred
+1	Adj[gen]	   tropical
+1	Adj[gen]	   indigenous
+1	Adj[gen]	   temperate
+1	Adj[gen]	   hot
+1	Adj[gen]	   lucky
+1	Adj[gen]	   simple
+1	Adj[gen]	   tiny
+1	Adj[gen]	   hard
+1	Adj[gen]	   sensational
+1	Adj[gen]	   comparable
+1	Adj[gen]	   angolian
+1	Adj[gen]	   yellow
+1	Adj[gen]	   plodding
+
+# Comparative adjectives.
+1	Misc	bloodier
+1	Misc	wearier
+1	Misc	trustier
+1	Misc	hotter
+1	Misc	simpler
+1	Misc	tinier
+1	Misc	harder
+
+# Superlative adjectives.
+1	Misc	bloodiest
+1	Misc	weariest
+1	Misc	trustiest
+1	Misc	hottest
+1	Misc	simplest
+1	Misc	tiniest
+1	Misc	hardest
+
+
+# Personal pronouns.
+1	Misc	he
+1	Misc	her
+1	Misc	him
+1	Misc	it
+1	Misc	one
+1	Misc	she
+1	Misc	them
+1	Misc	they
+
+
+# Possessive personal pronouns
+1	Misc	her
+1	Misc	his
+1	Misc	its
+1	Misc	their
+
+# Adverbs.
+1	Adv	   again
+1	Adv	   already
+1	Adv	   currently
+1	Adv	   frequently
+1	Adv	   precisely
+1	Adv	   south
+1	Adv	   successfully
+1	Adv	   unfortunately
+
+# 'do'/'does'
+1	Misc	do
+1	Misc	does
+
+# 'to'
+1	Misc	to
+
+# 'not'
+1	Misc	not
+
+# Verbs (base form).
+1	Verb_Base	have
+1	Verb_Base	speak
+1	Verb_Base	cover
+1	Verb_Base	be
+1	Verb_Base	ride
+1	Verb_Base	drink
+1	Verb_Base	grow
+1	Verb_Base	carry
+1	Verb_Base	suggest
+1	Verb_Base	migrate
+1	Verb_Base	know
+
+# Verbs that take two objects 
+1   VerbT[2object,base]       carry 
+1   VerbT[2object,base]       ride 
+1   VerbT[2object,base]       be 
+
+# Verbs (past tense).
+1	Verb_Past	had
+1	Verb_Past	spoke
+1	Verb_Past	covered
+1	Verb_Past	was
+1	Verb_Past	were
+1	Verb_Past	rode
+1	Verb_Past	drank
+1	Verb_Past	grew
+1	Verb_Past	carried
+1	Verb_Past	suggested
+1	Verb_Past	migrated
+1	Verb_Past	knew
+
+# Verbs (present participles).
+1	Gerund	having
+1	Gerund	speaking
+1	Gerund	covering
+1	Gerund	being
+1	Gerund	riding
+1	Gerund	drinking
+1	Gerund	growing
+1	Gerund	carrying
+1	Gerund	suggesting
+1	Gerund	migrating
+1	Gerund	knowing
+
+# Gerund Phrase 
+1 PreGerund[sing] PreGerund[sing,futr]
+1 PreGerund[sing] PreGerund[sing,past]
+1 PreGerund[sing] PreGerund[sing,pres]
+
+1 PreGerund[sing,futr] will BE[sing,futr]
+1 PreGerund[sing,past] was
+1 PreGerund[sing,pres] is
+
+1 PreGerund[plur,futr] will BE[sing,futr]
+1 PreGerund[plur,past] was 
+1 PreGerund[plur,pres] are
+
+1 PreGerun[plur] PreGerund[plur,futr]
+1 PreGerun[plur] PreGerund[plur,past]
+1 PreGerun[plur] PreGerund[plur,pres]
+
+
+1 BE[sing,futr] be
+
+
+# Verbs (past participle).
+1	Misc	had
+1	Misc	spoken
+1	Misc	covered
+1	Misc	been
+1	Misc	ridden
+1	Misc	drunk
+1	Misc	grown
+1	Misc	carried
+1	Misc	suggested
+1	Misc	migrated
+1	Misc	known
+
+# More third person singular verbs.
+1	VerbT[pres,sing,3rd]	speaks
+1	VerbT[pres,sing,3rd]	grows
+1	VerbT[pres,sing,3rd]	goes
+1	VerbT[pres,sing,3rd]	migrates
+1	VerbT[pres,sing,3rd]	suggests
+1	VerbT[pres,sing,3rd]	knows
+
+1	VerbI[pres,sing,3rd]	speaks
+1	VerbI[pres,sing,3rd]	grows
+1	VerbI[pres,sing,3rd]	goes
+1	VerbI[pres,sing,3rd]	migrates
+1	VerbI[pres,sing,3rd]	suggests
+1	VerbI[pres,sing,3rd]	knows
+
+
+# Verbs (present, plural, third person).
+1	VerbT[pres,plur,3rd]	have
+1	VerbT[pres,plur,3rd]	speak
+1	VerbT[pres,plur,3rd]	cover
+1	VerbT[pres,plur,3rd]	are
+1	VerbT[pres,plur,3rd]	ride
+1	VerbT[pres,plur,3rd]	drink
+1	VerbT[pres,plur,3rd]	grow
+1	VerbT[pres,plur,3rd]	carry
+1	VerbT[pres,plur,3rd]	suggest
+1	VerbT[pres,plur,3rd]	migrate
+1	VerbT[pres,plur,3rd]	know
+
+1	VerbI[pres,plur,3rd]	speak
+1	VerbI[pres,plur,3rd]	ride
+1	VerbI[pres,plur,3rd]	drink
+1	VerbI[pres,plur,3rd]	grow
+1	VerbI[pres,plur,3rd]	migrate
+1	VerbI[pres,plur,3rd]	know
+
+# Verbs that take two objects 
+1   VerbT[2object,pres,plur,3rd]     carry 
+1   VerbT[2object,pres,plur,3rd]     ride 
+
+
+# Wh-determiners.
+1	Misc	that
+1	Misc	what
+1	Misc	which
+
+# Wh-pronouns.
+1	Misc	what
+1	Misc	who
+
+# Wh possessive pronoun.
+1	Misc	whose
+
+# Wh-adverbs
+1	Misc	how
+1	Misc	when
+1	Misc	where
+1	Misc	why
+
+
+# Possessive marker.
+1	Misc	's
