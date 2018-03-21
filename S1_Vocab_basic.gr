@@ -127,6 +127,7 @@
 
 # Coordinating conjunctions.
 # defining subcategories as subcategories:
+# Understanding note: positive implies including / combining; negative implies excluding / rejecting
 1   CC[positive]    CC[end,positive]
 1   CC[negative]    CC[end,negative]
 
