@@ -61,12 +61,14 @@
 
 1  NP[sing] Det[sing] Modifier[sing] Noun[sing]
 1  NP[sing] Modifier[sing] Noun[sing]
+1  NP[sing] Det[sing] Noun[sing]
 1  NP[sing] Noun[sing]
 1  NP[sing] Proper[sing]
 1  NP[sing] Modifier[sing] Proper[sing]
 
 1  NP[plur] Det[plur] Modifier[plur] Noun[plur]
 1  NP[plur] Modifier[plur] Noun[plur]
+1  NP[plur] Det[plur] Noun[plur]
 1  NP[plur] Noun[plur]
 1  NP[plur] Proper[plur]
 1  NP[plur] Modifier[plur] Proper[plur]
