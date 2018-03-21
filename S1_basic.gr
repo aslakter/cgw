@@ -1,6 +1,7 @@
 # This is a very, very, very simple grammar to get you started.
 
 1000	S1	S END
+1000    S1  S_CC END
 1   S1  do S ?
 1   S1  CMD VP_BASE END
 1   S1  when S , S END
@@ -10,6 +11,10 @@
 
 1   S   S[sing]
 1   S   S[plur]
+
+# sentences wrapped by CCs
+1   S_CC    CC[start,positive] S CC[end,positive] S
+1   S_CC    CC[start,negative] S CC[end,negative] S
 
 
 1   S[sing]   NP[sing] VP[sing]
@@ -72,6 +77,36 @@
 1  NP[plur] Noun[plur]
 1  NP[plur] Proper[plur]
 1  NP[plur] Modifier[plur] Proper[plur]
+
+# NP with CC
+1 NP[plur] NP CC[positive] NP
+
+# NP either / neither rules (http://www.grammar-monster.com/lessons/either_or_plural_or_singular_verb.htm)
+# either / or rules
+1 NP[sing] CC[start,positive] NP[sing] CC[end,positive] NP[sing]
+1 NP[plur] CC[start,positive] NP[sing] CC[end,positive] NP[plur]
+1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[sing]
+1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[plur]
+
+# neither / nor rules
+1 NP[sing] CC[start,negative] NP[sing] CC[end,negative] NP[sing]
+1 NP[plur] CC[start,negative] NP[sing] CC[end,negative] NP[plur]
+1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[sing]
+1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[plur]
+
+# TODO: decide whether or not to use proximity rule(s) below
+# proximiy either/or neither/nor rules
+# either / or rules
+# 1 NP[sing] CC[start,positive] NP[sing] CC[end,positive] NP[sing]
+# 1 NP[plur] CC[start,positive] NP[sing] CC[end,positive] NP[plur]
+# 1 NP[sing] CC[start,positive] NP[plur] CC[end,positive] NP[sing]
+# 1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[plur]
+
+# neither / nor rules
+# 1 NP[sing] CC[start,negative] NP[sing] CC[end,negative] NP[sing]
+# 1 NP[plur] CC[start,negative] NP[sing] CC[end,negative] NP[plur]
+# 1 NP[sing] CC[start,negative] NP[plur] CC[end,negative] NP[sing]
+# 1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[plur]
 
 
 # Modifiers
