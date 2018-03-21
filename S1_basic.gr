@@ -1,7 +1,6 @@
 # This is a very, very, very simple grammar to get you started.
 
-1	S1	NP VP END
-1   S   NP VP 
+1000	S1	S END
 1   S1  do S ?
 1   S1  CMD VP_BASE END
 1   S1  when S , S END
@@ -9,31 +8,77 @@
 1   S1  what does NP Verb_Present ?
 1   S1  who does NP Verb_Present ?
 
+1   S   S[sing]
+1   S   S[plur]
+
+
+1   S[sing]   NP[sing] VP[sing]
+1   S[plur]   NP[plur] VP[plur]
+
+
 1   END .
 1   END ! 
 
 1   CMD do
 1   CMD do not
 
+
+# Verb Phrases
+
+1 VP[sing] Verb[trans,sing] NP
+1 VP[sing] Verb[intrans,sing]
+1 VP[sing] VP[sing] PP
+
+1 VP[plur] Verb[trans,plur] NP
+1 VP[plur] Verb[intrans,plur]
+1 VP[plur] VP[plur] PP
+
+
+1 Verb[trans,sing] VerbT[pres,sing,3rd]
+1 Verb[intrans,sing] VerbI[pres,sing,3rd]
+
+
+1 Verb[trans,plur] VerbT[pres,plur,3rd]
+1 Verb[intrans,plur] VerbI[pres,plur,3rd]
+
+
 1	VP	VerbT NP
 1   VP  VP_BASE
 1   VP  VP_PRESENT
 1   VP  VP_PAST
 1   VP  VerbT NP Adv
-1   VP  Verb  PP Adv
-
 
 1   VP_BASE     Verb_Base NP
 1   VP_PRESENT  Verb_Present NP
 1   VP_PAST     Verb_Past NP
 
-20	NP	Det Nbar
-1	NP	Proper
-1   NP  Adj Proper
+
+# Noun phrases
+1   NP NP[sing]
+1   NP NP[plur]
+3   NP[sing] NP[sing] PP
+1   NP[plur] NP[plur] PP
+
+1  NP[sing] Det[sing] Modifier[sing] Noun[sing]
+1  NP[sing] Modifier[sing] Noun[sing]
+1  NP[sing] Noun[sing]
+1  NP[sing] Proper[sing]
+1  NP[sing] Modifier[sing] Proper[sing]
+
+1  NP[plur] Det[plur] Modifier[plur] Noun[plur]
+1  NP[plur] Modifier[plur] Noun[plur]
+1  NP[plur] Noun[plur]
+1  NP[plur] Proper[plur]
+1  NP[plur] Modifier[plur] Proper[plur]
 
 
-20	Nbar	Noun
-1   Nbar    Adj Nbar
-1	Nbar	Nbar PP
+# Modifiers
+3  Modifier[sing]    Adj[sing]
+1  Modifier[sing]    Adv Modifier[sing]
+3  Modifier[plur]    Adj[plur]
+1  Modifier[plur]    Adv Modifier[plur]
+1  Adj[plur] Adj[gen]
+1  Adj[sing] Adj[gen]
 
+# Prepositional Phrases
 1	PP	Prep NP

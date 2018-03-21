@@ -12,38 +12,56 @@
 
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
-1	Noun	castle
-1	Noun	king
-1	Noun	defeater
-1	Noun	sovereign
-1	Noun	servant
-1	Noun	corner
-1	Noun	land
-1	Noun	quest
-1	Noun	chalice
-1	Noun	master
-1	Noun	horse
-1	Noun	fruit
-1	Noun	swallow
-1	Noun	sun
-1	Noun	winter
-1	Noun	coconut
-1	Noun	pound
-1	Noun	husk
-1	Noun	home
-1	Noun	weight
-1	Noun	story
+1	Noun[sing]	castle
+1	Noun[sing]	king
+1	Noun[sing]	defeater
+1	Noun[sing]	sovereign
+1	Noun[sing]	servant
+1	Noun[sing]	corner
+1	Noun[sing]	land
+1	Noun[sing]	quest
+1	Noun[sing]	chalice
+1	Noun[sing]	master
+1	Noun[sing]	horse
+1	Noun[sing]	fruit
+1	Noun[sing]	swallow
+1	Noun[sing]	sun
+1	Noun[sing]	winter
+1	Noun[sing]	coconut
+1	Noun[sing]	pound
+1	Noun[sing]	husk
+1	Noun[sing]	home
+1	Noun[sing]	weight
+1	Noun[sing]	story
+
+# Plural nouns.
+1	Noun[plur]	coconuts
+1	Noun[plur]	halves
+1	Noun[plur]	snows
+1	Noun[plur]	mountains
+1	Noun[plur]	areas
+1	Noun[plur]	strangers
+1	Noun[plur]	inches
+1	Noun[plur]	snakes
+1	Noun[plur]	ants
+1	Noun[plur]	nights
 
 # Determiners.
-1	Det	a
-1	Det	another
-1	Det	any
-1	Det	each
-1	Det	every
-1	Det	no
-1	Det	that
-1	Det	the
-1	Det	this
+1	Det[sing]	a
+1	Det[sing]	another
+1	Det[sing]	any
+1	Det[sing]	each
+1	Det[sing]	every
+1	Det[sing]	no
+1	Det[sing]	that
+1	Det[sing]	the
+1	Det[sing]	this
+
+1	Det[plur]	the
+1	Det[plur]	no
+1   Det[plur]   those
+1   Det[plur]   many
+
 
 # Prepositions.
 1	Prep	above
@@ -62,24 +80,38 @@
 1	Prep	with
 
 # Proper nouns.  Note that our Proper tag is just for people.
-1	Proper	Arthur
-1	Proper	Guinevere
-1	Proper	Sir Lancelot
-1	Proper	Sir Bedevere
-1	Proper	Zoot
-1	Proper	Dingo
-1	Proper	Patsy
-1	Proper	Uther Pendragon
+1	Proper[sing]	Arthur
+1	Proper[sing]	Guinevere
+1	Proper[sing]	Sir Lancelot
+1	Proper[sing]	Sir Bedevere
+1	Proper[sing]	Zoot
+1	Proper[sing]	Dingo
+1	Proper[sing]	Patsy
+1	Proper[sing]	Uther Pendragon
+
+# More proper nouns, not people.
+
+1	Proper[sing]	Camelot
+1	Proper[sing]	England
+1	Proper[sing]	Holy Grail
+1	Proper[sing]	Round Table
+
+# Plural proper nouns.
+1	Proper[plur]	Britons
+1	Proper[plur]	Saxons
+
 
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,
 # and some of those could also function as intransitives!
-1	VerbT	has
-1	VerbT	covers
-1	VerbT	is
-1	VerbT	drinks
-1	VerbT	carries
-1	VerbT	rides
+1	VerbT[pres,sing,3rd]	has
+1	VerbT[pres,sing,3rd]	covers
+1	VerbT[pres,sing,3rd]	is
+1	VerbT[pres,sing,3rd]	drinks
+1	VerbT[pres,sing,3rd]	carries
+1	VerbT[pres,sing,3rd]	rides
+
+1	VerbI[pres,sing,3rd]	drinks
 
 # End-of-sentence.
 1	Misc	!
@@ -103,12 +135,12 @@
 1	Misc	so
 
 # Numbers.
-1	Misc	eight
-1	Misc	five
-1	Misc	one
-1	Misc	5.5
-1	Misc	sixty
-1	Misc	5,000
+1	Adj[plur]	eight
+1	Adj[plur]	five
+1	Adj[sing]	one
+1	Adj[plur]	5.5
+1	Adj[plur]	sixty
+1	Adj[plur]	5,000
 
 # Expletive.
 1	Misc	there
@@ -134,25 +166,25 @@
 
 
 # Adjectives.
-1	Adj    bloody
-1	Adj	   weary
-1	Adj	   unable
-1	Adj	   trusty
-1	Adj	   further
-1	Adj	   sacred
-1	Adj	   tropical
-1	Adj	   indigenous
-1	Adj	   temperate
-1	Adj	   hot
-1	Adj	   lucky
-1	Adj	   simple
-1	Adj	   tiny
-1	Adj	   hard	
-1	Adj	   sensational
-1	Adj	   comparable
-1	Adj	   angolian
-1	Adj	   yellow
-1	Adj	   plodding
+1	Adj[gen]    bloody
+1	Adj[gen]	   weary
+1	Adj[gen]	   unable
+1	Adj[gen]	   trusty
+1	Adj[gen]	   further
+1	Adj[gen]	   sacred
+1	Adj[gen]	   tropical
+1	Adj[gen]	   indigenous
+1	Adj[gen]	   temperate
+1	Adj[gen]	   hot
+1	Adj[gen]	   lucky
+1	Adj[gen]	   simple
+1	Adj[gen]	   tiny
+1	Adj[gen]	   hard
+1	Adj[gen]	   sensational
+1	Adj[gen]	   comparable
+1	Adj[gen]	   angolian
+1	Adj[gen]	   yellow
+1	Adj[gen]	   plodding
 
 # Comparative adjectives.
 1	Misc	bloodier
@@ -172,28 +204,6 @@
 1	Misc	tiniest
 1	Misc	hardest
 
-# Plural nouns.
-1	Misc	coconuts
-1	Misc	halves
-1	Misc	snows
-1	Misc	mountains
-1	Misc	areas
-1	Misc	strangers
-1	Misc	inches
-1	Misc	snakes
-1	Misc	ants
-1	Misc	nights
-
-# More proper nouns, not people.
-
-1	Misc	Camelot
-1	Misc	England
-1	Misc	Holy Grail
-1	Misc	Round Table
-
-# Plural proper nouns.
-1	Misc	Britons
-1	Misc	Saxons
 
 # Personal pronouns.
 1	Misc	he
@@ -286,25 +296,41 @@
 1	Misc	known
 
 # More third person singular verbs.
-1	Misc	speaks
-1	Misc	grows
-1	Misc	goes
-1	Misc	migrates
-1	Misc	suggests
-1	Misc	knows
+1	VerbT[pres,sing,3rd]	speaks
+1	VerbT[pres,sing,3rd]	grows
+1	VerbT[pres,sing,3rd]	goes
+1	VerbT[pres,sing,3rd]	migrates
+1	VerbT[pres,sing,3rd]	suggests
+1	VerbT[pres,sing,3rd]	knows
+
+1	VerbI[pres,sing,3rd]	speaks
+1	VerbI[pres,sing,3rd]	grows
+1	VerbI[pres,sing,3rd]	goes
+1	VerbI[pres,sing,3rd]	migrates
+1	VerbI[pres,sing,3rd]	suggests
+1	VerbI[pres,sing,3rd]	knows
+
 
 # Verbs (present, plural, third person).
-1	Verb_Present	have
-1	Verb_Present	speak
-1	Verb_Present	cover
-1	Verb_Present	are
-1	Verb_Present	ride
-1	Verb_Present	drink
-1	Verb_Present	grow
-1	Verb_Present	carry
-1	Verb_Present	suggest
-1	Verb_Present	migrate
-1	Verb_Present	know
+1	VerbT[pres,plur,3rd]	have
+1	VerbT[pres,plur,3rd]	speak
+1	VerbT[pres,plur,3rd]	cover
+1	VerbT[pres,plur,3rd]	are
+1	VerbT[pres,plur,3rd]	ride
+1	VerbT[pres,plur,3rd]	drink
+1	VerbT[pres,plur,3rd]	grow
+1	VerbT[pres,plur,3rd]	carry
+1	VerbT[pres,plur,3rd]	suggest
+1	VerbT[pres,plur,3rd]	migrate
+1	VerbT[pres,plur,3rd]	know
+
+1	VerbI[pres,plur,3rd]	speak
+1	VerbI[pres,plur,3rd]	ride
+1	VerbI[pres,plur,3rd]	drink
+1	VerbI[pres,plur,3rd]	grow
+1	VerbI[pres,plur,3rd]	migrate
+1	VerbI[pres,plur,3rd]	know
+
 
 # Wh-determiners.
 1	Misc	that
