@@ -86,6 +86,10 @@
 3   NP[sing] NP[sing] PP
 1   NP[plur] NP[plur] PP
 
+# Noun phrase with distinguishing phrases "the horse... that migrated here ..."
+1   NP[sing]    NP[sing] Det[distinguishing] VP[sing]
+1   NP[plur]    NP[plur] Det[distinguishing] VP[plur]
+
 1  NP[sing] Det[sing] Modifier[sing] Noun[sing]
 1  NP[sing] Modifier[sing] Noun[sing]
 1  NP[sing] Det[sing] Noun[sing]
