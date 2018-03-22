@@ -181,7 +181,11 @@
 1 Verb[trans,sing] VerbT[2object,past,sing,3rd]
 1 Verb[intrans,sing] VerbI[pres,sing,3rd]
 1 Verb[intrans,sing] VerbI[past,sing,3rd]
+1 Verb[linking,sing] VerbL[pres,sing,3rd] PresPart PP #TODO: ADD T VS I VS L
+1 Verb[linking,sing] VerbL[pres,sing,3rd] PresPart
 1 Verb[linking,sing] VerbL[pres,sing,3rd]
+1 Verb[linking,sing] VerbL[past,sing,3rd] PastPartT PP
+1 Verb[linking,sing] VerbL[past,sing,3rd] PastPartT
 1 Verb[linking,sing] VerbL[past,sing,3rd]
 
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
@@ -190,7 +194,11 @@
 1 Verb[trans,plur] VerbT[2object,past,plur,3rd] 
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
 1 Verb[intrans,plur] VerbI[past,plur,3rd]
+1 Verb[linking,plur] VerbL[pres,plur,3rd] PresPart PP
+1 Verb[linking,plur] VerbL[pres,plur,3rd] PresPart
 1 Verb[linking,plur] VerbL[pres,plur,3rd]
+1 Verb[linking,plur] VerbL[past,plur,3rd] PastPartT PP
+1 Verb[linking,plur] VerbL[past,plur,3rd] PastPartT
 1 Verb[linking,plur] VerbL[past,plur,3rd]
 
 
