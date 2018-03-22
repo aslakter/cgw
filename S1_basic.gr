@@ -7,9 +7,47 @@
 1   S1  why does NP[sing] VP_BASE ?
 1   S1  what does NP[sing] VerbI[pres,plur,3rd] ? # Should be VP_BASE I think. TODO: add ability to PP after the VerbI # Verb_Present ?
 1   S1  who does NP[sing] VP_BASE ? # TODO: Decide if this is correct # Verb_Present ?
+1000   S1  Q ?
 
 1   S   S[sing]
 1   S   S[plur]
+
+
+# questions parsings
+1       Q            Q[yesno]
+1       Q            Q[pronoun]
+1       Q            Q[adverb]
+1       Q            Q[det]
+1       Q            Q[poss]
+
+# yes/no questions
+1       Q[yesno]     Q[trans] NP
+1       Q[yesno]     Q[trans]
+1       Q[yesno]     Q[comp] CP_that
+1       Q[yesno]     Q[comp]
+
+# questions starting with adverbs (i.e. "where" / "when")
+1       Q[adverb]    WH[adverb] Q[yesno]
+
+# questions starting with "who" / "what" can take their own objects
+1       Q[pronoun]   WH[pronoun] Q[trans]
+1       Q[pronoun]   WH[pronoun] Q[trans] CP[intrans]  # todo: fix this!!
+1       Q[pronoun]   WH[pronoun] VP
+1       Q[pronoun]   WH[pronoun] Q[comp]
+1       Q[pronoun]   WH[pronoun] Q[comp] CP_that
+1       Q[pronoun]   WH[pronoun] Q[trans] NP Prep
+8       Q[pronoun]   WH[pronoun] Q[trans] Prep
+
+# questions starting with "which" / "what" (determiners)
+1       Q[det]   WH[det] S
+
+# questions starting with "whose"
+1       Q[poss]  WH[poss] S
+
+# building blocks of questions
+1       Q[comp]      Modal NP Verb[comp,inf]
+1       Q[trans]     Modal NP VerbT[inf]
+
 
 # Compound / complex sentence structures: TODO: maybe LHS should be S?
 1   S1   S CC[positive] S

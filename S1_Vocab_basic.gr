@@ -337,19 +337,26 @@
 # TODO: simplifying assumption that all SCs work like "that")
 
 # Verbs (base form).
-1	Verb_Base	have        # that (iff participle) _ NONE
-1	Verb_Base	speak       # NONE _ that (if speak == say), if(?x) (if speak == "fortells")
-1	Verb_Base	cover       # NONE? _ that, if, while? (covering a period of time like "Arthur covers while Gwen eats in his lecture")
+1	VerbT[inf]	have        # that (iff participle) _ NONE
+1	VerbT[inf]	speak       # NONE _ that (if speak == say), if(?x) (if speak == "fortells")
+1	VerbT[inf]	cover       # NONE? _ that, if, while? (covering a period of time like "Arthur covers while Gwen eats in his lecture")
+
+1	VerbT[inf]	have        # that (iff participle) _ NONE
+1	VerbT[inf]	speak       # NONE _ that (if speak == say), if(?x) (if speak == "fortells")
+1	VerbT[inf]	cover
+
+
+
 # be: that, if (if Arthur rides is a good question.), because (because Arthur rides is a reason), while (while Arthur rides is when we go)
 # be: _ NONE?
-1	Verb_Base	be
-1	Verb_Base	ride        # NONE _ NONE
-1	Verb_Base	drink       # NONE _ NONE
-1	Verb_Base	grow        # that? ("(silent "the idea") that Arthur rode grew on her") _ NONE  (??? because, if, while, so [that] (aka: in order to))   (NOT: that)
-1	Verb_Base	carry       # NONE _ (so [that] (enabling), if (condition for carry): if the direct object is dropped)
-1	Verb_Base	suggest     # that (NOT: because, if, so, while) _ that (No others) TODO: I think this requires 'that', but can be silent/dropped
-1	Verb_Base	migrate     # NONE _ NONE? (while, if, so, so that, because) (NOT: that)
-1	Verb_Base	know        # NONE _ that, if (NOT: knows X because/so/while --> no)
+1	VerbL[inf]	be
+1	VerbT[inf]	ride        # NONE _ NONE
+1	VerbT[inf]	drink       # NONE _ NONE
+1	VerbT[inf]	grow        # that? ("(silent "the idea") that Arthur rode grew on her") _ NONE  (??? because, if, while, so [that] (aka: in order to))   (NOT: that)
+1	VerbT[inf]	carry       # NONE _ (so [that] (enabling), if (condition for carry): if the direct object is dropped)
+1	VerbT[inf]	suggest     # that (NOT: because, if, so, while) _ that (No others) TODO: I think this requires 'that', but can be silent/dropped
+1	VerbT[inf]	migrate     # NONE _ NONE? (while, if, so, so that, because) (NOT: that)
+1	VerbT[inf]	know        # NONE _ that, if (NOT: knows X because/so/while --> no)
 
 1   VerbT[2object,base]       carry 
 1   VerbT[2object,base]       ride 
@@ -482,22 +489,21 @@
 
 # Wh-determiners.
 1	Misc	that
-1	Misc	what
-1	Misc	which
+1	WH[det]	what
+1	WH[det]	which
 
 # Wh-pronouns.
-1	Misc	what
-1	Misc	who
+1	WH[pronoun]	what
+1	WH[pronoun]	who
 
 # Wh possessive pronoun.
-1	Misc	whose
+1	WH[poss]	whose
 
 # Wh-adverbs
-1	Misc	how
-1	Misc	when
-1	Misc	where
-1	Misc	why
-
+1	WH[adverb]	how
+1	WH[adverb]	when
+1	WH[adverb]	where
+1	WH[adverb]	why
 
 # Possessive marker.
 1	Misc	's
