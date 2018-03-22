@@ -120,6 +120,9 @@
 1	VerbL[pres,sing,3rd]	is
 1	VerbI[pres,sing,3rd]	drinks
 
+1   VerbT[2object,pres,sing,3rd]       carries 
+1   VerbT[2object,pres,sing,3rd]       rides 
+
 # End-of-sentence.
 1	Misc	!
 1	Misc	.
@@ -281,6 +284,10 @@
 1	Verb_Base	migrate     # NONE _ NONE? (while, if, so, so that, because) (NOT: that)
 1	Verb_Base	know        # NONE _ that, if (NOT: knows X because/so/while --> no)
 
+1   VerbT[2object,base]       carry 
+1   VerbT[2object,base]       ride 
+1   VerbT[2object,base]       be 
+
 # Verbs (past tense).
 1	VerbT[past,sing,3rd]	had
 1	VerbT[past,sing,3rd]	spoke
@@ -369,6 +376,9 @@
 
 1	VerbL[pres,plur,3rd]	are
 
+# Verbs that take two objects 
+1   VerbT[2object,pres,plur,3rd]     carry 
+1   VerbT[2object,pres,plur,3rd]     ride 
 
 # Wh-determiners.
 1	Misc	that
