@@ -98,6 +98,13 @@
 1 VP[sing] Verb[linking,sing]
 1 VP[sing] VP[sing] PP
 
+1 VP[sing] Adv Verb[trans,sing] NP
+1 VP[sing] Adv Verb[intrans,sing]
+1 VP[sing] Adv Verb[linking,sing] NP[sing]
+1 VP[sing] Adv Verb[linking,sing] Modifier[sing]
+1 VP[sing] Adv Verb[linking,sing]
+1 VP[sing] Adv VP[sing] PP
+
 
 # Complementizer phrases post VP
 1 VP[sing] VP[sing] CP_generic
@@ -123,6 +130,13 @@
 1 VP[plur] Verb[linking,plur] Modifier[plur]
 1 VP[plur] Verb[linking,plur]
 1 VP[plur] VP[plur] PP
+
+1 VP[plur] Adv Verb[trans,plur] NP
+1 VP[plur] Adv Verb[intrans,plur]
+1 VP[plur] Adv Verb[linking,plur] NP[plur]
+1 VP[plur] Adv Verb[linking,plur] Modifier[plur]
+1 VP[plur] Adv Verb[linking,plur]
+1 VP[plur] Adv VP[plur] PP
 
 # Complementizer phrases post VP
 1 VP[plur] VP[plur] CP_generic
@@ -418,6 +432,9 @@
 1   VI[plur] VerbI[past,plur,3rd]
 
 # Asides
-1   NP NP Aside
+1   NP[sing] NP[sing] Aside
+1   NP[plur] NP[plur] Aside
 1   Aside , NP ,
 1   Aside , NP
+1   Aside , Adv ,
+1   Aside , Adv
