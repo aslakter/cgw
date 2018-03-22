@@ -286,9 +286,9 @@
 # To do: Location Prep Phrase
 # 1  GerundS      GerundLocPrep LocPrepP
 
-1  S      GerundS is Adj[sing]
-1  S      GerundS suggests S
-1  S      GerundS suggests that S
+1  S   GerundS is Adj[sing]
+1  S   GerundS suggests S
+1  S   GerundS suggests that S
 
 # Modifiers
 3  Modifier[sing]    Adj[sing]
