@@ -172,6 +172,21 @@
 1 Verb[linking,plur] Modal[future] have PastPartL PastPartT
 1 Verb[linking,plur] Modal[future] have PastPartL
 
+# Present Modal Perfect
+1 Verb[linking,sing] Modal be PresPart PP #TODO: ADD T VS I VS L
+1 Verb[linking,sing] Modal be PresPart
+1 Verb[linking,sing] Modal be
+1 Verb[linking,plur] Modal be PresPart PP # TODO: can all pres part take PP?
+1 Verb[linking,plur] Modal be PresPart
+1 Verb[linking,plur] Modal be
+
+# Future Modal Perfect
+1 Verb[linking,sing] Modal[future] be PresPart PP #TODO: ADD T VS I VS L
+1 Verb[linking,sing] Modal[future] be PresPart
+1 Verb[linking,sing] Modal[future] be
+1 Verb[linking,plur] Modal[future] be PresPart PP # TODO: can all pres part take PP?
+1 Verb[linking,plur] Modal[future] be PresPart
+1 Verb[linking,plur] Modal[future] be
 
 
 # Simple Past/Present
@@ -194,10 +209,10 @@
 1 Verb[trans,plur] VerbT[2object,past,plur,3rd] 
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
 1 Verb[intrans,plur] VerbI[past,plur,3rd]
-1 Verb[linking,plur] VerbL[pres,plur,3rd] PresPart PP
+1 Verb[linking,plur] VerbL[pres,plur,3rd] PresPart PP # TODO: can all pres part take PP?
 1 Verb[linking,plur] VerbL[pres,plur,3rd] PresPart
 1 Verb[linking,plur] VerbL[pres,plur,3rd]
-1 Verb[linking,plur] VerbL[past,plur,3rd] PastPartT PP
+1 Verb[linking,plur] VerbL[past,plur,3rd] PastPartT PP # TODO: can all past part verbs take PP?
 1 Verb[linking,plur] VerbL[past,plur,3rd] PastPartT
 1 Verb[linking,plur] VerbL[past,plur,3rd]
 
