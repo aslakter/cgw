@@ -316,7 +316,10 @@
 1	VerbL[past,sing,3rd]	was
 1	VerbL[past,plur,3rd]	were
 
-
+1   VerbT[2object,past,sing,3rd] rode 
+1   VerbT[2object,past,plur,3rd] rode 
+1   VerbT[2object,past,sing,3rd] carried
+1   VerbT[2object,past,plur,3rd] carried
 
 # Verbs (present participles).
 1	PresPart 	having
