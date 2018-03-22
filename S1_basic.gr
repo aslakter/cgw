@@ -1,4 +1,3 @@
-# This is a very, very, very simple grammar to get you started.
 
 1000	S1	S END
 1000    S1  S_CC END
@@ -34,33 +33,28 @@
 
 
 # Verb Phrases
-
 1 VP[sing] Verb[trans,sing] NP
 1 VP[sing] Verb[intrans,sing]
+1 VP[sing] Verb[linking,sing] NP[sing]
+1 VP[sing] Verb[linking,sing] Modifier[sing]
+1 VP[sing] Verb[linking,sing]
 1 VP[sing] VP[sing] PP
 
 1 VP[plur] Verb[trans,plur] NP
 1 VP[plur] Verb[intrans,plur]
+1 VP[plur] Verb[linking,plur] NP[plur]
+1 VP[plur] Verb[linking,plur] Modifier[plur]
+1 VP[plur] Verb[linking,plur]
 1 VP[plur] VP[plur] PP
-
 
 1 Verb[trans,sing] VerbT[pres,sing,3rd]
 1 Verb[intrans,sing] VerbI[pres,sing,3rd]
-
+1 Verb[linking,sing] VerbL[pres,sing,3rd]
 
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
+1 Verb[linking,plur] VerbL[pres,plur,3rd]
 
-# TODO: decide if necessary
-1	VP	VerbT NP
-1   VP  VP_BASE
-1   VP  VP_PRESENT
-1   VP  VP_PAST
-1   VP  VerbT NP Adv
-
-1   VP_BASE     Verb_Base NP
-1   VP_PRESENT  Verb_Present NP
-1   VP_PAST     Verb_Past NP
 
 # Verb Phrases with conjunctions
 1   VP[sing]    VP[sing] CC[positive] VP[sing]
@@ -73,6 +67,7 @@
 1   VP[plur]    CC[start,positive] VP[plur] CC[end,positive] VP[plur]
 1   VP[plur]    CC[start,negative] VP[plur] CC[end,negative] VP[plur]
 
+
 # Noun phrases
 1   NP NP[sing]
 1   NP NP[plur]
@@ -84,6 +79,7 @@
 1  NP[sing] Det[sing] Noun[sing]
 1  NP[sing] Noun[sing]
 1  NP[sing] Proper[sing]
+1  NP[sing] Det[sing] Proper[sing,det]
 1  NP[sing] Modifier[sing] Proper[sing]
 
 1  NP[plur] Det[plur] Modifier[plur] Noun[plur]
@@ -91,6 +87,7 @@
 1  NP[plur] Det[plur] Noun[plur]
 1  NP[plur] Noun[plur]
 1  NP[plur] Proper[plur]
+1  NP[plur] Det[plur] Proper[plur,det]
 1  NP[plur] Modifier[plur] Proper[plur]
 
 # NP with CC TODO: decide on requiring non-terminals or not
