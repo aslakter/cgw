@@ -418,5 +418,6 @@
 1   VI[plur] VerbI[past,plur,3rd]
 
 # Asides
-1   NP NP , NP ,
-1   NP NP , NP
+1   NP NP Aside
+1   Aside , NP ,
+1   Aside , NP
