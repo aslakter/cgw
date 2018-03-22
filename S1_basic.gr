@@ -72,6 +72,19 @@
 1 VP[plur] are PresPart2Obj 2OBJ
 1 VP[plur] are PresPart NP
 
+# Past Participle
+1 VerbT[2object,past,sing,3rd]  PrePastPerfect PastPart2Obj
+1 Verb[trans,sing] PrePastPerfect PastPartT
+1 Verb[intrans,sing] PrePastPerfect PastPartI
+1 Verb[linking,sing] PrePastPerfect PastPartL
+1 VerbT[2object,past,plur,3rd]  PrePastPerfect PastPart2Obj
+1 Verb[trans,plur] PrePastPerfect PastPartT
+1 Verb[intrans,plur] PrePastPerfect PastPartI
+1 Verb[linking,plur] PrePastPerfect PastPartL
+
+
+
+# Simple Past/Present
 1 Verb[trans,sing] VerbT[pres,sing,3rd]
 1 Verb[trans,sing] VerbT[2object,pres,sing,3rd]
 1 Verb[trans,sing] VerbT[past,sing,3rd]
