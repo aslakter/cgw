@@ -1,6 +1,7 @@
 # This is a very, very, very simple grammar to get you started.
 
 1000	S1	S END
+1000    S1  S_CC END
 1   S1  do S ?
 1   S1  CMD VP_BASE END
 1   S1  when S , S END
@@ -10,6 +11,15 @@
 
 1   S   S[sing]
 1   S   S[plur]
+
+# Compound / complex sentence structures: TODO: maybe LHS should be S?
+1   S1   S CC[positive] S
+1   S1   S CC[negative] S
+1   S1   S CC[explanatory] S #TODO: MAKE SURE TENSES OF SENTENCES MAKE SENSE
+
+# sentences wrapped by CCs (either/or neither/nor)
+1   S_CC    CC[start,positive] S CC[end,positive] S
+1   S_CC    CC[start,negative] S CC[end,negative] S
 
 
 1   S[sing]   NP[sing] VP[sing]
@@ -41,7 +51,7 @@
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
 
-
+# TODO: decide if necessary
 1	VP	VerbT NP
 1   VP  VP_BASE
 1   VP  VP_PRESENT
@@ -52,6 +62,16 @@
 1   VP_PRESENT  Verb_Present NP
 1   VP_PAST     Verb_Past NP
 
+# Verb Phrases with conjunctions
+1   VP[sing]    VP[sing] CC[positive] VP[sing]
+1   VP[sing]    VP[sing] CC[negative] VP[sing]
+1   VP[sing]    CC[start,positive] VP[sing] CC[end,positive] VP[sing]
+1   VP[sing]    CC[start,negative] VP[sing] CC[end,negative] VP[sing]
+
+1   VP[plur]    VP[plur] CC[positive] VP[plur]
+1   VP[plur]    VP[plur] CC[negative] VP[plur]
+1   VP[plur]    CC[start,positive] VP[plur] CC[end,positive] VP[plur]
+1   VP[plur]    CC[start,negative] VP[plur] CC[end,negative] VP[plur]
 
 # Noun phrases
 1   NP NP[sing]
@@ -72,6 +92,48 @@
 1  NP[plur] Noun[plur]
 1  NP[plur] Proper[plur]
 1  NP[plur] Modifier[plur] Proper[plur]
+
+# NP with CC TODO: decide on requiring non-terminals or not
+1 NP[plur] NP and NP
+
+# NP either / neither rules (http://www.grammar-monster.com/lessons/either_or_plural_or_singular_verb.htm)
+# either / or rules
+1 NP[sing] CC[start,positive] NP[sing] CC[end,positive] NP[sing]
+1 NP[plur] CC[start,positive] NP[sing] CC[end,positive] NP[plur]
+1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[sing]
+1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[plur]
+
+# OR rules
+1 NP[sing]  NP[sing] CC[end,positive] NP[sing]
+1 NP[plur]  NP[sing] CC[end,positive] NP[plur]
+1 NP[plur]  NP[plur] CC[end,positive] NP[sing]
+1 NP[plur]  NP[plur] CC[end,positive] NP[plur]
+
+# neither / nor rules
+1 NP[sing] CC[start,negative] NP[sing] CC[end,negative] NP[sing]
+1 NP[plur] CC[start,negative] NP[sing] CC[end,negative] NP[plur]
+1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[sing]
+1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[plur]
+
+# NOR rules
+1 NP[sing] NP[sing] CC[end,negative] NP[sing]
+1 NP[plur] NP[sing] CC[end,negative] NP[plur]
+1 NP[plur] NP[plur] CC[end,negative] NP[sing]
+1 NP[plur] NP[plur] CC[end,negative] NP[plur]
+
+# TODO: decide whether or not to use proximity rule(s) below (this is reasonable in practice, but not theory)
+# proximiy either/or neither/nor rules
+# either / or rules
+# 1 NP[sing] CC[start,positive] NP[sing] CC[end,positive] NP[sing]
+# 1 NP[plur] CC[start,positive] NP[sing] CC[end,positive] NP[plur]
+# 1 NP[sing] CC[start,positive] NP[plur] CC[end,positive] NP[sing]
+# 1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[plur]
+
+# neither / nor rules
+# 1 NP[sing] CC[start,negative] NP[sing] CC[end,negative] NP[sing]
+# 1 NP[plur] CC[start,negative] NP[sing] CC[end,negative] NP[plur]
+# 1 NP[sing] CC[start,negative] NP[plur] CC[end,negative] NP[sing]
+# 1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[plur]
 
 
 # Modifiers
