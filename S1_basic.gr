@@ -40,12 +40,17 @@
 1 VP[sing] Verb[linking,sing]
 1 VP[sing] VP[sing] PP
 
+
 # Complementizer phrases post VP
 1 VP[sing] VP[sing] CP_generic
 
 # 2 object verbs plural
 1 2OBJ NP Noun PP
 1 2OBJ NP home
+
+# Infinitive 
+1 VP[sing] VerbT[2Object,infin,pres] 2OBJ
+1 VP[sing] VerbT[2Object,infin,past] 2OBJ
 
 # 2 object verbs
 1 VP[sing] VerbT[2object,pres,sing,3rd] 2OBJ
@@ -63,6 +68,10 @@
 
 # Complementizer phrases post VP
 1 VP[plur] VP[plur] CP_generic
+
+# Infinitive 
+1 VP[plur] VerbT[2Object,infin,pres] 2OBJ
+1 VP[plur] VerbT[2Object,infin,past] 2OBJ
 
 # Two Objects
 1 VP[plur] VerbT[2object,pres,plur,3rd] 2OBJ

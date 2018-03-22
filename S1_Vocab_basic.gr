@@ -383,6 +383,18 @@
 1   VerbT[2object,past,sing,3rd] carried
 1   VerbT[2object,past,plur,3rd] carried
 
+# Infinitive
+# TODO: not sure handling suggested, know properly
+1   VerbT[infin,base]            to Verb_Base
+1   VerbT[2Object,infin,base]    to VerbT[2object,base]
+1   VerbT[infin,pres]            Modal_pre_infinitive[present] VerbT[infin,base]
+1   VerbT[infin,past]            Modal_pre_infinitive[past] VerbT[infin,base]
+1   VerbT[2Object,infin,pres]    Modal_pre_infinitive[present] VerbT[2Object,infin,base]
+1   VerbT[2Object,infin,past]    Modal_pre_infinitive[past] VerbT[2Object,infin,base]
+
+1   Verb[trans,plur]             VerbT[infin,past]
+1   Verb[trans,plur]             VerbT[infin,pres]
+
 # Verbs (present participles).
 1	PresPart 	having
 1	PresPart 	speaking
