@@ -76,13 +76,15 @@
 1 VerbT[2object,past,sing,3rd]  PrePastPerfect PastPart2Obj
 1 Verb[trans,sing] PrePastPerfect PastPartT
 1 Verb[intrans,sing] PrePastPerfect PastPartI
+
 # Linking Past TODO: check following cases
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPart2Obj 2OBJ
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPartT NP
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPartT PP
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPart
-1 Verb[linking,sing] PrePastPerfect PastPartL PastPart2Obj 2OBJ
-1 Verb[linking,sing] PrePastPerfect PastPartL PastPartT NP
+
+# 1 Verb[linking,sing] PrePastPerfect PastPartL PastPart2Obj 2OBJ
+# 1 Verb[linking,sing] PrePastPerfect PastPartL PastPartT NP
 1 Verb[linking,sing] PrePastPerfect PastPartL PastPartT PP
 1 Verb[linking,sing] PrePastPerfect PastPartL PastPartT
 1 Verb[linking,sing] PrePastPerfect PastPartL
@@ -95,8 +97,8 @@
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPartT NP
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPartT PP
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPart
-1 Verb[linking,plur] PrePastPerfect PastPartL PastPart2Obj 2OBJ
-1 Verb[linking,plur] PrePastPerfect PastPartL PastPartT NP
+# 1 Verb[linking,plur] PrePastPerfect PastPartL PastPart2Obj 2OBJ
+# 1 Verb[linking,plur] PrePastPerfect PastPartL PastPartT NP
 1 Verb[linking,plur] PrePastPerfect PastPartL PastPartT PP
 1 Verb[linking,plur] PrePastPerfect PastPartL PastPartT
 1 Verb[linking,plur] PrePastPerfect PastPartL
@@ -106,12 +108,14 @@
 1 Verb[trans,sing] Modal have PastPartT
 1 Verb[intrans,sing] Modal have PastPartI
 
+# Past progressive
 1 Verb[linking,sing] Modal have PastPartL PresPart2Obj 2OBJ
 1 Verb[linking,sing] Modal have PastPartL PresPartT NP
 1 Verb[linking,sing] Modal have PastPartL PresPartT PP
 1 Verb[linking,sing] Modal have PastPartL PresPart
-1 Verb[linking,sing] Modal have PastPartL PastPart2Obj 2OBJ
-1 Verb[linking,sing] Modal have PastPartL PastPartT NP
+# Past Perfect
+# 1 Verb[linking,sing] Modal have PastPartL PastPart2Obj 2OBJ
+# 1 Verb[linking,sing] Modal have PastPartL PastPartT NP
 1 Verb[linking,sing] Modal have PastPartL PastPartT PP
 1 Verb[linking,sing] Modal have PastPartL PastPartT
 1 Verb[linking,sing] Modal have PastPartL
@@ -120,12 +124,14 @@
 1 Verb[trans,plur] Modal have PastPartT
 1 Verb[intrans,plur] Modal have PastPartI
 
+# Past Progressing
 1 Verb[linking,plur] Modal have PastPartL PresPart2Obj 2OBJ
 1 Verb[linking,plur] Modal have PastPartL PresPartT NP
 1 Verb[linking,plur] Modal have PastPartL PresPartT PP
 1 Verb[linking,plur] Modal have PastPartL PresPart
-1 Verb[linking,plur] Modal have PastPartL PastPart2Obj 2OBJ
-1 Verb[linking,plur] Modal have PastPartL PastPartT NP
+# Past Perfect
+# 1 Verb[linking,plur] Modal have PastPartL PastPart2Obj 2OBJ
+# 1 Verb[linking,plur] Modal have PastPartL PastPartT NP
 1 Verb[linking,plur] Modal have PastPartL PastPartT PP
 1 Verb[linking,plur] Modal have PastPartL PastPartT
 1 Verb[linking,plur] Modal have PastPartL
@@ -136,27 +142,32 @@
 1 Verb[intrans,sing] Modal[future] have PastPartI
 
 
+# Future Past Progressive
 1 Verb[linking,sing] Modal[future] have PastPartL PresPart2Obj 2OBJ
 1 Verb[linking,sing] Modal[future] have PastPartL PresPartT NP
 1 Verb[linking,sing] Modal[future] have PastPartL PresPartT PP
 1 Verb[linking,sing] Modal[future] have PastPartL PresPart
-1 Verb[linking,sing] Modal[future] have PastPartL PastPart2Obj 2OBJ
-1 Verb[linking,sing] Modal[future] have PastPartL PastPartT NP
+
+# Future Past Perfect
+#1 Verb[linking,sing] Modal[future] have PastPartL PastPart2Obj 2OBJ
+#1 Verb[linking,sing] Modal[future] have PastPartL PastPartT NP
 1 Verb[linking,sing] Modal[future] have PastPartL PastPartT PP
 1 Verb[linking,sing] Modal[future] have PastPartL PastPartT
 1 Verb[linking,sing] Modal[future] have PastPartL
-
 
 1 VerbT[2object,past,plur,3rd]  Modal[future] have PastPart2Obj
 1 Verb[trans,plur] Modal[future] have PastPartT
 1 Verb[intrans,plur] Modal[future] have PastPartI
 
+# Future Past progressive
 1 Verb[linking,plur] Modal[future] have PastPartL PresPart2Obj 2OBJ
 1 Verb[linking,plur] Modal[future] have PastPartL PresPartT NP
 1 Verb[linking,plur] Modal[future] have PastPartL PresPartT PP
 1 Verb[linking,plur] Modal[future] have PastPartL PresPart
-1 Verb[linking,plur] Modal[future] have PastPartL PastPart2Obj 2OBJ
-1 Verb[linking,plur] Modal[future] have PastPartL PastPartT NP
+
+# Future Past Perfect
+#1 Verb[linking,plur] Modal[future] have PastPartL PastPart2Obj 2OBJ
+#1 Verb[linking,plur] Modal[future] have PastPartL PastPartT NP
 1 Verb[linking,plur] Modal[future] have PastPartL PastPartT PP
 1 Verb[linking,plur] Modal[future] have PastPartL PastPartT
 1 Verb[linking,plur] Modal[future] have PastPartL
