@@ -244,6 +244,11 @@
 1	Modal[future]	will
 1	Modal	would
 
+
+1   Qword Modal
+1   Qword does
+
+
 # Modals for infinitive
 1   Modal_pre_infinitive[present]    Semi_Modal
 1   Modal_pre_infinitive[present]    Modal have

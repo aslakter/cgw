@@ -7,7 +7,7 @@
 1   S1  why does NP[sing] VP_BASE ?
 1   S1  what does NP[sing] VerbI[pres,plur,3rd] ? # Should be VP_BASE I think. TODO: add ability to PP after the VerbI # Verb_Present ?
 1   S1  who does NP[sing] VP_BASE ? # TODO: Decide if this is correct # Verb_Present ?
-1000   S1  Q ?
+1   S1  Q ?
 
 1   S   S[sing]
 1   S   S[plur]
@@ -45,8 +45,8 @@
 1       Q[poss]  WH[poss] S
 
 # building blocks of questions
-1       Q[comp]      Modal NP Verb[comp,inf]
-1       Q[trans]     Modal NP VerbT[inf]
+1       Q[comp]      Qword NP Verb[comp,inf]
+1       Q[trans]     Qword NP VerbT[inf]
 
 
 # Compound / complex sentence structures: TODO: maybe LHS should be S?
