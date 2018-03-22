@@ -46,6 +46,56 @@
 1	Noun[plur]	ants
 1	Noun[plur]	nights
 
+# Gerunds 
+# TODO: take out proper noun for some NP
+# GerundNP
+# Gerund2Obj
+# GerundProp
+# GerundPP
+# Gerunds that don't require an object
+# Ex: speaking is hard
+# GerundEmpty
+# GerundInfin
+# GerundThat
+# GerundLocPrep
+
+1   GerundNP        having
+1	GerundInfin 	having
+
+1   GerundEmpty     speaking 
+1   GerundPP        speaking 
+
+1	GerundNP	    covering
+
+1	GerundNP    	being
+1   GerundLocPrep   being
+
+1	GerundEmpty 	riding
+1	GerundNP    	riding
+1	GerundPP    	riding
+1	GerundProper 	riding
+1	Gerund2Obj	riding
+
+1	GerundNP    	drinking
+1	GerundPP    	drinking
+
+1	GerundNP    	growing
+1	GerundPP    	growing
+
+1	GerundNP	    carrying
+1	Gerund2Obj	    carrying
+
+1	GerundNP    	migrating
+1	GerundPP    	migrating
+1	GerundProper    migrating
+
+# TODO: need to handle "Suggesting to the king"
+1	GerundThat	    suggesting
+
+1	GerundThat  	knowing
+
+
+
 # Determiners.
 1	Det[sing]	a
 1	Det[sing]	another
@@ -80,6 +130,9 @@
 1	Prep	through
 1	Prep	with
 
+# Location Prepositions 
+# to do
+
 # Proper nouns.  Note that our Proper tag is just for people.
 1	Proper[sing]	Arthur
 1	Proper[sing]	Guinevere
@@ -107,6 +160,11 @@
 1	Proper[plur,det]	Britons
 1	Proper[plur,det]	Saxons
 
+
+1   AllProper    Proper[sing]
+1   AllProper    Proper[plur]
+1   AllProper    Proper[plur,det]
+1   AllProper    Proper[sing,det]
 
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,

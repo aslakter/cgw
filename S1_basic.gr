@@ -188,6 +188,28 @@
 # 1 NP[sing] CC[start,negative] NP[plur] CC[end,negative] NP[sing]
 # 1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[plur]
 
+# Gerunds (nouns) - but must be in the beginning
+# GerundNP, Gerund2Obj, GerundProp, GerundPP
+# GerundEmpty, GerundInfin, GerundThat, GerundLocPrep
+
+1  GerundS      GerundNP NP 
+1  GerundS      Gerund2Obj NP 2OBJ
+1  GerundS      GerundProp AllProper
+1  GerundS      GerundPP PP 
+1  GerundS      GerundEmpty
+
+#TODO: Infinitive versb
+#1  GerundS     GerundInfin VerbInfin
+
+1  GerundS      GerundThat that S
+1  GerundS      GerundThat S
+
+# To do: Location Prep Phrase
+# 1  GerundS      GerundLocPrep LocPrepP
+
+1  S      GerundS is Adj[sing]
+1  S      GerundS suggests S
+1  S      GerundS suggests that S
 
 # Modifiers
 3  Modifier[sing]    Adj[sing]
