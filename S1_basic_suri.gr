@@ -29,17 +29,20 @@
 1 VP[sing] Verb[intrans,sing]
 1 VP[sing] VP[sing] PP
 
+# Suri added 
 1 VP[sing] VerbT[2object,pres,sing,3rd] NP NP
 1 VP[sing] PreGerund[sing] Gerund NP
-1 VP[plur] PreGerund[plur] Gerund NP
 
 
 1 VP[plur] Verb[trans,plur] NP
 1 VP[plur] Verb[intrans,plur]
 1 VP[plur] VP[plur] PP
 
+# Suri added
 1 VP[plur] VerbT[2object,base] NP NP
 1 VP[plur] VerbT[2object,pres,plur,3rd]
+1 VP[plur] PreGerund[plur] Gerund NP
+
 
 1 Verb[trans,sing] VerbT[pres,sing,3rd]
 1 Verb[intrans,sing] VerbI[pres,sing,3rd]
@@ -81,6 +84,13 @@
 1  NP[plur] Noun[plur]
 1  NP[plur] Proper[plur]
 1  NP[plur] Modifier[plur] Proper[plur]
+
+# Suri Added  
+# I need to split this up by subcases because 
+# there is a difference for "having a... is hard"
+# versus "riding to Camelot is hard" or "speaking is hard"
+1 NP   GerundNoun
+# 1 NP   Det[sing] GerundNoun
 
 
 # Modifiers

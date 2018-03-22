@@ -113,15 +113,16 @@
 
 1	VerbI[pres,sing,3rd]	drinks
 
+# Suri Added
 # Verbs that take two objects 
 1   VerbT[2object,pres,sing,3rd]       carries 
 1   VerbT[2object,pres,sing,3rd]       rides 
 
 
 # End-of-sentence.
-1	Misc	!
-1	Misc	.
-1	Misc	?
+1	END 	!
+1	END 	.
+1	END 	?
 
 # Pauses.
 1	Misc	,
@@ -270,6 +271,7 @@
 1	Verb_Base	migrate
 1	Verb_Base	know
 
+# Suri Added
 # Verbs that take two objects 
 1   VerbT[2object,base]       carry 
 1   VerbT[2object,base]       ride 
@@ -289,6 +291,7 @@
 1	Verb_Past	migrated
 1	Verb_Past	knew
 
+# Suri Added
 # Verbs (present participles).
 1	Gerund	having
 1	Gerund	speaking
@@ -301,6 +304,10 @@
 1	Gerund	suggesting
 1	Gerund	migrating
 1	Gerund	knowing
+
+# Suri Added -- need to subcase
+# GerundNoun Gerund 
+
 
 # Gerund Phrase 
 1 PreGerund[sing] PreGerund[sing,futr]
