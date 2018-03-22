@@ -321,7 +321,8 @@
 1   VerbI[pres,sing,3rd]   does
 
 # 'to'
-1	Misc	to
+# To Do: this is over simplifying
+1	Prep	to
 
 # 'not'
 1	Misc	not
