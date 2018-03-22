@@ -30,8 +30,10 @@
 1 VP[sing] VP[sing] PP
 
 # Suri added 
-1 VP[sing] VerbT[2object,pres,sing,3rd] NP NP
-1 VP[sing] PreGerund[sing] Gerund NP
+1 VP[sing] VerbT[2object,pres,sing,3rd] NP Noun PP
+1 VP[sing] VerbT[2object,press,sing,3rd] NP home
+
+# 1 VP[sing] PreGerund[sing] Gerund NP <--fix this
 
 
 1 VP[plur] Verb[trans,plur] NP
@@ -39,9 +41,10 @@
 1 VP[plur] VP[plur] PP
 
 # Suri added
-1 VP[plur] VerbT[2object,base] NP NP
+1 VP[plur] VerbT[2object,base] NP NP #check if can be any 2 noun phrase
+# might need to split for specific second NP type, locational, prep, etc.
 1 VP[plur] VerbT[2object,pres,plur,3rd]
-1 VP[plur] PreGerund[plur] Gerund NP
+# 1 VP[plur] PreGerund[plur] Gerund NP <<-- see fixes below
 
 
 1 Verb[trans,sing] VerbT[pres,sing,3rd]
@@ -90,22 +93,33 @@
 # there is a difference for "having a... is hard"
 # versus "riding to Camelot is hard" or "speaking is hard"
 
-# riding [Det Noun, NounPlural], [Prep phrase], [Proper] all work
-# having [Det Noun], [Proper?] [VP present?]
-# speaking [Prep Phrase]
-# covering [NP]
-# being [Det Noun],[Location Prepositions], [Proper?]
-# drinking [Det Noun], [Noun], [Prep]
-# growing [NP], maybe: growing for
-# carrying [NP] [NP, NP]
-# suggesting [that], [to, (for?)], [VP]
-# migrating Prep 
-# knowing that..., [Proper], [VP]
+# only time can have gerund as noun phrase is with BE (will be), might have been, etc.
 
+# riding []. [Det Noun, NounPlural], [Prep phrase], [Proper] all work
+# *To handle later: having [S] [Det Noun], [VP present?] [to verb (infinitive?)]
+# speaking [], [Prep Phrase]
+# covering [NP] #idiomatically can say "covering for ..."
+# being [Det Noun],[Location Prepositions, not to], [Proper]
+# drinking [Det Noun], [Noun], [Prep Phrase], * no Proper noun here
+# growing [NP], [Prep] ** Growing for?
+# carrying [NP] [NP, Noun-Location]
+# suggesting [that S], [to NP], [S] ** can take any kind of sentence?
+# migrating [PrepPhrase] [NP] ** migrating cocounts
+# knowing that [S], [Proper], [S]
 
-1 NP   GerundNoun
-# 1 NP   Det[sing] GerundNoun
+# Knowing that riding is hard suggests that Arthor is the king 
+# Knowing that riding is hard [might have suggested] that Arthor scared the king
+# Knowing that riding is hard [BE - is] bloody
+# Growing the flowers suggests... [S]
+# 
+1 S      GerundNoun Classificiations ** TODO ... [BE] [ADJ]
+1 S      GerundNoun suggests that S 
+1 S      GerundNoun suggests S
 
+# Gerunds as a verb phrase 
+# Arthur (is riding)<-- new form of verb, Present Progressive
+# Arthur (will be) riding, (should be) riding, 
+# Arther (had been) riding, (might have been) riding
 
 # Modifiers
 3  Modifier[sing]    Adj[sing]
