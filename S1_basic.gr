@@ -48,12 +48,18 @@
 1 VP[plur] VP[plur] PP
 
 1 Verb[trans,sing] VerbT[pres,sing,3rd]
+1 Verb[trans,sing] VerbT[past,sing,3rd]
 1 Verb[intrans,sing] VerbI[pres,sing,3rd]
+1 Verb[intrans,sing] VerbI[past,sing,3rd]
 1 Verb[linking,sing] VerbL[pres,sing,3rd]
+1 Verb[linking,sing] VerbL[past,sing,3rd]
 
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
+1 Verb[trans,plur] VerbT[past,plur,3rd]
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
+1 Verb[intrans,plur] VerbI[past,plur,3rd]
 1 Verb[linking,plur] VerbL[pres,plur,3rd]
+1 Verb[linking,plur] VerbL[past,plur,3rd]
 
 
 # Verb Phrases with conjunctions
