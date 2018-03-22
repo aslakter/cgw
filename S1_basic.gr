@@ -40,12 +40,18 @@
 1 VP[sing] Verb[linking,sing]
 1 VP[sing] VP[sing] PP
 
+# Complementizer phrases post VP
+1 VP[sing] VP[sing] CP_generic
+
 1 VP[plur] Verb[trans,plur] NP
 1 VP[plur] Verb[intrans,plur]
 1 VP[plur] Verb[linking,plur] NP[plur]
 1 VP[plur] Verb[linking,plur] Modifier[plur]
 1 VP[plur] Verb[linking,plur]
 1 VP[plur] VP[plur] PP
+
+# Complementizer phrases post VP
+1 VP[plur] VP[plur] CP_generic
 
 1 Verb[trans,sing] VerbT[pres,sing,3rd]
 1 Verb[trans,sing] VerbT[past,sing,3rd]
@@ -149,3 +155,9 @@
 
 # Prepositional Phrases
 1	PP	Prep NP
+
+# Complementizer Phrases
+1   CP_generic  SC_generic S
+1   CP_that     SC_that S
+1   CP_if   SC_if S
+

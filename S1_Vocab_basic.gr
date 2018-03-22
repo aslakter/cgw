@@ -157,11 +157,15 @@
 1	Misc	there
 
 # Subordinating conjunctions.
-1	SC	that # TODO: "the horse that wanted the crown VP" (IS NEEDED!!)
-1	SC	so # TODO: can always occur at end of a VP? (acting as "so that" aka: in order to)
-1	SC	while   # TODO: can always occur at end of a VP?
-1	SC	because # TODO: can always occur at end of a VP?
-1	SC	if # TODO: can always occur at end of a VP?
+1   SC  SC_generic
+
+1	SC_that	that # TODO: "the horse that wanted the crown VP" (IS NEEDED!!)
+1	SC_generic	so # TODO: can always occur at end of a VP? (acting as "so that" aka: in order to)
+1   SC_generic  so that # More specific case of above
+1	SC_generic	while   # TODO: can always occur at end of a VP?
+1	SC_generic	because # TODO: can always occur at end of a VP?
+1   SC_generic  SC_if
+1	SC_if	if # TODO: can always occur at end of a VP?
 
 # Modals.
 1	Misc	can
