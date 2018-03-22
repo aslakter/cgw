@@ -277,18 +277,29 @@
 1	Verb_Base	know        # NONE _ that, if (NOT: knows X because/so/while --> no)
 
 # Verbs (past tense).
-1	Verb_Past	had
-1	Verb_Past	spoke
-1	Verb_Past	covered
-1	Verb_Past	was
-1	Verb_Past	were
-1	Verb_Past	rode
-1	Verb_Past	drank
-1	Verb_Past	grew
-1	Verb_Past	carried
-1	Verb_Past	suggested
-1	Verb_Past	migrated
-1	Verb_Past	knew
+1	VerbT[past,sing,3rd]	had
+1	VerbT[past,sing,3rd]	spoke
+1	VerbT[past,sing,3rd]	covered
+1	VerbT[past,sing,3rd]	rode
+1	VerbT[past,sing,3rd]	drank
+1	VerbT[past,sing,3rd]	grew
+1	VerbT[past,sing,3rd]	carried
+1	VerbT[past,sing,3rd]	suggested
+1	VerbT[past,sing,3rd]	migrated
+1	VerbT[past,sing,3rd]	knew
+
+1	VerbI[past,sing,3rd]	spoke  ## TODO: fix these verb categories
+1	VerbI[past,sing,3rd]	rode
+1	VerbI[past,sing,3rd]	drank
+1	VerbI[past,sing,3rd]	grew
+1	VerbI[past,sing,3rd]	suggested
+1	VerbI[past,sing,3rd]	migrated
+1	VerbI[past,sing,3rd]	knew
+
+1	VerbL[past,sing,3rd]	was
+1	VerbL[past,plur,3rd]	were
+
+
 
 # Verbs (present participles).
 1	Misc	having
