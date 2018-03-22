@@ -335,17 +335,32 @@
 1	PresPart2Obj	carrying
 
 # Verbs (past participle).
-1	Misc	had
-1	Misc	spoken
-1	Misc	covered
-1	Misc	been
-1	Misc	ridden
-1	Misc	drunk
-1	Misc	grown
-1	Misc	carried
-1	Misc	suggested
-1	Misc	migrated
-1	Misc	known
+1   PrePastPerfect  had
+1   PrePastPerfect  have
+
+1	PastPartT	had
+1	PastPartT	spoken
+1	PastPartT	covered
+1	PastPartT	ridden
+1	PastPartT	drunk
+1	PastPartT	grown
+1	PastPartT	carried
+1	PastPartT	suggested
+1	PastPartT	migrated
+1	PastPartT	known
+
+1	PastPartI	spoken
+1	PastPartI	ridden
+1	PastPartI	drunk
+1	PastPartI	grown
+1	PastPartI	suggested
+1	PastPartI	migrated
+1	PastPartI	known
+
+1   PastPart2Obj    ridden
+1   PastPart2Obj    carried
+
+1	PastPartL	been        # L
 
 # More third person singular verbs.
 1	VerbT[pres,sing,3rd]	speaks
