@@ -50,6 +50,10 @@
 # 2 object verbs
 1 VP[sing] VerbT[2object,pres,sing,3rd] 2OBJ
 
+# Present Participle 
+1 VP[sing] is PresPart2Obj 2OBJ
+1 VP[sing] is PresPart NP
+
 1 VP[plur] Verb[trans,plur] NP
 1 VP[plur] Verb[intrans,plur]
 1 VP[plur] Verb[linking,plur] NP[plur]
@@ -60,9 +64,13 @@
 # Complementizer phrases post VP
 1 VP[plur] VP[plur] CP_generic
 
-
+# Two Objects
 1 VP[plur] VerbT[2object,pres,plur,3rd] 2OBJ
 1 VP[plur] VerbT[2object,base] 2OBJ
+
+# Present Participle 
+1 VP[plur] are PresPart2Obj 2OBJ
+1 VP[plur] are PresPart NP
 
 1 Verb[trans,sing] VerbT[pres,sing,3rd]
 1 Verb[trans,sing] VerbT[past,sing,3rd]

@@ -314,17 +314,20 @@
 
 
 # Verbs (present participles).
-1	Misc	having
-1	Misc	speaking
-1	Misc	covering
-1	Misc	being
-1	Misc	riding
-1	Misc	drinking
-1	Misc	growing
-1	Misc	carrying
-1	Misc	suggesting
-1	Misc	migrating
-1	Misc	knowing
+1	PresPart 	having
+1	PresPart 	speaking
+1	PresPart	covering
+1	PresPart	being
+1	PresPart	riding
+1	PresPart	drinking
+1	PresPart	growing
+1	PresPart	carrying
+1	PresPart	suggesting
+1	PresPart	migrating
+1	PresPart	knowing
+
+1	PresPart2Obj	riding
+1	PresPart2Obj	carrying
 
 # Verbs (past participle).
 1	Misc	had
