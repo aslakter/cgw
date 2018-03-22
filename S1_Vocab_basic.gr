@@ -107,17 +107,16 @@
 1	Proper[plur,det]	Saxons
 
 
-
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,
 # and some of those could also function as intransitives!
 1	VerbT[pres,sing,3rd]	has
 1	VerbT[pres,sing,3rd]	covers
-1	VerbT[pres,sing,3rd]	is
 1	VerbT[pres,sing,3rd]	drinks
 1	VerbT[pres,sing,3rd]	carries
 1	VerbT[pres,sing,3rd]	rides
 
+1	VerbL[pres,sing,3rd]	is
 1	VerbI[pres,sing,3rd]	drinks
 
 # End-of-sentence.
@@ -337,7 +336,6 @@
 1	VerbT[pres,plur,3rd]	have
 1	VerbT[pres,plur,3rd]	speak
 1	VerbT[pres,plur,3rd]	cover
-1	VerbT[pres,plur,3rd]	are
 1	VerbT[pres,plur,3rd]	ride
 1	VerbT[pres,plur,3rd]	drink
 1	VerbT[pres,plur,3rd]	grow
@@ -352,6 +350,8 @@
 1	VerbI[pres,plur,3rd]	grow
 1	VerbI[pres,plur,3rd]	migrate
 1	VerbI[pres,plur,3rd]	know
+
+1	VerbL[pres,plur,3rd]	are
 
 
 # Wh-determiners.

@@ -37,19 +37,28 @@
 
 1 VP[sing] Verb[trans,sing] NP
 1 VP[sing] Verb[intrans,sing]
+1 VP[sing] VP[linking,sing] NP[sing]
+1 VP[sing] VP[linking,sing] Modifier[sing]
+1 VP[sing] VP[linking,sing]
 1 VP[sing] VP[sing] PP
+
 
 1 VP[plur] Verb[trans,plur] NP
 1 VP[plur] Verb[intrans,plur]
+1 VP[plur] VP[linking,plur] NP[plur]
+1 VP[plur] VP[linking,plur] Modifier[plur]
+1 VP[plur] VP[linking,plur]
 1 VP[plur] VP[plur] PP
 
 
 1 Verb[trans,sing] VerbT[pres,sing,3rd]
 1 Verb[intrans,sing] VerbI[pres,sing,3rd]
-
+1 Verb[linking,sing] VerbL[pres,sing,3rd]
 
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
+1 Verb[linking,plur] VerbL[pres,plur,3rd]
+
 
 # TODO: decide if necessary
 1	VP	VerbT NP
