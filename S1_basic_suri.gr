@@ -89,6 +89,20 @@
 # I need to split this up by subcases because 
 # there is a difference for "having a... is hard"
 # versus "riding to Camelot is hard" or "speaking is hard"
+
+# riding [Det Noun, NounPlural], [Prep phrase], [Proper] all work
+# having [Det Noun], [Proper?] [VP present?]
+# speaking [Prep Phrase]
+# covering [NP]
+# being [Det Noun],[Location Prepositions], [Proper?]
+# drinking [Det Noun], [Noun], [Prep]
+# growing [NP], maybe: growing for
+# carrying [NP] [NP, NP]
+# suggesting [that], [to, (for?)], [VP]
+# migrating Prep 
+# knowing that..., [Proper], [VP]
+
+
 1 NP   GerundNoun
 # 1 NP   Det[sing] GerundNoun
 
