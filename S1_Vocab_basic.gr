@@ -96,9 +96,16 @@
 1	Proper[sing]	Holy Grail
 1	Proper[sing]	Round Table
 
+1	Proper[sing,det]	Holy Grail
+1	Proper[sing,det]	Round Table
+
 # Plural proper nouns.
 1	Proper[plur]	Britons
 1	Proper[plur]	Saxons
+
+1	Proper[plur,det]	Britons
+1	Proper[plur,det]	Saxons
+
 
 
 # Verbs (third person singular present).
