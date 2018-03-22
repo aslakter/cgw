@@ -246,7 +246,8 @@
 
 
 1   Qword Modal
-1   Qword does
+1   Qword[sing] does
+1   Qword[plur] do
 
 
 # Modals for infinitive
@@ -362,6 +363,10 @@
 1	VerbT[inf]	suggest     # that (NOT: because, if, so, while) _ that (No others) TODO: I think this requires 'that', but can be silent/dropped
 1	VerbT[inf]	migrate     # NONE _ NONE? (while, if, so, so that, because) (NOT: that)
 1	VerbT[inf]	know        # NONE _ that, if (NOT: knows X because/so/while --> no)
+
+
+1   VerbC[inf] suggest
+1   VerbC[inf] know
 
 1   VerbT[2object,base]       carry 
 1   VerbT[2object,base]       ride 

@@ -19,18 +19,36 @@
 1       Q[yesno]     Q[trans]
 1       Q[yesno]     Q[comp] CP_that
 1       Q[yesno]     Q[comp]
+1       Q[yesno]     Q[link,sing] NP[sing]
+1       Q[yesno]     Q[link,plur] NP[plur]
+1       Q[yesno]     Q[link,sing] Modifier[plur]
+1       Q[yesno]     Q[link,plur] Modifier[plur]
+1       Q[yesno]     Q[link,sing]
+1       Q[yesno]     Q[link,plur]
 
 # questions starting with adverbs (i.e. "where" / "when")
 1       Q[adverb]    WH[adverb] Q[yesno]
 
 # questions starting with "who" / "what" can take their own objects
-1       Q[pronoun]   WH[pronoun] Q[trans]
-1       Q[pronoun]   WH[pronoun] Q[trans] CP[intrans]  # todo: fix this!!
 1       Q[pronoun]   WH[pronoun] VP
 1       Q[pronoun]   WH[pronoun] Q[comp]
 1       Q[pronoun]   WH[pronoun] Q[comp] CP_that
+
+1       Q[pronoun]   WH[pronoun] Q[trans]
+1       Q[pronoun]   WH[pronoun] Q[trans] CP_intrans
 1       Q[pronoun]   WH[pronoun] Q[trans] NP Prep
-8       Q[pronoun]   WH[pronoun] Q[trans] Prep
+1       Q[pronoun]   WH[pronoun] Q[trans] Prep
+
+1       Q[pronoun]   WH[pronoun] Q[link,sing]
+1       Q[pronoun]   WH[pronoun] Q[link,sing] CP_intrans
+1       Q[pronoun]   WH[pronoun] Q[link,sing] NP[sing] Prep
+1       Q[pronoun]   WH[pronoun] Q[link,sing] Prep
+
+1       Q[pronoun]   WH[pronoun] Q[link,plur]
+1       Q[pronoun]   WH[pronoun] Q[link,plur] CP_intrans
+1       Q[pronoun]   WH[pronoun] Q[link,plur] NP[plur] Prep
+1       Q[pronoun]   WH[pronoun] Q[link,plur] Prep
+
 
 # questions starting with "which" / "what" (determiners)
 1       Q[det]   WH[det] S
@@ -39,8 +57,16 @@
 1       Q[poss]  WH[poss] S
 
 # building blocks of questions
-1       Q[comp]      Qword NP Verb[comp,inf]
+1       Q[comp]      Qword NP VerbC[inf]
+
+1       Q[trans]     Qword[sing] NP[sing] VerbT[inf]
+1       Q[trans]     Qword[plur] NP[plur] VerbT[inf]
 1       Q[trans]     Qword NP VerbT[inf]
+
+1       Q[link,sing]     Qword[sing] NP[sing] VerbL[inf]
+1       Q[link,plur]     Qword[plur] NP[plur] VerbL[inf]
+1       Q[link,sing]     Qword NP VerbL[inf]
+1       Q[link,plur]     Qword NP VerbL[inf]
 
 
 # Compound / complex sentence structures: TODO: maybe LHS should be S?
@@ -380,4 +406,14 @@
 1   CP_generic  SC_generic S
 1   CP_that     SC_that S
 1   CP_if   SC_if S
+1   CP_intrans  SC_that S[intrans]
+
+1   S[intrans]   S[intrans] CC[positive] S[intrans]
+1   S[intrans]   S[intrans] CC[negative] S[intrans]
+1   S[intrans]   NP[sing] VI[sing]
+1   S[intrans]   NP[plur] VI[plur]
+1   VI[sing] VerbI[past,sing,3rd]
+1   VI[sing] VerbI[pres,sing,3rd]
+1   VI[plur] VerbI[pres,plur,3rd]
+1   VI[plur] VerbI[past,plur,3rd]
 
