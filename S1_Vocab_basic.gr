@@ -172,16 +172,21 @@
 1	SC_if	if # TODO: can always occur at end of a VP?
 
 # Modals.
-1	Misc	can
-1	Misc	could
-1	Misc	may
-1	Misc	might
-1	Misc	must
-1	Misc	ought
-1	Misc	shall
-1	Misc	should
-1	Misc	will
-1	Misc	would
+1	Modal	can
+1	Modal	could
+1	Modal	may
+1	Modal	might
+1	Modal	must
+1	Semi_Modal	ought
+1	Modal	shall
+1	Modal	should
+1	Modal	will
+1	Modal	would
+
+# Modals for infinitive
+1   Modal_pre_infinitive[present]    Semi_Modal
+1   Modal_pre_infinitive[present]    Modal have
+1   Modal_pre_infinitive[past]    Modal have had
 
 
 # Adjectives.
