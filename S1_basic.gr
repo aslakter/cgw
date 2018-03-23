@@ -97,6 +97,7 @@
 1 VP[sing] Verb[linking,sing] Modifier[sing]
 1 VP[sing] Verb[linking,sing]
 1 VP[sing] VP[sing] PP
+1 VP[sing] VP[sing] Adv
 
 1 VP[sing] Adv Verb[trans,sing] NP
 1 VP[sing] Adv Verb[intrans,sing]
@@ -130,6 +131,7 @@
 1 VP[plur] Verb[linking,plur] Modifier[plur]
 1 VP[plur] Verb[linking,plur]
 1 VP[plur] VP[plur] PP
+1 VP[plur] VP[plur] Adv
 
 1 VP[plur] Adv Verb[trans,plur] NP
 1 VP[plur] Adv Verb[intrans,plur]
