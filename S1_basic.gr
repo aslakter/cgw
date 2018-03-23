@@ -143,7 +143,7 @@
 # Complementizer phrases post VP
 1 VP[plur] VP[plur] CP_generic
 
-# Infinitive 
+# Infinitive
 1 VP[plur] VerbT[2Object,infin,pres] 2OBJ
 1 VP[plur] VerbT[2Object,infin,past] 2OBJ
 
@@ -421,6 +421,7 @@
 # Complementizer Phrases
 1   CP_generic  SC_generic S
 1   CP_that     SC_that S
+1   CP_that     S  #dropped "that" case
 1   CP_if   SC_if S
 1   CP_intrans  SC_that S[intrans]
 
