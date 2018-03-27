@@ -92,23 +92,25 @@
 
 # Verb Phrases
 1 VP[sing] Verb[trans,sing] NP
+1 VP[sing] VerbT[pres,sing,3rd,that] CP_that
 1 VP[sing] Verb[intrans,sing]
 1 VP[sing] Verb[linking,sing] NP[sing]
 1 VP[sing] Verb[linking,sing] Modifier[sing]
 1 VP[sing] Verb[linking,sing]
-1 VP[sing] VP[sing] PP
-1 VP[sing] VP[sing] Adv
+0.01 VP[sing] VP[sing] PP
+0.01 VP[sing] VP[sing] Adv
 
 1 VP[sing] Adv Verb[trans,sing] NP
+1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_that
 1 VP[sing] Adv Verb[intrans,sing]
 1 VP[sing] Adv Verb[linking,sing] NP[sing]
 1 VP[sing] Adv Verb[linking,sing] Modifier[sing]
 1 VP[sing] Adv Verb[linking,sing]
-1 VP[sing] Adv VP[sing] PP
+0.01 VP[sing] Adv VP[sing] PP
 
 
 # Complementizer phrases post VP
-1 VP[sing] VP[sing] CP_generic
+0.01 VP[sing] VP[sing] CP_generic
 
 # 2 object verbs plural
 1 2OBJ NP Noun PP
@@ -126,14 +128,16 @@
 1 VP[sing] is PresPart NP
 
 1 VP[plur] Verb[trans,plur] NP
+1 VP[plur] VerbT[pres,plur,3rd,that] CP_that
 1 VP[plur] Verb[intrans,plur]
 1 VP[plur] Verb[linking,plur] NP[plur]
 1 VP[plur] Verb[linking,plur] Modifier[plur]
 1 VP[plur] Verb[linking,plur]
-1 VP[plur] VP[plur] PP
-1 VP[plur] VP[plur] Adv
+0.01 VP[plur] VP[plur] PP
+0.01 VP[plur] VP[plur] Adv
 
 1 VP[plur] Adv Verb[trans,plur] NP
+1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_that
 1 VP[plur] Adv Verb[intrans,plur]
 1 VP[plur] Adv Verb[linking,plur] NP[plur]
 1 VP[plur] Adv Verb[linking,plur] Modifier[plur]
@@ -150,6 +154,13 @@
 # Two Objects
 1 VP[plur] VerbT[2object,pres,plur,3rd] 2OBJ
 1 VP[plur] VerbT[2object,base] 2OBJ
+
+# Modal Not Participle
+1 Verb[trans, sing] Modal VerbT[inf]
+1 Verb[intrans, sing] Modal VerbT[inf]
+
+1 Verb[trans, plur] Modal VerbT[inf]
+1 Verb[intrans, plur] Modal VerbT[inf]
 
 # Present Participle 
 1 VP[plur] are PresPart2Obj 2OBJ
@@ -301,15 +312,15 @@
 
 
 # Verb Phrases with conjunctions
-1   VP[sing]    VP[sing] CC[positive] VP[sing]
-1   VP[sing]    VP[sing] CC[negative] VP[sing]
-1   VP[sing]    CC[start,positive] VP[sing] CC[end,positive] VP[sing]
-1   VP[sing]    CC[start,negative] VP[sing] CC[end,negative] VP[sing]
+0.01   VP[sing]    VP[sing] CC[positive] VP[sing]
+0.01   VP[sing]    VP[sing] CC[negative] VP[sing]
+0.01   VP[sing]    CC[start,positive] VP[sing] CC[end,positive] VP[sing]
+0.01   VP[sing]    CC[start,negative] VP[sing] CC[end,negative] VP[sing]
 
-1   VP[plur]    VP[plur] CC[positive] VP[plur]
-1   VP[plur]    VP[plur] CC[negative] VP[plur]
-1   VP[plur]    CC[start,positive] VP[plur] CC[end,positive] VP[plur]
-1   VP[plur]    CC[start,negative] VP[plur] CC[end,negative] VP[plur]
+0.01   VP[plur]    VP[plur] CC[positive] VP[plur]
+0.01   VP[plur]    VP[plur] CC[negative] VP[plur]
+0.01   VP[plur]    CC[start,positive] VP[plur] CC[end,positive] VP[plur]
+0.01   VP[plur]    CC[start,negative] VP[plur] CC[end,negative] VP[plur]
 
 
 # Noun phrases
@@ -319,12 +330,12 @@
 1   NP[plur] NP[plur] PP
 
 # Noun phrase with distinguishing phrases "the horse... that migrated here ..."
-1   NP[sing]    NP[sing] Det[distinguishing] VP[sing]
-1   NP[sing]    NP[sing] Det[distinguishing] S[sing]
-1   NP[sing]    NP[sing] Det[distinguishing] S[plur]
-1   NP[plur]    NP[plur] Det[distinguishing] VP[plur]
-1   NP[plur]    NP[plur] Det[distinguishing] S[plur]
-1   NP[plur]    NP[plur] Det[distinguishing] S[sing]
+0.01   NP[sing]    NP[sing] Det[distinguishing] VP[sing]
+0.01   NP[sing]    NP[sing] Det[distinguishing] S[sing]
+0.01   NP[sing]    NP[sing] Det[distinguishing] S[plur]
+0.01   NP[plur]    NP[plur] Det[distinguishing] VP[plur]
+0.01   NP[plur]    NP[plur] Det[distinguishing] S[plur]
+0.01   NP[plur]    NP[plur] Det[distinguishing] S[sing]
 
 1  NP[sing] Det[sing] Modifier[sing] Noun[sing]
 1  NP[sing] Modifier[sing] Noun[sing]
@@ -424,6 +435,7 @@
 1   CP_that     S  #dropped "that" case
 1   CP_if   SC_if S
 1   CP_intrans  SC_that S[intrans]
+1   CP_intrans  S[intrans] # dropped "that" case
 
 1   S[intrans]   S[intrans] CC[positive] S[intrans]
 1   S[intrans]   S[intrans] CC[negative] S[intrans]

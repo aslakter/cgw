@@ -387,6 +387,18 @@
 1	VerbT[past,sing,3rd]	migrated
 1	VerbT[past,sing,3rd]	knew
 
+# Verbs that can precede specific subordinating clauses
+# ____ that
+1   VerbT[past,sing,3rd,that] spoke
+1   VerbT[past,sing,3rd,that] covered
+1   VerbT[past,sing,3rd,that] suggested
+1   VerbT[past,sing,3rd,that] knew
+
+# Verbs that can follow specific subordinating clauses
+1   VerbT[that,past,sing,3rd] suggested
+1   VerbT[that,past,sing,3rd] grew
+
+
 1	VerbI[past,sing,3rd]	spoke  ## TODO: fix these verb categories
 1	VerbI[past,sing,3rd]	rode
 1	VerbI[past,sing,3rd]	drank
@@ -467,6 +479,17 @@
 1	VerbT[pres,sing,3rd]	suggests
 1	VerbT[pres,sing,3rd]	knows
 
+# Verbs that can precede specific subordinating clauses
+# ____ that
+1   VerbT[pres,sing,3rd,that] speaks
+1   VerbT[pres,sing,3rd,that] covers
+1   VerbT[pres,sing,3rd,that] suggests
+1   VerbT[pres,sing,3rd,that] knows
+
+# Verbs that can follow specific subordinating clauses
+1   VerbT[that,pres,sing,3rd] suggests
+1   VerbT[that,pres,sing,3rd] grows
+
 1	VerbI[pres,sing,3rd]	speaks
 1	VerbI[pres,sing,3rd]	grows
 1	VerbI[pres,sing,3rd]	goes
@@ -486,6 +509,13 @@
 1	VerbT[pres,plur,3rd]	suggest
 1	VerbT[pres,plur,3rd]	migrate
 1	VerbT[pres,plur,3rd]	know
+
+# Verbs that can precede specific subordinating clauses
+# ____ that
+1   VerbT[pres,plur,3rd,that] speak
+1   VerbT[pres,plur,3rd,that] cover
+1   VerbT[pres,plur,3rd,that] suggest
+1   VerbT[pres,plur,3rd,that] know
 
 1	VerbI[pres,plur,3rd]	speak
 1	VerbI[pres,plur,3rd]	ride
