@@ -342,9 +342,9 @@
 1   Pronoun[plur,obj] Pronoun[obj,plur,fem]
 1   Pronoun[plur,obj] Pronoun[obj,plur,neut]
 
-1   Pronoun[plur,nom] Pronoun[plur,sing,masc]
-1   Pronoun[plur,nom] Pronoun[plur,sing,fem]
-1   Pronoun[plur,nom] Pronoun[plur,sing,neut]
+1   Pronoun[plur,nom] Pronoun[nom,plur,masc]
+1   Pronoun[plur,nom] Pronoun[nom,plur,fem]
+1   Pronoun[plur,nom] Pronoun[nom,plur,neut]
 
 # Noun phrases
 1   NP[nom] NP[sing,nom]
