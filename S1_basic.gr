@@ -93,6 +93,8 @@
 # Verb Phrases
 1 VP[sing] Verb[trans,sing] NP[obj]
 1 VP[sing] VerbT[pres,sing,3rd,that] CP_that
+1 VP[sing] VerbT[pres,sing,3rd,that] CP_what
+1 VP[sing] VerbT[pres,sing,3rd,that] CP_who
 1 VP[sing] Verb[intrans,sing]
 1 VP[sing] Verb[linking,sing] NP[sing,nom]
 1 VP[sing] Verb[linking,sing] Modifier[sing]
@@ -102,6 +104,8 @@
 
 1 VP[sing] Adv Verb[trans,sing] NP[obj]
 1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_that
+1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_what
+1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_who
 1 VP[sing] Adv Verb[intrans,sing]
 1 VP[sing] Adv Verb[linking,sing] NP[sing,nom]
 1 VP[sing] Adv Verb[linking,sing] Modifier[sing]
@@ -135,6 +139,8 @@
 
 1 VP[plur] Verb[trans,plur] NP[obj]
 1 VP[plur] VerbT[pres,plur,3rd,that] CP_that
+1 VP[plur] VerbT[pres,plur,3rd,that] CP_what
+1 VP[plur] VerbT[pres,plur,3rd,that] CP_who
 1 VP[plur] Verb[intrans,plur]
 1 VP[plur] Verb[linking,plur] NP[plur,obj]
 1 VP[plur] Verb[linking,plur] Modifier[plur]
@@ -144,6 +150,8 @@
 
 1 VP[plur] Adv Verb[trans,plur] NP[obj]
 1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_that
+1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_what
+1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_who
 1 VP[plur] Adv Verb[intrans,plur]
 1 VP[plur] Adv Verb[linking,plur] NP[plur,obj]
 1 VP[plur] Adv Verb[linking,plur] Modifier[plur]
@@ -515,6 +523,8 @@
 1   CP_that     SC_that S
 1   CP_that     S  #dropped "that" case
 1   CP_if   SC_if S
+1   CP_who   who S
+1   CP_what   what S
 1   CP_intrans  SC_that S[intrans]
 1   CP_intrans  S[intrans] # dropped "that" case
 

@@ -413,6 +413,15 @@
 1   VerbT[past,sing,3rd,that] suggested
 1   VerbT[past,sing,3rd,that] knew
 
+# _____ what
+1   VerbT[past,sing,3rd,what] knew
+1   VerbT[past,sing,3rd,what] covered
+1   VerbT[past,sing,3rd,what] spoke
+
+# _____ who
+1   VerbT[past,sing,3rd,who] knew
+1   VerbT[past,sing,3rd,who] covered
+
 # Verbs that can follow specific subordinating clauses
 1   VerbT[that,past,sing,3rd] suggested
 1   VerbT[that,past,sing,3rd] grew
@@ -505,6 +514,15 @@
 1   VerbT[pres,sing,3rd,that] suggests
 1   VerbT[pres,sing,3rd,that] knows
 
+# _____ what
+1   VerbT[pres,sing,3rd,what] knows
+1   VerbT[pres,sing,3rd,what] covers
+1   VerbT[pres,sing,3rd,what] speaks
+
+# _____ who
+1   VerbT[pres,sing,3rd,who] knows
+1   VerbT[pres,sing,3rd,who] covers
+
 # Verbs that can follow specific subordinating clauses
 1   VerbT[that,pres,sing,3rd] suggests
 1   VerbT[that,pres,sing,3rd] grows
@@ -535,6 +553,15 @@
 1   VerbT[pres,plur,3rd,that] cover
 1   VerbT[pres,plur,3rd,that] suggest
 1   VerbT[pres,plur,3rd,that] know
+
+# _____ what
+1   VerbT[pres,plur,3rd,what] know
+1   VerbT[pres,plur,3rd,what] cover
+1   VerbT[pres,plur,3rd,what] speak
+
+# _____ who
+1   VerbT[pres,plur,3rd,who] know
+1   VerbT[pres,plur,3rd,who] cover
 
 1	VerbI[pres,plur,3rd]	speak
 1	VerbI[pres,plur,3rd]	ride
