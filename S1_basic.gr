@@ -156,10 +156,10 @@
 1 VP[plur] Adv Verb[linking,plur] NP[plur,obj]
 1 VP[plur] Adv Verb[linking,plur] Modifier[plur]
 1 VP[plur] Adv Verb[linking,plur]
-1 VP[plur] Adv VP[plur] PP
+0.01 VP[plur] Adv VP[plur] PP
 
 # Complementizer phrases post VP
-1 VP[plur] VP[plur] CP_generic
+0.01 VP[plur] VP[plur] CP_generic
 
 # Infinitive
 1 VP[plur] VerbT[2Object,infin,pres] 2OBJ
@@ -346,12 +346,12 @@
 1   Pronoun[sing,nom] Pronoun[nom,sing,fem]
 1   Pronoun[sing,nom] Pronoun[nom,sing,neut]
 
-1   Pronoun[plur,obj] Pronoun[obj,plur,masc]
-1   Pronoun[plur,obj] Pronoun[obj,plur,fem]
+#1   Pronoun[plur,obj] Pronoun[obj,plur,masc]
+#1   Pronoun[plur,obj] Pronoun[obj,plur,fem]
 1   Pronoun[plur,obj] Pronoun[obj,plur,neut]
 
-1   Pronoun[plur,nom] Pronoun[nom,plur,masc]
-1   Pronoun[plur,nom] Pronoun[nom,plur,fem]
+#1   Pronoun[plur,nom] Pronoun[nom,plur,masc]
+#1   Pronoun[plur,nom] Pronoun[nom,plur,fem]
 1   Pronoun[plur,nom] Pronoun[nom,plur,neut]
 
 # Noun phrases
@@ -361,11 +361,11 @@
 1   NP[obj] NP[sing,obj]
 1   NP[obj] NP[plur,obj]
 
-3   NP[sing,obj] NP[sing,obj] PP
-1   NP[plur,obj] NP[plur,obj] PP
+0.03   NP[sing,obj] NP[sing,obj] PP
+0.01   NP[plur,obj] NP[plur,obj] PP
 
-3   NP[sing,nom] NP[sing,nom] PP
-1   NP[plur,nom] NP[plur,nom] PP
+0.03   NP[sing,nom] NP[sing,nom] PP
+0.01   NP[plur,nom] NP[plur,nom] PP
 
 # Noun phrase with distinguishing phrases "the horse... that migrated here ..."
 0.01   NP[sing,nom]    NP[sing,nom] Det[distinguishing] VP[sing]
@@ -420,69 +420,69 @@
 1  NP[plur,obj] Modifier[plur] Proper[plur]
 
 # NP with CC TODO: decide on requiring non-terminals or not
-1 NP[plur,obj] NP[obj] and NP[obj]
-1 NP[plur,nom] NP[nom] and NP[nom]
+0.01 NP[plur,obj] NP[obj] and NP[obj]
+0.01 NP[plur,nom] NP[nom] and NP[nom]
 
 
 # NP either / neither rules (http://www.grammar-monster.com/lessons/either_or_plural_or_singular_verb.htm)
 # either / or rules
-1 NP[sing,nom] CC[start,positive] NP[sing,nom] CC[end,positive] NP[sing,nom]
-1 NP[plur,nom] CC[start,positive] NP[sing,nom] CC[end,positive] NP[plur,nom]
-1 NP[plur,nom] CC[start,positive] NP[plur,nom] CC[end,positive] NP[sing,nom]
-1 NP[plur,nom] CC[start,positive] NP[plur,nom] CC[end,positive] NP[plur,nom]
+0.01 NP[sing,nom] CC[start,positive] NP[sing,nom] CC[end,positive] NP[sing,nom]
+0.01 NP[plur,nom] CC[start,positive] NP[sing,nom] CC[end,positive] NP[plur,nom]
+0.01 NP[plur,nom] CC[start,positive] NP[plur,nom] CC[end,positive] NP[sing,nom]
+0.01 NP[plur,nom] CC[start,positive] NP[plur,nom] CC[end,positive] NP[plur,nom]
 
-1 NP[sing,obj] CC[start,positive] NP[sing,obj] CC[end,positive] NP[sing,obj]
-1 NP[plur,obj] CC[start,positive] NP[sing,obj] CC[end,positive] NP[plur,obj]
-1 NP[plur,obj] CC[start,positive] NP[plur,obj] CC[end,positive] NP[sing,obj]
-1 NP[plur,obj] CC[start,positive] NP[plur,obj] CC[end,positive] NP[plur,obj]
+0.01 NP[sing,obj] CC[start,positive] NP[sing,obj] CC[end,positive] NP[sing,obj]
+0.01 NP[plur,obj] CC[start,positive] NP[sing,obj] CC[end,positive] NP[plur,obj]
+0.01 NP[plur,obj] CC[start,positive] NP[plur,obj] CC[end,positive] NP[sing,obj]
+0.01 NP[plur,obj] CC[start,positive] NP[plur,obj] CC[end,positive] NP[plur,obj]
 
 # OR rules
-1 NP[sing,nom]  NP[sing,nom] CC[end,positive] NP[sing,nom]
-1 NP[plur,nom]  NP[sing,nom] CC[end,positive] NP[plur,nom]
-1 NP[plur,nom]  NP[plur,nom] CC[end,positive] NP[sing,nom]
-1 NP[plur,nom]  NP[plur,nom] CC[end,positive] NP[plur,nom]
+0.01 NP[sing,nom]  NP[sing,nom] CC[end,positive] NP[sing,nom]
+0.01 NP[plur,nom]  NP[sing,nom] CC[end,positive] NP[plur,nom]
+0.01 NP[plur,nom]  NP[plur,nom] CC[end,positive] NP[sing,nom]
+0.01 NP[plur,nom]  NP[plur,nom] CC[end,positive] NP[plur,nom]
 
-1 NP[sing,obj]  NP[sing,obj] CC[end,positive] NP[sing,obj]
-1 NP[plur,obj]  NP[sing,obj] CC[end,positive] NP[plur,obj]
-1 NP[plur,obj]  NP[plur,obj] CC[end,positive] NP[sing,obj]
-1 NP[plur,obj]  NP[plur,obj] CC[end,positive] NP[plur,obj]
+0.01 NP[sing,obj]  NP[sing,obj] CC[end,positive] NP[sing,obj]
+0.01 NP[plur,obj]  NP[sing,obj] CC[end,positive] NP[plur,obj]
+0.01 NP[plur,obj]  NP[plur,obj] CC[end,positive] NP[sing,obj]
+0.01 NP[plur,obj]  NP[plur,obj] CC[end,positive] NP[plur,obj]
 
 # neither / nor rules
-1 NP[sing,nom] CC[start,negative] NP[sing,nom] CC[end,negative] NP[sing,nom]
-1 NP[plur,nom] CC[start,negative] NP[sing,nom] CC[end,negative] NP[plur,nom]
-1 NP[plur,nom] CC[start,negative] NP[plur,nom] CC[end,negative] NP[sing,nom]
-1 NP[plur,nom] CC[start,negative] NP[plur,nom] CC[end,negative] NP[plur,nom]
+0.01 NP[sing,nom] CC[start,negative] NP[sing,nom] CC[end,negative] NP[sing,nom]
+0.01 NP[plur,nom] CC[start,negative] NP[sing,nom] CC[end,negative] NP[plur,nom]
+0.01 NP[plur,nom] CC[start,negative] NP[plur,nom] CC[end,negative] NP[sing,nom]
+0.01 NP[plur,nom] CC[start,negative] NP[plur,nom] CC[end,negative] NP[plur,nom]
 
-1 NP[sing,obj] CC[start,negative] NP[sing,obj] CC[end,negative] NP[sing,obj]
-1 NP[plur,obj] CC[start,negative] NP[sing,obj] CC[end,negative] NP[plur,obj]
-1 NP[plur,obj] CC[start,negative] NP[plur,obj] CC[end,negative] NP[sing,obj]
-1 NP[plur,obj] CC[start,negative] NP[plur,obj] CC[end,negative] NP[plur,obj]
+0.01 NP[sing,obj] CC[start,negative] NP[sing,obj] CC[end,negative] NP[sing,obj]
+0.01 NP[plur,obj] CC[start,negative] NP[sing,obj] CC[end,negative] NP[plur,obj]
+0.01 NP[plur,obj] CC[start,negative] NP[plur,obj] CC[end,negative] NP[sing,obj]
+0.01 NP[plur,obj] CC[start,negative] NP[plur,obj] CC[end,negative] NP[plur,obj]
 
 
 # NOR rules
-1 NP[sing,nom] NP[sing,nom] CC[end,negative] NP[sing,nom]
-1 NP[plur,nom] NP[sing,nom] CC[end,negative] NP[plur,nom]
-1 NP[plur,nom] NP[plur,nom] CC[end,negative] NP[sing,nom]
-1 NP[plur,nom] NP[plur,nom] CC[end,negative] NP[plur,nom]
+0.01 NP[sing,nom] NP[sing,nom] CC[end,negative] NP[sing,nom]
+0.01 NP[plur,nom] NP[sing,nom] CC[end,negative] NP[plur,nom]
+0.01 NP[plur,nom] NP[plur,nom] CC[end,negative] NP[sing,nom]
+0.01 NP[plur,nom] NP[plur,nom] CC[end,negative] NP[plur,nom]
 
-1 NP[sing,obj] NP[sing,obj] CC[end,negative] NP[sing,obj]
-1 NP[plur,obj] NP[sing,obj] CC[end,negative] NP[plur,obj]
-1 NP[plur,obj] NP[plur,obj] CC[end,negative] NP[sing,obj]
-1 NP[plur,obj] NP[plur,obj] CC[end,negative] NP[plur,obj]
+0.01 NP[sing,obj] NP[sing,obj] CC[end,negative] NP[sing,obj]
+0.01 NP[plur,obj] NP[sing,obj] CC[end,negative] NP[plur,obj]
+0.01 NP[plur,obj] NP[plur,obj] CC[end,negative] NP[sing,obj]
+0.01 NP[plur,obj] NP[plur,obj] CC[end,negative] NP[plur,obj]
 
 # TODO: decide whether or not to use proximity rule(s) below (this is reasonable in practice, but not theory)
 # proximiy either/or neither/nor rules
 # either / or rules
-# 1 NP[sing] CC[start,positive] NP[sing] CC[end,positive] NP[sing]
-# 1 NP[plur] CC[start,positive] NP[sing] CC[end,positive] NP[plur]
-# 1 NP[sing] CC[start,positive] NP[plur] CC[end,positive] NP[sing]
-# 1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[plur]
+# 0.01 NP[sing] CC[start,positive] NP[sing] CC[end,positive] NP[sing]
+# 0.01 NP[plur] CC[start,positive] NP[sing] CC[end,positive] NP[plur]
+# 0.01 NP[sing] CC[start,positive] NP[plur] CC[end,positive] NP[sing]
+# 0.01 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[plur]
 
 # neither / nor rules
-# 1 NP[sing] CC[start,negative] NP[sing] CC[end,negative] NP[sing]
-# 1 NP[plur] CC[start,negative] NP[sing] CC[end,negative] NP[plur]
-# 1 NP[sing] CC[start,negative] NP[plur] CC[end,negative] NP[sing]
-# 1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[plur]
+# 0.01 NP[sing] CC[start,negative] NP[sing] CC[end,negative] NP[sing]
+# 0.01 NP[plur] CC[start,negative] NP[sing] CC[end,negative] NP[plur]
+# 0.01 NP[sing] CC[start,negative] NP[plur] CC[end,negative] NP[sing]
+# 0.01 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[plur]
 
 # Gerunds (nouns) - but must be in the beginning
 # GerundNP, Gerund2Obj, GerundProp, GerundPP
@@ -503,9 +503,9 @@
 # To do: Location Prep Phrase
 # 1  GerundS      GerundLocPrep LocPrepP
 
-1  S   GerundS is Adj[sing]
-1  S   GerundS suggests S
-1  S   GerundS suggests that S
+0.01  S   GerundS is Adj[sing]
+0.01  S   GerundS suggests S
+0.01  S   GerundS suggests that S
 
 # Modifiers
 3  Modifier[sing]    Adj[sing]
@@ -528,8 +528,8 @@
 1   CP_intrans  SC_that S[intrans]
 1   CP_intrans  S[intrans] # dropped "that" case
 
-1   S[intrans]   S[intrans] CC[positive] S[intrans]
-1   S[intrans]   S[intrans] CC[negative] S[intrans]
+0.01   S[intrans]   S[intrans] CC[positive] S[intrans]
+0.01   S[intrans]   S[intrans] CC[negative] S[intrans]
 1   S[intrans]   NP[sing,nom] VI[sing]
 1   S[intrans]   NP[plur,nom] VI[plur]
 1   VI[sing] VerbI[past,sing,3rd]
@@ -538,11 +538,11 @@
 1   VI[plur] VerbI[past,plur,3rd]
 
 # Asides
-1   NP[sing,nom] NP[sing,nom] Aside[nom]
-1   NP[sing,obj] NP[sing,obj] Aside[obj]
+0.01   NP[sing,nom] NP[sing,nom] Aside[nom]
+0.01   NP[sing,obj] NP[sing,obj] Aside[obj]
 
-1   NP[plur,nom] NP[plur,nom] Aside[nom]
-1   NP[plur,obj] NP[plur,obj] Aside[obj]
+0.01   NP[plur,nom] NP[plur,nom] Aside[nom]
+0.01   NP[plur,obj] NP[plur,obj] Aside[obj]
 
 1   Aside[nom] , NP[nom] ,
 1   Aside[nom] , NP[nom]

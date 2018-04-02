@@ -313,8 +313,8 @@
 1  Pronoun[obj,sing,fem] her
 1  Pronoun[obj,sing,neut] it
 1  Pronoun[nom,sing,neut] it
-1  Pronoun[obj,plur,neut] it
-1  Pronoun[nom,plur,neut] it
+#1  Pronoun[obj,plur,neut] it
+#1  Pronoun[nom,plur,neut] it
 1  Pronoun[obj,sing,neut] one
 1  Pronoun[nom,sing,neut] one
 1  Pronoun[obj,plur,neut] them
@@ -406,6 +406,17 @@
 1	VerbT[past,sing,3rd]	migrated
 1	VerbT[past,sing,3rd]	knew
 
+1	VerbT[past,plur,3rd]	had
+1	VerbT[past,plur,3rd]	spoke
+1	VerbT[past,plur,3rd]	covered
+1	VerbT[past,plur,3rd]	rode
+1	VerbT[past,plur,3rd]	drank
+1	VerbT[past,plur,3rd]	grew
+1	VerbT[past,plur,3rd]	carried
+1	VerbT[past,plur,3rd]	suggested
+1	VerbT[past,plur,3rd]	migrated
+1	VerbT[past,plur,3rd]	knew
+
 # Verbs that can precede specific subordinating clauses
 # ____ that
 1   VerbT[past,sing,3rd,that] spoke
@@ -435,6 +446,14 @@
 1	VerbI[past,sing,3rd]	migrated
 1	VerbI[past,sing,3rd]	knew
 
+1	VerbI[past,plur,3rd]	spoke  ## TODO: fix these verb categories
+1	VerbI[past,plur,3rd]	rode
+1	VerbI[past,plur,3rd]	drank
+1	VerbI[past,plur,3rd]	grew
+1	VerbI[past,plur,3rd]	suggested
+1	VerbI[past,plur,3rd]	migrated
+1	VerbI[past,plur,3rd]	knew
+
 1	VerbL[past,sing,3rd]	was
 1	VerbL[past,plur,3rd]	were
 
@@ -456,17 +475,30 @@
 1   Verb[trans,plur]             VerbT[infin,pres]
 
 # Verbs (present participles).
-1	PresPart 	having
-1	PresPart 	speaking
-1	PresPart	covering
-1	PresPart	being
-1	PresPart	riding
-1	PresPart	drinking
-1	PresPart	growing
-1	PresPart	carrying
-1	PresPart	suggesting
-1	PresPart	migrating
-1	PresPart	knowing
+1   PresPart    PresPartT
+1   PresPart    PresPartL
+1   PresPart    PresPartI
+
+1	PresPartL	being
+
+1	PresPartT 	having
+1	PresPartT 	speaking
+1	PresPartT	covering
+1	PresPartT	riding
+1	PresPartT	drinking
+1	PresPartT	growing
+1	PresPartT	carrying
+1	PresPartT	suggesting
+1	PresPartT	migrating
+1	PresPartT	knowing
+
+1	PresPartI 	speaking
+1	PresPartI	riding
+1	PresPartI	drinking
+1	PresPartI	growing
+1	PresPartI	suggesting
+1	PresPartI	migrating
+1	PresPartI	knowing
 
 1	PresPart2Obj	riding
 1	PresPart2Obj	carrying
