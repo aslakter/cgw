@@ -177,7 +177,12 @@
 1	VerbT[pres,sing,3rd]	rides
 
 1	VerbL[pres,sing,3rd]	is
+
 1	VerbI[pres,sing,3rd]	drinks
+1	VerbI[pres,sing,3rd]	covers
+1	VerbI[pres,sing,3rd]	drinks
+1	VerbI[pres,sing,3rd]	carries
+1	VerbI[pres,sing,3rd]	rides
 
 1   VerbT[2object,pres,sing,3rd]       carries
 1   VerbT[2object,pres,sing,3rd]       rides
@@ -378,6 +383,7 @@
 # be: that, if (if Arthur rides is a good question.), because (because Arthur rides is a reason), while (while Arthur rides is when we go)
 # be: _ NONE?
 1	VerbL[inf]	be
+
 1	VerbT[inf]	ride        # NONE _ NONE
 1	VerbT[inf]	drink       # NONE _ NONE
 1	VerbT[inf]	grow        # that? ("(silent "the idea") that Arthur rode grew on her") _ NONE  (??? because, if, while, so [that] (aka: in order to))   (NOT: that)
@@ -423,6 +429,7 @@
 1   VerbT[past,sing,3rd,that] covered
 1   VerbT[past,sing,3rd,that] suggested
 1   VerbT[past,sing,3rd,that] knew
+1   VerbT[past,sing,3rd,that,inf] suggested
 
 # _____ what
 1   VerbT[past,sing,3rd,what] knew
@@ -545,6 +552,7 @@
 1   VerbT[pres,sing,3rd,that] covers
 1   VerbT[pres,sing,3rd,that] suggests
 1   VerbT[pres,sing,3rd,that] knows
+1   VerbT[pres,sing,3rd,that,inf] suggests
 
 # _____ what
 1   VerbT[pres,sing,3rd,what] knows
@@ -585,6 +593,7 @@
 1   VerbT[pres,plur,3rd,that] cover
 1   VerbT[pres,plur,3rd,that] suggest
 1   VerbT[pres,plur,3rd,that] know
+1   VerbT[pres,plur,3rd,that,inf] suggest
 
 # _____ what
 1   VerbT[pres,plur,3rd,what] know
