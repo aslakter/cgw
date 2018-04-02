@@ -1,7 +1,7 @@
 
 1000	S1	S END
 1000    S1  S_CC END
-1   S1  CMD VP_BASE END
+1   S1  CMD VP[inf] END
 1   S1  when S , S END
 1   S1  Q ?
 1   S   S[sing]
@@ -83,8 +83,8 @@
 1   S[plur]   NP[plur,nom] VP[plur]
 
 
-1   END .
-1   END !
+#1   END .
+#1   END !
 
 1   CMD do
 1   CMD do not
@@ -107,6 +107,12 @@
 1 VP[sing] Adv Verb[linking,sing] Modifier[sing]
 1 VP[sing] Adv Verb[linking,sing]
 0.01 VP[sing] Adv VP[sing] PP
+
+# Verb Phrase Base (infinitive)
+1 VP[inf] VerbT[inf]
+1 VP[inf] VerbT[inf] PP
+1 VP[inf] VerbT[inf] Adv
+
 
 
 # Complementizer phrases post VP

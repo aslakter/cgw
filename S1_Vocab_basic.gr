@@ -183,8 +183,8 @@
 1   VerbT[2object,pres,sing,3rd]       rides
 
 # End-of-sentence.
-1	Misc	!
-1	Misc	.
+1	END	!
+1	END	.
 1	Misc	?
 
 # Pauses.
