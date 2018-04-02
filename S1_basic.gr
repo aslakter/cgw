@@ -15,12 +15,12 @@
 1       Q            Q[poss]
 
 # yes/no questions
-1       Q[yesno]     Q[trans] NP
+1       Q[yesno]     Q[trans] NP[obj]
 1       Q[yesno]     Q[trans]
 1       Q[yesno]     Q[comp] CP_that
 1       Q[yesno]     Q[comp]
-1       Q[yesno]     Q[link,sing] NP[sing]
-1       Q[yesno]     Q[link,plur] NP[plur]
+1       Q[yesno]     Q[link,sing] NP[sing,nom]
+1       Q[yesno]     Q[link,plur] NP[plur,nom]
 1       Q[yesno]     Q[link,sing] Modifier[plur]
 1       Q[yesno]     Q[link,plur] Modifier[plur]
 1       Q[yesno]     Q[link,sing]
@@ -36,17 +36,17 @@
 
 1       Q[pronoun]   WH[pronoun] Q[trans]
 1       Q[pronoun]   WH[pronoun] Q[trans] CP_intrans
-1       Q[pronoun]   WH[pronoun] Q[trans] NP Prep
+1       Q[pronoun]   WH[pronoun] Q[trans] NP[obj] Prep
 1       Q[pronoun]   WH[pronoun] Q[trans] Prep
 
 1       Q[pronoun]   WH[pronoun] Q[link,sing]
 1       Q[pronoun]   WH[pronoun] Q[link,sing] CP_intrans
-1       Q[pronoun]   WH[pronoun] Q[link,sing] NP[sing] Prep
+1       Q[pronoun]   WH[pronoun] Q[link,sing] NP[sing,nom] Prep
 1       Q[pronoun]   WH[pronoun] Q[link,sing] Prep
 
 1       Q[pronoun]   WH[pronoun] Q[link,plur]
 1       Q[pronoun]   WH[pronoun] Q[link,plur] CP_intrans
-1       Q[pronoun]   WH[pronoun] Q[link,plur] NP[plur] Prep
+1       Q[pronoun]   WH[pronoun] Q[link,plur] NP[plur,nom] Prep
 1       Q[pronoun]   WH[pronoun] Q[link,plur] Prep
 
 
@@ -57,16 +57,16 @@
 1       Q[poss]  WH[poss] S
 
 # building blocks of questions
-1       Q[comp]      Qword NP VerbC[inf]
+1       Q[comp]      Qword NP[nom] VerbC[inf]
 
-1       Q[trans]     Qword[sing] NP[sing] VerbT[inf]
-1       Q[trans]     Qword[plur] NP[plur] VerbT[inf]
-1       Q[trans]     Qword NP VerbT[inf]
+1       Q[trans]     Qword[sing] NP[sing,nom] VerbT[inf]
+1       Q[trans]     Qword[plur] NP[plur,nom] VerbT[inf]
+1       Q[trans]     Qword NP[nom] VerbT[inf]
 
-1       Q[link,sing]     Qword[sing] NP[sing] VerbL[inf]
-1       Q[link,plur]     Qword[plur] NP[plur] VerbL[inf]
-1       Q[link,sing]     Qword NP VerbL[inf]
-1       Q[link,plur]     Qword NP VerbL[inf]
+1       Q[link,sing]     Qword[sing] NP[sing,nom] VerbL[inf]
+1       Q[link,plur]     Qword[plur] NP[plur,nom] VerbL[inf]
+1       Q[link,sing]     Qword NP[nom] VerbL[inf]
+1       Q[link,plur]     Qword NP[nom] VerbL[inf]
 
 
 # Compound / complex sentence structures: TODO: maybe LHS should be S?
@@ -79,31 +79,31 @@
 1   S_CC    CC[start,negative] S CC[end,negative] S
 
 
-1   S[sing]   NP[sing] VP[sing]
-1   S[plur]   NP[plur] VP[plur]
+1   S[sing]   NP[sing,nom] VP[sing]
+1   S[plur]   NP[plur,nom] VP[plur]
 
 
 1   END .
-1   END ! 
+1   END !
 
 1   CMD do
 1   CMD do not
 
 
 # Verb Phrases
-1 VP[sing] Verb[trans,sing] NP
+1 VP[sing] Verb[trans,sing] NP[obj]
 1 VP[sing] VerbT[pres,sing,3rd,that] CP_that
 1 VP[sing] Verb[intrans,sing]
-1 VP[sing] Verb[linking,sing] NP[sing]
+1 VP[sing] Verb[linking,sing] NP[sing,nom]
 1 VP[sing] Verb[linking,sing] Modifier[sing]
 1 VP[sing] Verb[linking,sing]
 0.01 VP[sing] VP[sing] PP
 0.01 VP[sing] VP[sing] Adv
 
-1 VP[sing] Adv Verb[trans,sing] NP
+1 VP[sing] Adv Verb[trans,sing] NP[obj]
 1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_that
 1 VP[sing] Adv Verb[intrans,sing]
-1 VP[sing] Adv Verb[linking,sing] NP[sing]
+1 VP[sing] Adv Verb[linking,sing] NP[sing,nom]
 1 VP[sing] Adv Verb[linking,sing] Modifier[sing]
 1 VP[sing] Adv Verb[linking,sing]
 0.01 VP[sing] Adv VP[sing] PP
@@ -113,33 +113,33 @@
 0.01 VP[sing] VP[sing] CP_generic
 
 # 2 object verbs plural
-1 2OBJ NP Noun PP
-1 2OBJ NP home
+1 2OBJ NP[obj] Noun PP
+1 2OBJ NP[obj] home
 
-# Infinitive 
+# Infinitive
 1 VP[sing] VerbT[2Object,infin,pres] 2OBJ
 1 VP[sing] VerbT[2Object,infin,past] 2OBJ
 
 # 2 object verbs
 1 VP[sing] VerbT[2object,pres,sing,3rd] 2OBJ
 
-# Present Participle 
+# Present Participle
 1 VP[sing] is PresPart2Obj 2OBJ
-1 VP[sing] is PresPart NP
+1 VP[sing] is PresPart NP[obj]
 
-1 VP[plur] Verb[trans,plur] NP
+1 VP[plur] Verb[trans,plur] NP[obj]
 1 VP[plur] VerbT[pres,plur,3rd,that] CP_that
 1 VP[plur] Verb[intrans,plur]
-1 VP[plur] Verb[linking,plur] NP[plur]
+1 VP[plur] Verb[linking,plur] NP[plur,obj]
 1 VP[plur] Verb[linking,plur] Modifier[plur]
 1 VP[plur] Verb[linking,plur]
 0.01 VP[plur] VP[plur] PP
 0.01 VP[plur] VP[plur] Adv
 
-1 VP[plur] Adv Verb[trans,plur] NP
+1 VP[plur] Adv Verb[trans,plur] NP[obj]
 1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_that
 1 VP[plur] Adv Verb[intrans,plur]
-1 VP[plur] Adv Verb[linking,plur] NP[plur]
+1 VP[plur] Adv Verb[linking,plur] NP[plur,obj]
 1 VP[plur] Adv Verb[linking,plur] Modifier[plur]
 1 VP[plur] Adv Verb[linking,plur]
 1 VP[plur] Adv VP[plur] PP
@@ -162,9 +162,9 @@
 1 Verb[trans, plur] Modal VerbT[inf]
 1 Verb[intrans, plur] Modal VerbT[inf]
 
-# Present Participle 
+# Present Participle
 1 VP[plur] are PresPart2Obj 2OBJ
-1 VP[plur] are PresPart NP
+1 VP[plur] are PresPart NP[obj]
 
 # Past Participle
 1 VerbT[2object,past,sing,3rd]  PrePastPerfect PastPart2Obj
@@ -173,12 +173,12 @@
 
 # Linking Past TODO: check following cases
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPart2Obj 2OBJ
-1 Verb[linking,sing] PrePastPerfect PastPartL PresPartT NP
+1 Verb[linking,sing] PrePastPerfect PastPartL PresPartT NP[obj]
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPartT PP
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPart
 
 # 1 Verb[linking,sing] PrePastPerfect PastPartL PastPart2Obj 2OBJ
-# 1 Verb[linking,sing] PrePastPerfect PastPartL PastPartT NP
+# 1 Verb[linking,sing] PrePastPerfect PastPartL PastPartT NP[obj]
 1 Verb[linking,sing] PrePastPerfect PastPartL PastPartT PP
 1 Verb[linking,sing] PrePastPerfect PastPartL PastPartT
 1 Verb[linking,sing] PrePastPerfect PastPartL
@@ -188,11 +188,11 @@
 1 Verb[intrans,plur] PrePastPerfect PastPartI
 # Linking TODO: CHECK
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPart2Obj 2OBJ
-1 Verb[linking,plur] PrePastPerfect PastPartL PresPartT NP
+1 Verb[linking,plur] PrePastPerfect PastPartL PresPartT NP[obj]
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPartT PP
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPart
 # 1 Verb[linking,plur] PrePastPerfect PastPartL PastPart2Obj 2OBJ
-# 1 Verb[linking,plur] PrePastPerfect PastPartL PastPartT NP
+# 1 Verb[linking,plur] PrePastPerfect PastPartL PastPartT NP[obj]
 1 Verb[linking,plur] PrePastPerfect PastPartL PastPartT PP
 1 Verb[linking,plur] PrePastPerfect PastPartL PastPartT
 1 Verb[linking,plur] PrePastPerfect PastPartL
@@ -204,12 +204,12 @@
 
 # Past progressive
 1 Verb[linking,sing] Modal have PastPartL PresPart2Obj 2OBJ
-1 Verb[linking,sing] Modal have PastPartL PresPartT NP
+1 Verb[linking,sing] Modal have PastPartL PresPartT NP[obj]
 1 Verb[linking,sing] Modal have PastPartL PresPartT PP
 1 Verb[linking,sing] Modal have PastPartL PresPart
 # Past Perfect
 # 1 Verb[linking,sing] Modal have PastPartL PastPart2Obj 2OBJ
-# 1 Verb[linking,sing] Modal have PastPartL PastPartT NP
+# 1 Verb[linking,sing] Modal have PastPartL PastPartT NP[obj]
 1 Verb[linking,sing] Modal have PastPartL PastPartT PP
 1 Verb[linking,sing] Modal have PastPartL PastPartT
 1 Verb[linking,sing] Modal have PastPartL
@@ -220,12 +220,12 @@
 
 # Past Progressing
 1 Verb[linking,plur] Modal have PastPartL PresPart2Obj 2OBJ
-1 Verb[linking,plur] Modal have PastPartL PresPartT NP
+1 Verb[linking,plur] Modal have PastPartL PresPartT NP[obj]
 1 Verb[linking,plur] Modal have PastPartL PresPartT PP
 1 Verb[linking,plur] Modal have PastPartL PresPart
 # Past Perfect
 # 1 Verb[linking,plur] Modal have PastPartL PastPart2Obj 2OBJ
-# 1 Verb[linking,plur] Modal have PastPartL PastPartT NP
+# 1 Verb[linking,plur] Modal have PastPartL PastPartT NP[obj]
 1 Verb[linking,plur] Modal have PastPartL PastPartT PP
 1 Verb[linking,plur] Modal have PastPartL PastPartT
 1 Verb[linking,plur] Modal have PastPartL
@@ -238,13 +238,13 @@
 
 # Future Past Progressive
 1 Verb[linking,sing] Modal[future] have PastPartL PresPart2Obj 2OBJ
-1 Verb[linking,sing] Modal[future] have PastPartL PresPartT NP
+1 Verb[linking,sing] Modal[future] have PastPartL PresPartT NP[obj]
 1 Verb[linking,sing] Modal[future] have PastPartL PresPartT PP
 1 Verb[linking,sing] Modal[future] have PastPartL PresPart
 
 # Future Past Perfect
 #1 Verb[linking,sing] Modal[future] have PastPartL PastPart2Obj 2OBJ
-#1 Verb[linking,sing] Modal[future] have PastPartL PastPartT NP
+#1 Verb[linking,sing] Modal[future] have PastPartL PastPartT NP[obj]
 1 Verb[linking,sing] Modal[future] have PastPartL PastPartT PP
 1 Verb[linking,sing] Modal[future] have PastPartL PastPartT
 1 Verb[linking,sing] Modal[future] have PastPartL
@@ -255,13 +255,13 @@
 
 # Future Past progressive
 1 Verb[linking,plur] Modal[future] have PastPartL PresPart2Obj 2OBJ
-1 Verb[linking,plur] Modal[future] have PastPartL PresPartT NP
+1 Verb[linking,plur] Modal[future] have PastPartL PresPartT NP[obj]
 1 Verb[linking,plur] Modal[future] have PastPartL PresPartT PP
 1 Verb[linking,plur] Modal[future] have PastPartL PresPart
 
 # Future Past Perfect
 #1 Verb[linking,plur] Modal[future] have PastPartL PastPart2Obj 2OBJ
-#1 Verb[linking,plur] Modal[future] have PastPartL PastPartT NP
+#1 Verb[linking,plur] Modal[future] have PastPartL PastPartT NP[obj]
 1 Verb[linking,plur] Modal[future] have PastPartL PastPartT PP
 1 Verb[linking,plur] Modal[future] have PastPartL PastPartT
 1 Verb[linking,plur] Modal[future] have PastPartL
@@ -300,7 +300,7 @@
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
 1 Verb[trans,plur] VerbT[2object,pres,plur,3rd]
 1 Verb[trans,plur] VerbT[past,plur,3rd]
-1 Verb[trans,plur] VerbT[2object,past,plur,3rd] 
+1 Verb[trans,plur] VerbT[2object,past,plur,3rd]
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
 1 Verb[intrans,plur] VerbI[past,plur,3rd]
 1 Verb[linking,plur] VerbL[pres,plur,3rd] PresPart PP # TODO: can all pres part take PP?
@@ -323,63 +323,138 @@
 0.01   VP[plur]    CC[start,negative] VP[plur] CC[end,negative] VP[plur]
 
 
+# Pronouns
+1   Pronoun[sing,obj] Pronoun[obj,sing,masc]
+1   Pronoun[sing,obj] Pronoun[obj,sing,fem]
+1   Pronoun[sing,obj] Pronoun[obj,sing,neut]
+
+1   Pronoun[sing,nom] Pronoun[nom,sing,masc]
+1   Pronoun[sing,nom] Pronoun[nom,sing,fem]
+1   Pronoun[sing,nom] Pronoun[nom,sing,neut]
+
+1   Pronoun[plur,obj] Pronoun[obj,plur,masc]
+1   Pronoun[plur,obj] Pronoun[obj,plur,fem]
+1   Pronoun[plur,obj] Pronoun[obj,plur,neut]
+
+1   Pronoun[plur,nom] Pronoun[plur,sing,masc]
+1   Pronoun[plur,nom] Pronoun[plur,sing,fem]
+1   Pronoun[plur,nom] Pronoun[plur,sing,neut]
+
 # Noun phrases
-1   NP NP[sing]
-1   NP NP[plur]
-3   NP[sing] NP[sing] PP
-1   NP[plur] NP[plur] PP
+1   NP[nom] NP[sing,nom]
+1   NP[nom] NP[plur,nom]
+
+1   NP[obj] NP[sing,obj]
+1   NP[obj] NP[plur,obj]
+
+3   NP[sing,obj] NP[sing,obj] PP
+1   NP[plur,obj] NP[plur,obj] PP
+
+3   NP[sing,nom] NP[sing,nom] PP
+1   NP[plur,nom] NP[plur,nom] PP
 
 # Noun phrase with distinguishing phrases "the horse... that migrated here ..."
-0.01   NP[sing]    NP[sing] Det[distinguishing] VP[sing]
-0.01   NP[sing]    NP[sing] Det[distinguishing] S[sing]
-0.01   NP[sing]    NP[sing] Det[distinguishing] S[plur]
-0.01   NP[plur]    NP[plur] Det[distinguishing] VP[plur]
-0.01   NP[plur]    NP[plur] Det[distinguishing] S[plur]
-0.01   NP[plur]    NP[plur] Det[distinguishing] S[sing]
+0.01   NP[sing,nom]    NP[sing,nom] Det[distinguishing] VP[sing]
+0.01   NP[sing,nom]    NP[sing,nom] Det[distinguishing] S[sing]
+0.01   NP[sing,nom]    NP[sing,nom] Det[distinguishing] S[plur]
+0.01   NP[plur,nom]    NP[plur,nom] Det[distinguishing] VP[plur]
+0.01   NP[plur,nom]    NP[plur,nom] Det[distinguishing] S[plur]
+0.01   NP[plur,nom]    NP[plur,nom] Det[distinguishing] S[sing]
 
-1  NP[sing] Det[sing] Modifier[sing] Noun[sing]
-1  NP[sing] Modifier[sing] Noun[sing]
-1  NP[sing] Det[sing] Noun[sing]
-1  NP[sing] Noun[sing]
-1  NP[sing] Proper[sing]
-1  NP[sing] Det[sing] Proper[sing,det]
-1  NP[sing] Modifier[sing] Proper[sing]
+0.01   NP[sing,obj]    NP[sing,obj] Det[distinguishing] VP[sing]
+0.01   NP[sing,obj]    NP[sing,obj] Det[distinguishing] S[sing]
+0.01   NP[sing,obj]    NP[sing,obj] Det[distinguishing] S[plur]
+0.01   NP[plur,obj]    NP[plur,obj] Det[distinguishing] VP[plur]
+0.01   NP[plur,obj]    NP[plur,obj] Det[distinguishing] S[plur]
+0.01   NP[plur,obj]    NP[plur,obj] Det[distinguishing] S[sing]
 
-1  NP[plur] Det[plur] Modifier[plur] Noun[plur]
-1  NP[plur] Modifier[plur] Noun[plur]
-1  NP[plur] Det[plur] Noun[plur]
-1  NP[plur] Noun[plur]
-1  NP[plur] Proper[plur]
-1  NP[plur] Det[plur] Proper[plur,det]
-1  NP[plur] Modifier[plur] Proper[plur]
+
+1  NP[sing,nom] Det[sing] Modifier[sing] Noun[sing]
+1  NP[sing,nom] Modifier[sing] Noun[sing]
+1  NP[sing,nom] Det[sing] Noun[sing]
+1  NP[sing,nom] Noun[sing]
+1  NP[sing,nom] Pronoun[sing,nom]
+1  NP[sing,nom] Proper[sing]
+1  NP[sing,nom] Det[sing] Proper[sing,det]
+1  NP[sing,nom] Modifier[sing] Proper[sing]
+
+1  NP[sing,obj] Det[sing] Modifier[sing] Noun[sing]
+1  NP[sing,obj] Modifier[sing] Noun[sing]
+1  NP[sing,obj] Det[sing] Noun[sing]
+1  NP[sing,obj] Noun[sing]
+1  NP[sing,obj] Pronoun[sing,obj]
+1  NP[sing,obj] Proper[sing]
+1  NP[sing,obj] Det[sing] Proper[sing,det]
+1  NP[sing,obj] Modifier[sing] Proper[sing]
+
+1  NP[plur,nom] Det[plur] Modifier[plur] Noun[plur]
+1  NP[plur,nom] Modifier[plur] Noun[plur]
+1  NP[plur,nom] Det[plur] Noun[plur]
+1  NP[plur,nom] Noun[plur]
+1  NP[plur,nom] Pronoun[plur,nom]
+1  NP[plur,nom] Proper[plur]
+1  NP[plur,nom] Det[plur] Proper[plur,det]
+1  NP[plur,nom] Modifier[plur] Proper[plur]
+
+1  NP[plur,obj] Det[plur] Modifier[plur] Noun[plur]
+1  NP[plur,obj] Modifier[plur] Noun[plur]
+1  NP[plur,obj] Det[plur] Noun[plur]
+1  NP[plur,obj] Noun[plur]
+1  NP[plur,obj] Pronoun[plur,obj]
+1  NP[plur,obj] Proper[plur]
+1  NP[plur,obj] Det[plur] Proper[plur,det]
+1  NP[plur,obj] Modifier[plur] Proper[plur]
 
 # NP with CC TODO: decide on requiring non-terminals or not
-1 NP[plur] NP and NP
+1 NP[plur,obj] NP[obj] and NP[obj]
+1 NP[plur,nom] NP[nom] and NP[nom]
+
 
 # NP either / neither rules (http://www.grammar-monster.com/lessons/either_or_plural_or_singular_verb.htm)
 # either / or rules
-1 NP[sing] CC[start,positive] NP[sing] CC[end,positive] NP[sing]
-1 NP[plur] CC[start,positive] NP[sing] CC[end,positive] NP[plur]
-1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[sing]
-1 NP[plur] CC[start,positive] NP[plur] CC[end,positive] NP[plur]
+1 NP[sing,nom] CC[start,positive] NP[sing,nom] CC[end,positive] NP[sing,nom]
+1 NP[plur,nom] CC[start,positive] NP[sing,nom] CC[end,positive] NP[plur,nom]
+1 NP[plur,nom] CC[start,positive] NP[plur,nom] CC[end,positive] NP[sing,nom]
+1 NP[plur,nom] CC[start,positive] NP[plur,nom] CC[end,positive] NP[plur,nom]
+
+1 NP[sing,obj] CC[start,positive] NP[sing,obj] CC[end,positive] NP[sing,obj]
+1 NP[plur,obj] CC[start,positive] NP[sing,obj] CC[end,positive] NP[plur,obj]
+1 NP[plur,obj] CC[start,positive] NP[plur,obj] CC[end,positive] NP[sing,obj]
+1 NP[plur,obj] CC[start,positive] NP[plur,obj] CC[end,positive] NP[plur,obj]
 
 # OR rules
-1 NP[sing]  NP[sing] CC[end,positive] NP[sing]
-1 NP[plur]  NP[sing] CC[end,positive] NP[plur]
-1 NP[plur]  NP[plur] CC[end,positive] NP[sing]
-1 NP[plur]  NP[plur] CC[end,positive] NP[plur]
+1 NP[sing,nom]  NP[sing,nom] CC[end,positive] NP[sing,nom]
+1 NP[plur,nom]  NP[sing,nom] CC[end,positive] NP[plur,nom]
+1 NP[plur,nom]  NP[plur,nom] CC[end,positive] NP[sing,nom]
+1 NP[plur,nom]  NP[plur,nom] CC[end,positive] NP[plur,nom]
+
+1 NP[sing,obj]  NP[sing,obj] CC[end,positive] NP[sing,obj]
+1 NP[plur,obj]  NP[sing,obj] CC[end,positive] NP[plur,obj]
+1 NP[plur,obj]  NP[plur,obj] CC[end,positive] NP[sing,obj]
+1 NP[plur,obj]  NP[plur,obj] CC[end,positive] NP[plur,obj]
 
 # neither / nor rules
-1 NP[sing] CC[start,negative] NP[sing] CC[end,negative] NP[sing]
-1 NP[plur] CC[start,negative] NP[sing] CC[end,negative] NP[plur]
-1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[sing]
-1 NP[plur] CC[start,negative] NP[plur] CC[end,negative] NP[plur]
+1 NP[sing,nom] CC[start,negative] NP[sing,nom] CC[end,negative] NP[sing,nom]
+1 NP[plur,nom] CC[start,negative] NP[sing,nom] CC[end,negative] NP[plur,nom]
+1 NP[plur,nom] CC[start,negative] NP[plur,nom] CC[end,negative] NP[sing,nom]
+1 NP[plur,nom] CC[start,negative] NP[plur,nom] CC[end,negative] NP[plur,nom]
+
+1 NP[sing,obj] CC[start,negative] NP[sing,obj] CC[end,negative] NP[sing,obj]
+1 NP[plur,obj] CC[start,negative] NP[sing,obj] CC[end,negative] NP[plur,obj]
+1 NP[plur,obj] CC[start,negative] NP[plur,obj] CC[end,negative] NP[sing,obj]
+1 NP[plur,obj] CC[start,negative] NP[plur,obj] CC[end,negative] NP[plur,obj]
+
 
 # NOR rules
-1 NP[sing] NP[sing] CC[end,negative] NP[sing]
-1 NP[plur] NP[sing] CC[end,negative] NP[plur]
-1 NP[plur] NP[plur] CC[end,negative] NP[sing]
-1 NP[plur] NP[plur] CC[end,negative] NP[plur]
+1 NP[sing,nom] NP[sing,nom] CC[end,negative] NP[sing,nom]
+1 NP[plur,nom] NP[sing,nom] CC[end,negative] NP[plur,nom]
+1 NP[plur,nom] NP[plur,nom] CC[end,negative] NP[sing,nom]
+1 NP[plur,nom] NP[plur,nom] CC[end,negative] NP[plur,nom]
+
+1 NP[sing,obj] NP[sing,obj] CC[end,negative] NP[sing,obj]
+1 NP[plur,obj] NP[sing,obj] CC[end,negative] NP[plur,obj]
+1 NP[plur,obj] NP[plur,obj] CC[end,negative] NP[sing,obj]
+1 NP[plur,obj] NP[plur,obj] CC[end,negative] NP[plur,obj]
 
 # TODO: decide whether or not to use proximity rule(s) below (this is reasonable in practice, but not theory)
 # proximiy either/or neither/nor rules
@@ -399,10 +474,10 @@
 # GerundNP, Gerund2Obj, GerundProp, GerundPP
 # GerundEmpty, GerundInfin, GerundThat, GerundLocPrep
 
-1  GerundS      GerundNP NP 
-1  GerundS      Gerund2Obj NP 2OBJ
+1  GerundS      GerundNP NP[obj]
+1  GerundS      Gerund2Obj NP[obj] 2OBJ
 1  GerundS      GerundProp AllProper
-1  GerundS      GerundPP PP 
+1  GerundS      GerundPP PP
 1  GerundS      GerundEmpty
 
 #TODO: Infinitive versb
@@ -427,7 +502,7 @@
 1  Adj[sing] Adj[gen]
 
 # Prepositional Phrases
-1	PP	Prep NP
+1	PP	Prep NP[obj]
 
 # Complementizer Phrases
 1   CP_generic  SC_generic S
@@ -439,17 +514,26 @@
 
 1   S[intrans]   S[intrans] CC[positive] S[intrans]
 1   S[intrans]   S[intrans] CC[negative] S[intrans]
-1   S[intrans]   NP[sing] VI[sing]
-1   S[intrans]   NP[plur] VI[plur]
+1   S[intrans]   NP[sing,nom] VI[sing]
+1   S[intrans]   NP[plur,nom] VI[plur]
 1   VI[sing] VerbI[past,sing,3rd]
 1   VI[sing] VerbI[pres,sing,3rd]
 1   VI[plur] VerbI[pres,plur,3rd]
 1   VI[plur] VerbI[past,plur,3rd]
 
 # Asides
-1   NP[sing] NP[sing] Aside
-1   NP[plur] NP[plur] Aside
-1   Aside , NP ,
-1   Aside , NP
-1   Aside , Adv ,
-1   Aside , Adv
+1   NP[sing,nom] NP[sing,nom] Aside[nom]
+1   NP[sing,obj] NP[sing,obj] Aside[obj]
+
+1   NP[plur,nom] NP[plur,nom] Aside[nom]
+1   NP[plur,obj] NP[plur,obj] Aside[obj]
+
+1   Aside[nom] , NP[nom] ,
+1   Aside[nom] , NP[nom]
+1   Aside[nom] , Adv ,
+1   Aside[nom] , Adv
+
+1   Aside[obj] , NP[obj],
+1   Aside[obj] , NP[obj]
+1   Aside[obj] , Adv ,
+1   Aside[obj] , Adv

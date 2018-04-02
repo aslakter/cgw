@@ -104,8 +104,8 @@
 1	Det[sing]	every
 1	Det[sing]	no
 1	Det[sing]	that
-1   Det[distinguishing]    that
-1   Det[distinguishing]    who #TODO: maybe make different non-terminal?
+1  Det[distinguishing]    that
+1  Det[distinguishing]    who #TODO: maybe make different non-terminal?
 1	Det[sing]	the
 1	Det[sing]	this
 
@@ -131,7 +131,7 @@
 1	Prep	through
 1	Prep	with
 
-# Location Prepositions 
+# Location Prepositions
 # to do
 
 # Proper nouns.  Note that our Proper tag is just for people.
@@ -179,8 +179,8 @@
 1	VerbL[pres,sing,3rd]	is
 1	VerbI[pres,sing,3rd]	drinks
 
-1   VerbT[2object,pres,sing,3rd]       carries 
-1   VerbT[2object,pres,sing,3rd]       rides 
+1   VerbT[2object,pres,sing,3rd]       carries
+1   VerbT[2object,pres,sing,3rd]       rides
 
 # End-of-sentence.
 1	Misc	!
@@ -298,23 +298,42 @@
 
 
 # Personal pronouns.
-# TODO: REFINE
-1	Noun[sing]	he
-1	Noun[sing]	her
-1	Noun[sing]	him
-1	Noun[sing]	it
-1	Noun[sing]	one
-1	Noun[sing]	she
-1	Noun[plur]	them
-1	Noun[plur]	they
+# 1	Noun[sing]	he
+# 1	Noun[sing]	her
+# 1	Noun[sing]	him
+# 1	Noun[sing]	it
+# 1	Noun[sing]	one
+# 1	Noun[sing]	she
+# 1	Noun[plur]	them
+# 1	Noun[plur]	they
+
+1  Pronoun[nom,sing,masc] he
+1  Pronoun[nom,sing,fem] she
+1  Pronoun[obj,sing,masc] him
+1  Pronoun[obj,sing,fem] her
+1  Pronoun[obj,sing,neut] it
+1  Pronoun[nom,sing,neut] it
+1  Pronoun[obj,plur,neut] it
+1  Pronoun[nom,plur,neut] it
+1  Pronoun[obj,sing,neut] one
+1  Pronoun[nom,sing,neut] one
+1  Pronoun[obj,plur,neut] them
+1  Pronoun[nom,plur,neut] they
 
 
 # Possessive personal pronouns
-# TODO: refine!!
 1	Det[sing]	her
 1	Det[sing]	his
 1	Det[sing]	its
 1	Det[plur]	their
+
+# TODO: maybe implement this properly?
+# 1  ProDet[sing,fem] her
+# 1  ProDet[sing,masc] his
+# 1  ProDet[sing,neut] its
+# 1  ProDet[plur,neut] their
+
+
 
 # Adverbs.
 1	Adv	   again
@@ -533,7 +552,7 @@
 # Wh-determiners.
 1	Misc	that
 1	WH[det]	what
-1	WH[det]	which
+1	WH[det]	which #TODO: change to Det[distinguishing] and make sure we distinguish "which" from "who"
 
 # Wh-pronouns.
 1	WH[pronoun]	what
