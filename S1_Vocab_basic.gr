@@ -231,7 +231,7 @@
 1	SC_if	if # TODO: can always occur at end of a VP?
 
 # Modals.
-1   Modal   Modal[past]
+#1   Modal   Modal[past]
 1   Modal   Modal[future]
 
 1	Modal[future]	can

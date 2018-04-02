@@ -161,12 +161,12 @@
 1 VP[plur] VerbT[2object,pres,plur,3rd] 2OBJ
 1 VP[plur] VerbT[2object,base] 2OBJ
 
-# Modal Not Participle
-1 Verb[trans, sing] Modal VerbT[inf]
-1 Verb[intrans, sing] Modal VerbT[inf]
+# Modal Not Participle (Simple future?)
+1 Verb[trans,sing] Modal VerbT[inf]
+1 Verb[intrans,sing] Modal VerbT[inf]
 
-1 Verb[trans, plur] Modal VerbT[inf]
-1 Verb[intrans, plur] Modal VerbT[inf]
+1 Verb[trans,plur] Modal VerbT[inf]
+1 Verb[intrans,plur] Modal VerbT[inf]
 
 # Present Participle
 1 VP[plur] are PresPart2Obj 2OBJ
