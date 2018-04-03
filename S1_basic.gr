@@ -103,7 +103,7 @@
 1 VP[sing] VerbT[past,sing,3rd,that] CP_who
 1 VP[sing] Verb[intrans,sing]
 1 VP[sing] Verb[linking,sing] NP[sing,nom]
-1 VP[sing] Verb[linking,sing] Modifier[sing]
+0.1 VP[sing] Verb[linking,sing] Modifier[sing]
 1 VP[sing] Verb[linking,sing]
 0.01 VP[sing] VP[sing] PP
 0.01 VP[sing] VP[sing] Adv
@@ -118,8 +118,8 @@
 1 VP[sing] Adv VerbT[past,sing,3rd,that] CP_what
 1 VP[sing] Adv VerbT[past,sing,3rd,that] CP_who
 1 VP[sing] Adv Verb[intrans,sing]
-1 VP[sing] Adv Verb[linking,sing] NP[sing,nom]
-1 VP[sing] Adv Verb[linking,sing] Modifier[sing]
+#1 VP[sing] Adv Verb[linking,sing] NP[sing,nom] #TODO: this produces weird/incorrect sentences. is this needed??
+0.1 VP[sing] Adv Verb[linking,sing] Adv # Modifier[sing] #TODO: decide if modifier or adv because I don't think adj can go here...?
 1 VP[sing] Adv Verb[linking,sing]
 0.01 VP[sing] Adv VP[sing] PP
 
@@ -140,7 +140,7 @@
 0.01 VP[sing] VP[sing] CP_generic
 
 # 2 object verbs plural
-1 2OBJ NP[obj] Noun PP
+#1 2OBJ NP[obj] Noun PP #TODO: is this really a thing?
 1 2OBJ NP[obj] home
 
 # Infinitive
@@ -161,7 +161,7 @@
 1 VP[plur] VerbT[pres,plur,3rd,that] CP_who
 1 VP[plur] Verb[intrans,plur]
 1 VP[plur] Verb[linking,plur] NP[plur,obj]
-1 VP[plur] Verb[linking,plur] Modifier[plur]
+0.1 VP[plur] Verb[linking,plur] Modifier[plur]
 1 VP[plur] Verb[linking,plur]
 0.01 VP[plur] VP[plur] PP
 0.01 VP[plur] VP[plur] Adv
@@ -173,7 +173,7 @@
 1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_who
 1 VP[plur] Adv Verb[intrans,plur]
 1 VP[plur] Adv Verb[linking,plur] NP[plur,obj]
-1 VP[plur] Adv Verb[linking,plur] Modifier[plur]
+0.1 VP[plur] Adv Verb[linking,plur] Modifier[plur]
 1 VP[plur] Adv Verb[linking,plur]
 0.01 VP[plur] Adv VP[plur] PP
 
@@ -204,7 +204,7 @@
 1 Verb[trans,sing] PrePastPerfect PastPartT
 1 Verb[intrans,sing] PrePastPerfect PastPartI
 
-# Linking Past TODO: check following cases
+# Linking Past TODO: check following cases. I think all the ones ending in partT should be trans??
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPart2Obj 2OBJ
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPartT NP[obj]
 1 Verb[linking,sing] PrePastPerfect PastPartL PresPartT PP
@@ -219,7 +219,7 @@
 1 VerbT[2object,past,plur,3rd]  PrePastPerfect PastPart2Obj
 1 Verb[trans,plur] PrePastPerfect PastPartT
 1 Verb[intrans,plur] PrePastPerfect PastPartI
-# Linking TODO: CHECK
+# Linking TODO: check. I think all the ones ending in partT should be trans??
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPart2Obj 2OBJ
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPartT NP[obj]
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPartT PP
@@ -292,7 +292,7 @@
 1 Verb[linking,plur] Modal[future] have PastPartL PresPartT PP
 1 Verb[linking,plur] Modal[future] have PastPartL PresPart
 
-# Future Past Perfect
+# Future Past Perfect #TODO: link vs trans
 #1 Verb[linking,plur] Modal[future] have PastPartL PastPart2Obj 2OBJ
 #1 Verb[linking,plur] Modal[future] have PastPartL PastPartT NP[obj]
 1 Verb[linking,plur] Modal[future] have PastPartL PastPartT PP
@@ -402,41 +402,41 @@
 0.01   NP[plur,obj]    NP[plur,obj] Det[distinguishing] S[sing]
 
 
-1  NP[sing,nom] Det[sing] Modifier[sing] Noun[sing]
-1  NP[sing,nom] Modifier[sing] Noun[sing]
+0.1  NP[sing,nom] Det[sing] Modifier[sing] Noun[sing]
+0.1  NP[sing,nom] Modifier[sing] Noun[sing]
 1  NP[sing,nom] Det[sing] Noun[sing]
 1  NP[sing,nom] Noun[sing]
 1  NP[sing,nom] Pronoun[sing,nom]
 1  NP[sing,nom] Proper[sing]
 1  NP[sing,nom] Det[sing] Proper[sing,det]
-1  NP[sing,nom] Modifier[sing] Proper[sing]
+0.1  NP[sing,nom] Modifier[sing] Proper[sing]
 
-1  NP[sing,obj] Det[sing] Modifier[sing] Noun[sing]
-1  NP[sing,obj] Modifier[sing] Noun[sing]
+0.1  NP[sing,obj] Det[sing] Modifier[sing] Noun[sing]
+0.1  NP[sing,obj] Modifier[sing] Noun[sing]
 1  NP[sing,obj] Det[sing] Noun[sing]
 1  NP[sing,obj] Noun[sing]
 1  NP[sing,obj] Pronoun[sing,obj]
 1  NP[sing,obj] Proper[sing]
 1  NP[sing,obj] Det[sing] Proper[sing,det]
-1  NP[sing,obj] Modifier[sing] Proper[sing]
+0.1  NP[sing,obj] Modifier[sing] Proper[sing]
 
-1  NP[plur,nom] Det[plur] Modifier[plur] Noun[plur]
-1  NP[plur,nom] Modifier[plur] Noun[plur]
+0.1  NP[plur,nom] Det[plur] Modifier[plur] Noun[plur]
+0.1  NP[plur,nom] Modifier[plur] Noun[plur]
 1  NP[plur,nom] Det[plur] Noun[plur]
 1  NP[plur,nom] Noun[plur]
 1  NP[plur,nom] Pronoun[plur,nom]
 1  NP[plur,nom] Proper[plur]
 1  NP[plur,nom] Det[plur] Proper[plur,det]
-1  NP[plur,nom] Modifier[plur] Proper[plur]
+0.1  NP[plur,nom] Modifier[plur] Proper[plur]
 
-1  NP[plur,obj] Det[plur] Modifier[plur] Noun[plur]
-1  NP[plur,obj] Modifier[plur] Noun[plur]
+0.1  NP[plur,obj] Det[plur] Modifier[plur] Noun[plur]
+0.1  NP[plur,obj] Modifier[plur] Noun[plur]
 1  NP[plur,obj] Det[plur] Noun[plur]
 1  NP[plur,obj] Noun[plur]
 1  NP[plur,obj] Pronoun[plur,obj]
 1  NP[plur,obj] Proper[plur]
 1  NP[plur,obj] Det[plur] Proper[plur,det]
-1  NP[plur,obj] Modifier[plur] Proper[plur]
+0.1  NP[plur,obj] Modifier[plur] Proper[plur]
 
 # NP with CC TODO: decide on requiring non-terminals or not
 0.01 NP[plur,obj] NP[obj] and NP[obj]
@@ -527,6 +527,7 @@
 0.01  S   GerundS suggests that S
 
 # Modifiers
+# TODO: currently modifiers can come after the noun/verb, but adj need to come before them??
 3  Modifier[sing]    Adj[sing]
 1  Modifier[sing]    Adv Modifier[sing]
 3  Modifier[plur]    Adj[plur]

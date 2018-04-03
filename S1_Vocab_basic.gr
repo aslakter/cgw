@@ -346,7 +346,7 @@
 1	Adv	   currently
 1	Adv	   frequently
 1	Adv	   precisely
-1	Adv	   south
+1	Adv	   south #TODO: is this actually an adverb...? whenever it's generated as an adverb it doesn't seem to fit...?
 1	Adv	   successfully
 1	Adv	   unfortunately
 
@@ -398,7 +398,7 @@
 
 1   VerbT[2object,base]       carry 
 1   VerbT[2object,base]       ride 
-1   VerbT[2object,base]       be 
+#1   VerbT[2object,base]       be #TODO: Decide if true
 
 # Verbs (past tense).
 1	VerbT[past,sing,3rd]	had
@@ -471,7 +471,8 @@
 
 # Infinitive
 # TODO: not sure handling suggested, know properly
-1   VerbT[infin,base]            to Verb_Base
+1   VerbT[infin,base]            to VerbT[inf]
+1   VerbT[infin,base]            to VerbL[inf]
 1   VerbT[2Object,infin,base]    to VerbT[2object,base]
 1   VerbT[infin,pres]            Modal_pre_infinitive[present] VerbT[infin,base]
 1   VerbT[infin,past]            Modal_pre_infinitive[past] VerbT[infin,base]
