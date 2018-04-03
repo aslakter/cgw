@@ -97,6 +97,10 @@
 1 VP[sing] VerbT[pres,sing,3rd,that,inf] CP_that[inf]
 1 VP[sing] VerbT[pres,sing,3rd,that] CP_what
 1 VP[sing] VerbT[pres,sing,3rd,that] CP_who
+1 VP[sing] VerbT[past,sing,3rd,that] CP_that
+1 VP[sing] VerbT[past,sing,3rd,that,inf] CP_that[inf]
+1 VP[sing] VerbT[past,sing,3rd,that] CP_what
+1 VP[sing] VerbT[past,sing,3rd,that] CP_who
 1 VP[sing] Verb[intrans,sing]
 1 VP[sing] Verb[linking,sing] NP[sing,nom]
 1 VP[sing] Verb[linking,sing] Modifier[sing]
@@ -109,6 +113,10 @@
 1 VP[sing] Adv VerbT[pres,sing,3rd,that,inf] CP_that[inf]
 1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_what
 1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_who
+1 VP[sing] Adv VerbT[past,sing,3rd,that] CP_that
+1 VP[sing] Adv VerbT[past,sing,3rd,that,inf] CP_that[inf]
+1 VP[sing] Adv VerbT[past,sing,3rd,that] CP_what
+1 VP[sing] Adv VerbT[past,sing,3rd,that] CP_who
 1 VP[sing] Adv Verb[intrans,sing]
 1 VP[sing] Adv Verb[linking,sing] NP[sing,nom]
 1 VP[sing] Adv Verb[linking,sing] Modifier[sing]
@@ -120,6 +128,11 @@
 1 VP[inf] VerbT[inf] PP
 1 VP[inf] VerbT[inf] Adv
 1 VP[inf] Adv VerbT[inf]
+# TODO: I think below are correct, but want second opinion.
+1 VP[inf] be PastPartT
+1 VP[inf] be PastPartT PP
+1 VP[inf] be PastPartT Adv
+1 VP[inf] Adv be PastPartT
 
 
 
