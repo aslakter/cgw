@@ -93,6 +93,8 @@
 
 # TODO: need to handle "Suggesting to the king"
 1	GerundThat	    suggesting
+# TODO: check this?
+1   GerundNP        suggesting
 
 1	GerundThat  	knowing
 
@@ -501,6 +503,11 @@
 1	PresPartT	suggesting
 1	PresPartT	migrating
 1	PresPartT	knowing
+
+# PresPart that can take ...that 
+1	PresPart[that]	    suggesting
+1	PresPart[that,inf]	suggesting
+1	PresPart[that]	    knowing
 
 1	PresPartI 	speaking
 1	PresPartI	riding
