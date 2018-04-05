@@ -115,8 +115,8 @@
 
 1	Det[plur]	the
 1	Det[plur]	no
-1   Det[plur]   those
-1   Det[plur]   many
+#1   Det[plur]   those
+#1   Det[plur]   many
 
 
 # Prepositions.
