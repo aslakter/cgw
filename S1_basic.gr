@@ -427,6 +427,12 @@
 0.01   NP[plur,obj]    NP[plur,obj] Det[distinguishing] S[plur]
 0.01   NP[plur,obj]    NP[plur,obj] Det[distinguishing] S[sing]
 
+# Possesive beginnings 
+1  PossessiveNoun[sing]  Noun[sing]  OWN  Noun[sing]
+1  PossessiveNoun[sing]  Noun[plur]  OWN  Noun[sing]
+1  PossessiveNoun[plur]  Noun[sing]  OWN  Noun[plur]
+1  PossessiveNoun[plur]  Noun[plur]  OWN  Noun[plur]
+
 
 0.1  NP[sing,nom] Det[sing] Modifier[sing] Noun[sing]
 0.1  NP[sing,nom] Modifier[sing] Noun[sing]
