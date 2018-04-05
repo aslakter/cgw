@@ -260,7 +260,7 @@
 1	ModalWord	might
 1	ModalWord	must
 1	Semi_Modal	ought
-1   ModalWord ought to
+0.01   ModalWord ought to
 1	ModalWord[future]	shall
 1	ModalWord	should
 1	ModalWord[future]	will
