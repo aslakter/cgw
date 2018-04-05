@@ -583,6 +583,61 @@
 0.01   S[intrans]   S[intrans] CC[negative] S[intrans]
 1   S[intrans]   NP[sing,nom] Verb[intrans,sing]
 1   S[intrans]   NP[plur,nom] Verb[intrans,plur]
+
+1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_that
+1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that,inf] CP_that[inf]
+1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_what
+1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_who
+1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_that
+1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that,inf] CP_that[inf]
+1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_what
+1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_who
+
+1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_that
+1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that,inf] CP_that[inf]
+1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_what
+1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_who
+1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_that
+1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that,inf] CP_that[inf]
+1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_what
+1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_who
+
+1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_that
+1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that,inf] CP_that[inf]
+1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_what
+1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_who
+1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_that
+1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that,inf] CP_that[inf]
+1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_what
+1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_who
+
+1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_that
+1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that,inf] CP_that[inf]
+1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_what
+1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_who
+1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_that
+1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that,inf] CP_that[inf]
+1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_what
+1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_who
+
+1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_that
+1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that,inf] Adv CP_that[inf]
+1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_what
+1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_who
+1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_that
+1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that,inf] Adv CP_that[inf]
+1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_what
+1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_who
+
+1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_that
+1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that,inf] Adv CP_that[inf]
+1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_what
+1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_who
+1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_that
+1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that,inf] Adv CP_that[inf]
+1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_what
+1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_who
+
 #1   VI[sing] VerbI[past,sing,3rd]
 #1   VI[sing] VerbI[pres,sing,3rd]
 #1   VI[plur] VerbI[pres,plur,3rd]
