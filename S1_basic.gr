@@ -211,20 +211,20 @@
 1 VP[plur] are PresPart NP[obj]
 
 # Past Participle
-1 VerbT[2object,past,sing,3rd]  PrePastPerfect PastPart2Obj
-1 Verb[trans,sing] PrePastPerfect PastPartT
-1 Verb[intrans,sing] PrePastPerfect PastPartI
+1 VerbT[2object,past,sing,3rd]  had PastPart2Obj
+1 Verb[trans,sing] had PastPartT
+1 Verb[intrans,sing] had PastPartI
 
 # Linking Past TODO: check following cases. I think all the ones ending in partT should be trans??
-1 Verb[intrans,sing] PrePastPerfect PastPartL PresPart2Obj 2OBJ #TODO find a better way? Not actually intrans, but want control for 2OBJ
-1 Verb[trans,sing] PrePastPerfect PastPartL PresPartT #NP[obj]
-1 Verb[intrans,sing] PrePastPerfect PastPartL PresPartT PP
-1 Verb[intrans,sing] PrePastPerfect PastPartL PresPartI
-1 Verb[linking,sing] PrePastPerfect PastPartL PresPartL
+1 Verb[intrans,sing] had PastPartL PresPart2Obj 2OBJ #TODO find a better way? Not actually intrans, but want control for 2OBJ
+1 Verb[trans,sing] had PastPartL PresPartT #NP[obj]
+1 Verb[intrans,sing] had PastPartL PresPartT PP
+1 Verb[intrans,sing] had PastPartL PresPartI
+1 Verb[linking,sing] had PastPartL PresPartL
 
-1 Verb[intrans,sing] PrePastPerfect PastPartL PastPartT PP
-1 Verb[intrans,sing] PrePastPerfect PastPartL PastPartT
-1 Verb[linking,sing] PrePastPerfect PastPartL
+1 Verb[intrans,sing] had PastPartL PastPartT PP
+1 Verb[intrans,sing] had PastPartL PastPartT
+1 Verb[linking,sing] had PastPartL
 
 1 VerbT[2object,past,plur,3rd]  PrePastPerfect PastPart2Obj # TODO CHECK THIS!!! [caroline]
 1 Verb[trans,plur] PrePastPerfect PastPartT
@@ -361,11 +361,11 @@
 1 Verb[trans,plur] VerbT[2object,past,plur,3rd]
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
 1 Verb[intrans,plur] VerbI[past,plur,3rd]
-1 Verb[linking,plur] VerbL[pres,plur,3rd] PresPart PP # TODO: can all pres part take PP?
-1 Verb[linking,plur] VerbL[pres,plur,3rd] PresPart
+1 Verb[intrans,plur] VerbL[pres,plur,3rd] PresPartT PP # TODO: can all pres part take PP?
+1 Verb[trans,plur] VerbL[pres,plur,3rd] PresPartT
 1 Verb[linking,plur] VerbL[pres,plur,3rd]
-1 Verb[linking,plur] VerbL[past,plur,3rd] PastPartT PP # TODO: can all past part verbs take PP?
-1 Verb[linking,plur] VerbL[past,plur,3rd] PastPartT
+1 Verb[intrans,plur] VerbL[past,plur,3rd] PastPartT PP # TODO: can all past part verbs take PP?
+1 Verb[trans,plur] VerbL[past,plur,3rd] PastPartT
 1 Verb[linking,plur] VerbL[past,plur,3rd]
 
 
