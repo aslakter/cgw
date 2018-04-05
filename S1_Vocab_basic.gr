@@ -241,22 +241,33 @@
 
 # Modals.
 #1   Modal   Modal[past]
-1   Modal   Modal[future]
+1   Modal   ModalPositive
+1   Modal   ModalNegated
+1   Modal[future] ModalWord[future]
+1   Modal[future] ModalWord[future] Negation
 
-1	Modal[future]	can
-1	Modal	could
-1	Modal	may
-1	Modal	might
-1	Modal	must
+####### TODO DECIDE ABOUT BELOW
+1   ModalPositive   ModalWord[future]
+1   ModalPositive   ModalWord
+1   ModalNegated   ModalWord Negation
+1   ModalNegated   ModalWord[future] Negation
+
+####### TODO DECIDE ABOUT ABOVE
+
+1	ModalWord[future]	can
+1	ModalWord	could
+1	ModalWord	may
+1	ModalWord	might
+1	ModalWord	must
 1	Semi_Modal	ought
-1   Modal ought to
-1	Modal[future]	shall
-1	Modal	should
-1	Modal[future]	will
-1	Modal	would
+1   ModalWord ought to
+1	ModalWord[future]	shall
+1	ModalWord	should
+1	ModalWord[future]	will
+1	ModalWord	would
 
 
-1   Qword Modal
+1   Qword ModalPositive
 1   Qword[sing] does
 1   Qword[plur] do
 
@@ -289,22 +300,23 @@
 1	Adj[gen]	   plodding
 
 # Comparative adjectives.
-1	Misc	bloodier
-1	Misc	wearier
-1	Misc	trustier
-1	Misc	hotter
-1	Misc	simpler
-1	Misc	tinier
-1	Misc	harder
+# TODO: HANDLE MORE ELEGANTLY
+0.1	Adj[gen]	bloodier
+0.1	Adj[gen]	wearier
+0.1	Adj[gen]	trustier
+0.1	Adj[gen]	hotter
+0.1	Adj[gen]	simpler
+0.1	Adj[gen]	tinier
+0.1	Adj[gen]	harder
 
 # Superlative adjectives.
-1	Misc	bloodiest
-1	Misc	weariest
-1	Misc	trustiest
-1	Misc	hottest
-1	Misc	simplest
-1	Misc	tiniest
-1	Misc	hardest
+0.1	Adj[gen]	bloodiest
+0.1	Adj[gen]	weariest
+0.1	Adj[gen]	trustiest
+0.1	Adj[gen]	hottest
+0.1	Adj[gen]	simplest
+0.1	Adj[gen]	tiniest
+0.1	Adj[gen]	hardest
 
 
 # Personal pronouns.
@@ -365,8 +377,8 @@
 # To Do: this is over simplifying
 1	Prep	to
 
-# 'not'
-1	Misc	not
+# 'not' #TODO: decide about below
+1	Negation	not
 
 # Verb + Conjunction Strategy:
 # Verbs will have addendums of SC to their non-terminal on whichever side(s)
@@ -444,6 +456,22 @@
 # _____ who
 1   VerbT[past,sing,3rd,who] knew
 1   VerbT[past,sing,3rd,who] covered
+
+# ____ that
+1   VerbT[past,plur,3rd,that] spoke
+1   VerbT[past,plur,3rd,that] covered
+1   VerbT[past,plur,3rd,that] suggested
+1   VerbT[past,plur,3rd,that] knew
+1   VerbT[past,plur,3rd,that,inf] suggested
+
+# _____ what
+1   VerbT[past,plur,3rd,what] knew
+1   VerbT[past,plur,3rd,what] covered
+1   VerbT[past,plur,3rd,what] spoke
+
+# _____ who
+1   VerbT[past,plur,3rd,who] knew
+1   VerbT[past,plur,3rd,who] covered
 
 # Verbs that can follow specific subordinating clauses
 1   VerbT[that,past,sing,3rd] suggested

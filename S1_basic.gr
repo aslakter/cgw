@@ -1,9 +1,9 @@
 
 1000	S1	S END
 1000    S1  S_CC END
-1   S1  CMD VP[inf] END
-1   S1  when S , S END
-1   S1  Q ?
+1000   S1  CMD VP[inf] END
+1000   S1  when S , S END
+1000   S1  Q ?
 1   S   S[sing]
 1   S   S[plur]
 
@@ -114,6 +114,7 @@
 1 VP[sing] VerbT[past,sing,3rd,that] CP_who
 1 VP[sing] Verb[intrans,sing]
 1 VP[sing] Verb[linking,sing] NP[sing,nom]
+1 VP[sing] Verb[linking,sing] NP[plur,obj] # TODO: IS THIS CORRECT?
 0.1 VP[sing] Verb[linking,sing] Modifier[sing]
 1 VP[sing] Verb[linking,sing]
 0.01 VP[sing] VP[sing] PP
