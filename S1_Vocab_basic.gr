@@ -298,6 +298,7 @@
 1	Adj[gen]	   angolian
 1	Adj[gen]	   yellow
 1	Adj[gen]	   plodding
+1   Adj[gen]    south
 
 # Comparative adjectives.
 # TODO: HANDLE MORE ELEGANTLY
@@ -363,7 +364,7 @@
 1	Adv	   currently
 1	Adv	   frequently
 1	Adv	   precisely
-1	Adv	   south #TODO: is this actually an adverb...? whenever it's generated as an adverb it doesn't seem to fit...?
+#1	Adv	   south #TODO: moved to Adj[gen]
 1	Adv	   successfully
 1	Adv	   unfortunately
 
