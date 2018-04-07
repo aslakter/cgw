@@ -3,5 +3,5 @@
 # These two rules are required; choose their weights carefully!
 # S1 is the start symbol of the grammar you construct
 # S2 is the start symbol of the markov grammar that is the default fallback.
-99	START	S1
-1	START	S2
+75	START	S1
+25	START	S2

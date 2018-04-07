@@ -10,23 +10,23 @@
 
 # questions parsings
 3      Q            Q[yesno]
-0.7    Q            Q[pronoun]
+1    Q            Q[pronoun]
 2      Q            Q[adverb]
 0.7    Q            Q[det]
 0.7    Q            Q[poss]
 1      Q            Q[be]
 
 # yes/no questions
-1       Q[yesno]     Q[trans] NP[obj]
-1       Q[yesno]     Q[trans]
-1       Q[yesno]     Q[comp] CP_that
-1       Q[yesno]     Q[comp]
-1       Q[yesno]     Q[link,sing] NP[sing,nom]
-1       Q[yesno]     Q[link,plur] NP[plur,nom]
-1       Q[yesno]     Q[link,sing] Modifier[plur]
-1       Q[yesno]     Q[link,plur] Modifier[plur]
-1       Q[yesno]     Q[link,sing]
-1       Q[yesno]     Q[link,plur]
+12       Q[yesno]     Q[trans] NP[obj]
+3      Q[yesno]     Q[trans]
+2       Q[yesno]     Q[comp] CP_that
+3       Q[yesno]     Q[comp]
+0.5       Q[yesno]     Q[link,sing] NP[sing,nom]
+0.5       Q[yesno]     Q[link,plur] NP[plur,nom]
+2       Q[yesno]     Q[link,sing] Modifier[plur]
+2       Q[yesno]     Q[link,plur] Modifier[plur]
+0.3       Q[yesno]     Q[link,sing]
+0.3       Q[yesno]     Q[link,plur]
 
 # questions starting with adverbs (i.e. "where" / "when")
 1       Q[adverb]    WH[adverb] Q[yesno]
