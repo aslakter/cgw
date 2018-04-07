@@ -1,17 +1,17 @@
-0.0001	S2
+0.01	S2
 2	    S2	_Det
 7	    S2	_Misc
 4	    S2	_Noun
 1	    S2	_Prep
 2	    S2	_Proper
 1	    S2	_VerbT
-0.001	_Det	Det
-0.01	_Det	Det _Det
+0.1	    _Det	Det
+0.1	    _Det	Det _Det
 5    	_Det	Det _Misc
 10	    _Det	Det _Noun
-0.01	_Det	Det _Prep
-0.01	_Det	Det _Proper
-0.01	_Det	Det _VerbT
+0.1	    _Det	Det _Prep
+0.1	    _Det	Det _Proper
+0.1	    _Det	Det _VerbT
 8	    _Misc	Misc
 0.8	    _Misc	Misc _Det
 3	    _Misc	Misc _Misc
@@ -20,25 +20,25 @@
 0.4	    _Misc	Misc _Proper
 0.2     _Misc	 Misc _VerbT
 10	    _Noun	Noun
-0.01	_Noun	Noun _Det
+0.1	    _Noun	Noun _Det
 3	    _Noun	Noun _Misc
-0.01	_Noun	Noun _Noun
+0.1	    _Noun	Noun _Noun
 2	    _Noun	Noun _Prep
-0.01	_Noun	Noun _Proper
+0.1	    _Noun	Noun _Proper
 8	    _Noun	Noun _VerbT
 0.1	    _Prep	Prep
 5	    _Prep	Prep _Det
 10   	_Prep	Prep _Misc
 3	    _Prep	Prep _Noun
-0.01	_Prep	Prep _Prep
+0.1	    _Prep	Prep _Prep
 1	    _Prep	Prep _Proper
-0.03	_Prep	Prep _VerbT
+0.3	    _Prep	Prep _VerbT
 1	    _Proper	Proper
-0.01	_Proper	Proper _Det
+0.1	    _Proper	Proper _Det
 5	    _Proper	Proper _Misc
-0.01	_Proper	Proper _Noun
+0.1	    _Proper	Proper _Noun
 2	    _Proper	Proper _Prep
-0.04	_Proper	Proper _Proper
+0.4	    _Proper	Proper _Proper
 6	    _Proper	Proper _VerbT
 1	    _VerbT	VerbT
 2	    _VerbT	VerbT _Det
@@ -46,4 +46,4 @@
 3	    _VerbT	VerbT _Noun
 2	    _VerbT	VerbT _Prep
 1	    _VerbT	VerbT _Proper
-0.01	_VerbT	VerbT _VerbT
+0.1	    _VerbT	VerbT _VerbT
