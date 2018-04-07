@@ -84,9 +84,9 @@
 
 
 # Compound / complex sentence structures: TODO: maybe LHS should be S?
-0.01   S1   S CC[positive] S
-0.01   S1   S CC[negative] S
-0.01   S1   S CC[explanatory] S #TODO: MAKE SURE TENSES OF SENTENCES MAKE SENSE
+0.1   S1   S CC[positive] S
+0.1   S1   S CC[negative] S
+0.1   S1   S CC[explanatory] S #TODO: MAKE SURE TENSES OF SENTENCES MAKE SENSE
 
 # sentences wrapped by CCs (either/or neither/nor)
 0.01   S_CC    CC[start,positive] S CC[end,positive] S
@@ -472,8 +472,8 @@
 0.1  NP[plur,obj] Modifier[plur] Proper[plur]
 
 # NP with CC TODO: decide on requiring non-terminals or not
-0.01 NP[plur,obj] NP[obj] and NP[obj]
-0.01 NP[plur,nom] NP[nom] and NP[nom]
+0.1 NP[plur,obj] NP[obj] and NP[obj]
+0.1 NP[plur,nom] NP[nom] and NP[nom]
 
 
 # NP either / neither rules (http://www.grammar-monster.com/lessons/either_or_plural_or_singular_verb.htm)
