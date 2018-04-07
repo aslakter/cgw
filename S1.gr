@@ -3,14 +3,14 @@
 3   S1  S_CC END
 1   S1  CMD VP[inf] END
 2   S1  when S , S END
-8  S1  Q ?
+8   S1  Q ?
 
 1   S   S[sing]
 1   S   S[plur]
 
 # questions parsings
 3      Q            Q[yesno]
-1    Q            Q[pronoun]
+1      Q            Q[pronoun]
 2      Q            Q[adverb]
 0.7    Q            Q[det]
 0.7    Q            Q[poss]
@@ -95,9 +95,6 @@
 1   S[sing]   NP[sing,nom] VP[sing]
 1   S[plur]   NP[plur,nom] VP[plur]
 
-
-#1   END .
-#1   END !
 
 3   CMD do
 1   CMD do not
@@ -351,8 +348,8 @@
 1 Verb[linking,sing] VerbL[pres,sing,3rd] PresPart PP #TODO: ADD T VS I VS L
 1 Verb[linking,sing] VerbL[pres,sing,3rd] PresPart
 1 Verb[linking,sing] VerbL[pres,sing,3rd]
-1 Verb[linking,sing] VerbL[past,sing,3rd] PastPartT PP
-1 Verb[linking,sing] VerbL[past,sing,3rd] PastPartT
+1 Verb[linking,sing] VerbL[past,sing,3rd] PastPartI PP
+1 Verb[linking,sing] VerbL[past,sing,3rd] PastPartI
 1 Verb[linking,sing] VerbL[past,sing,3rd]
 
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
