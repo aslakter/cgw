@@ -1,19 +1,21 @@
 
-1000	S1	S END
-1000    S1  S_CC END
-1000   S1  CMD VP[inf] END
-1000   S1  when S , S END
-1000   S1  Q ?
+100	S1	S END
+1   S1  S_CC END
+1   S1  CMD VP[inf] END
+1   S1  when S , S END
+50  S1  Q ?
+
+
 1   S   S[sing]
 1   S   S[plur]
 
 # questions parsings
-1       Q            Q[yesno]
-1       Q            Q[pronoun]
-1       Q            Q[adverb]
-1       Q            Q[det]
-1       Q            Q[poss]
-1       Q            Q[be]
+10     Q            Q[yesno]
+0.1    Q            Q[pronoun]
+10     Q            Q[adverb]
+0.1    Q            Q[det]
+0.1    Q            Q[poss]
+1      Q            Q[be]
 
 # yes/no questions
 1       Q[yesno]     Q[trans] NP[obj]
@@ -31,11 +33,11 @@
 1       Q[adverb]    WH[adverb] Q[yesno]
 
 # questions starting with BE (are, is)
-1       Q[be]        are NP[plur,nom] PresPart2Obj 2OBJ
+0.01    Q[be]        are NP[plur,nom] PresPart2Obj 2OBJ
 1       Q[be]        are NP[plur,nom] PresPart NP[obj]
 1       Q[be]        are NP[plur,nom] PresPart[that] CP_that
 1       Q[be]        are NP[plur,nom] PresPart[that,inf] CP_that[inf]
-1       Q[be]        is  NP[sing,nom] PresPart2Obj 2OBJ
+0.01    Q[be]        is  NP[sing,nom] PresPart2Obj 2OBJ
 1       Q[be]        is  NP[sing,nom] PresPart NP[obj]
 1       Q[be]        is  NP[sing,nom] PresPart[that] CP_that
 1       Q[be]        is  NP[sing,nom] PresPart[that,inf] CP_that[inf]
@@ -82,9 +84,9 @@
 
 
 # Compound / complex sentence structures: TODO: maybe LHS should be S?
-1   S1   S CC[positive] S
-1   S1   S CC[negative] S
-1   S1   S CC[explanatory] S #TODO: MAKE SURE TENSES OF SENTENCES MAKE SENSE
+0.01   S1   S CC[positive] S
+0.01   S1   S CC[negative] S
+0.01   S1   S CC[explanatory] S #TODO: MAKE SURE TENSES OF SENTENCES MAKE SENSE
 
 # sentences wrapped by CCs (either/or neither/nor)
 0.01   S_CC    CC[start,positive] S CC[end,positive] S
@@ -101,7 +103,6 @@
 1   CMD do
 1   CMD do not
 
-
 # Verb Phrases
 1 VP[sing] Verb[trans,sing] NP[obj]
 1 VP[sing] VerbT[pres,sing,3rd,that] CP_that
@@ -114,7 +115,7 @@
 1 VP[sing] VerbT[past,sing,3rd,that] CP_who
 1 VP[sing] Verb[intrans,sing]
 1 VP[sing] Verb[linking,sing] NP[sing,nom]
-1 VP[sing] Verb[linking,sing] NP[plur,obj] # TODO: IS THIS CORRECT?
+0.1 VP[sing] Verb[linking,sing] NP[plur,obj] # TODO: IS THIS CORRECT?
 0.1 VP[sing] Verb[linking,sing] Modifier[sing]
 1 VP[sing] Verb[linking,sing]
 0.01 VP[sing] VP[sing] PP
@@ -156,17 +157,17 @@
 1 2OBJ NP[obj] home
 
 # Infinitive
-1 VP[sing] VerbT[2Object,infin,pres] 2OBJ
-1 VP[sing] VerbT[2Object,infin,past] 2OBJ
+0.01 VP[sing] VerbT[2Object,infin,pres] 2OBJ
+0.01 VP[sing] VerbT[2Object,infin,past] 2OBJ
 
 # 2 object verbs
-1 VP[sing] VerbT[2object,pres,sing,3rd] 2OBJ
+0.1 VP[sing] VerbT[2object,pres,sing,3rd] 2OBJ
 
 # Present Participle
-1 VP[sing] is PresPart2Obj 2OBJ
+0.01 VP[sing] is PresPart2Obj 2OBJ
 1 VP[sing] is PresPart NP[obj]
 
-1 VP[plur] Verb[trans,plur] NP[obj]
+10 VP[plur] Verb[trans,plur] NP[obj]
 1 VP[plur] VerbT[pres,plur,3rd,that] CP_that
 1 VP[plur] VerbT[pres,plur,3rd,that,inf] CP_that[inf]
 1 VP[plur] VerbT[pres,plur,3rd,that] CP_what
@@ -193,12 +194,12 @@
 0.01 VP[plur] VP[plur] CP_generic
 
 # Infinitive
-1 VP[plur] VerbT[2Object,infin,pres] 2OBJ
-1 VP[plur] VerbT[2Object,infin,past] 2OBJ
+0.01 VP[plur] VerbT[2Object,infin,pres] 2OBJ
+0.01 VP[plur] VerbT[2Object,infin,past] 2OBJ
 
 # Two Objects
-1 VP[plur] VerbT[2object,pres,plur,3rd] 2OBJ
-1 VP[plur] VerbT[2object,base] 2OBJ
+0.01 VP[plur] VerbT[2object,pres,plur,3rd] 2OBJ
+0.01 VP[plur] VerbT[2object,base] 2OBJ
 
 # Modal Not Participle (Simple future?)
 1 Verb[trans,sing] Modal VerbT[inf]
@@ -208,17 +209,17 @@
 1 Verb[intrans,plur] Modal VerbT[inf]
 
 # Present Participle
-1 VP[plur] are PresPart2Obj 2OBJ
+0.01 VP[plur] are PresPart2Obj 2OBJ
 1 VP[plur] are PresPart NP[obj]
 
 # Past Participle
-1 VerbT[2object,past,sing,3rd]  had PastPart2Obj
+0.01 VerbT[2object,past,sing,3rd]  had PastPart2Obj
 1 Verb[trans,sing] had PastPartT
 1 Verb[intrans,sing] had PastPartI
 
 # Linking Past TODO: check following cases. I think all the ones ending in partT should be trans??
-1 Verb[intrans,sing] had PastPartL PresPart2Obj 2OBJ #TODO find a better way? Not actually intrans, but want control for 2OBJ
-1 Verb[trans,sing] had PastPartL PresPartT #NP[obj]
+0.01 Verb[intrans,sing] had PastPartL PresPart2Obj 2OBJ #TODO find a better way? Not actually intrans, but want control for 2OBJ
+1 Verb[trans,sing] had PastPartL PresPartT
 1 Verb[intrans,sing] had PastPartL PresPartT PP
 1 Verb[intrans,sing] had PastPartL PresPartI
 1 Verb[linking,sing] had PastPartL PresPartL
@@ -227,11 +228,11 @@
 1 Verb[intrans,sing] had PastPartL PastPartT
 1 Verb[linking,sing] had PastPartL
 
-1 VerbT[2object,past,plur,3rd]  PrePastPerfect PastPart2Obj # TODO CHECK THIS!!! [caroline]
+0.01 VerbT[2object,past,plur,3rd]  PrePastPerfect PastPart2Obj # TODO CHECK THIS!!! [caroline]
 1 Verb[trans,plur] PrePastPerfect PastPartT
 1 Verb[intrans,plur] PrePastPerfect PastPartI
 # Linking TODO: check. I think all the ones ending in partT should be trans??
-1 Verb[intrans,plur] PrePastPerfect PastPartL PresPart2Obj 2OBJ
+0.01 Verb[intrans,plur] PrePastPerfect PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,plur] PrePastPerfect PastPartL PresPartT #NP[obj]
 1 Verb[intrans,plur] PrePastPerfect PastPartL PresPartT PP
 1 Verb[intrans,plur] PrePastPerfect PastPartL PresPartI
@@ -242,12 +243,12 @@
 1 Verb[linking,plur] PrePastPerfect PastPartL
 
 # Modal Past Participles
-1 VerbT[2object,past,sing,3rd]  Modal have PastPart2Obj
+0.01 VerbT[2object,past,sing,3rd]  Modal have PastPart2Obj
 1 Verb[trans,sing] Modal have PastPartT
 1 Verb[intrans,sing] Modal have PastPartI
 
 # Past progressive
-1 Verb[intrans,sing] Modal have PastPartL PresPart2Obj 2OBJ
+0.01 Verb[intrans,sing] Modal have PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,sing] Modal have PastPartL PresPartT #NP[obj]
 1 Verb[intrans,sing] Modal have PastPartL PresPartT PP
 1 Verb[intrans,sing] Modal have PastPartL PresPartI
@@ -258,12 +259,12 @@
 1 Verb[intrans,sing] Modal have PastPartL PastPartT
 1 Verb[linking,sing] Modal have PastPartL
 
-1 VerbT[2object,past,plur,3rd]  Modal have PastPart2Obj
+0.01 VerbT[2object,past,plur,3rd]  Modal have PastPart2Obj
 1 Verb[trans,plur] Modal have PastPartT
 1 Verb[intrans,plur] Modal have PastPartI
 
 # Past Progressing
-1 Verb[intrans,plur] Modal have PastPartL PresPart2Obj 2OBJ
+0.01 Verb[intrans,plur] Modal have PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,plur] Modal have PastPartL PresPartT #NP[obj]
 1 Verb[intrans,plur] Modal have PastPartL PresPartT PP
 1 Verb[intrans,plur] Modal have PastPartL PresPartI
@@ -275,13 +276,13 @@
 1 Verb[linking,plur] Modal have PastPartL
 
 # Modal Future Past Participles
-1 VerbT[2object,past,sing,3rd]  Modal[future] have PastPart2Obj
+0.01 VerbT[2object,past,sing,3rd]  Modal[future] have PastPart2Obj
 1 Verb[trans,sing] Modal[future] have PastPartT
 1 Verb[intrans,sing] Modal[future] have PastPartI
 
 
 # Future Past Progressive
-1 Verb[intrans,sing] Modal[future] have PastPartL PresPart2Obj 2OBJ
+0.01 Verb[intrans,sing] Modal[future] have PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,sing] Modal[future] have PastPartL PresPartT #NP[obj]
 1 Verb[intrans,sing] Modal[future] have PastPartL PresPartT PP
 1 Verb[intrans,sing] Modal[future] have PastPartL PresPartI
@@ -293,12 +294,12 @@
 1 Verb[intrans,sing] Modal[future] have PastPartL PastPartT
 1 Verb[linking,sing] Modal[future] have PastPartL
 
-1 VerbT[2object,past,plur,3rd]  Modal[future] have PastPart2Obj
+0.01 VerbT[2object,past,plur,3rd]  Modal[future] have PastPart2Obj
 1 Verb[trans,plur] Modal[future] have PastPartT
 1 Verb[intrans,plur] Modal[future] have PastPartI
 
 # Future Past progressive
-1 Verb[intrans,plur] Modal[future] have PastPartL PresPart2Obj 2OBJ
+0.01 Verb[intrans,plur] Modal[future] have PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,plur] Modal[future] have PastPartL PresPartT #NP[obj]
 1 Verb[intrans,plur] Modal[future] have PastPartL PresPartT PP
 1 Verb[intrans,plur] Modal[future] have PastPartL PresPartI
@@ -439,7 +440,7 @@
 1  NP[sing,nom] Det[sing] Noun[sing]
 1  NP[sing,nom] Noun[sing]
 1  NP[sing,nom] Pronoun[sing,nom]
-1  NP[sing,nom] Proper[sing]
+0.01  NP[sing,nom] Proper[sing]
 1  NP[sing,nom] Det[sing] Proper[sing,det]
 0.1  NP[sing,nom] Modifier[sing] Proper[sing]
 
@@ -448,7 +449,7 @@
 1  NP[sing,obj] Det[sing] Noun[sing]
 1  NP[sing,obj] Noun[sing]
 1  NP[sing,obj] Pronoun[sing,obj]
-1  NP[sing,obj] Proper[sing]
+0.01  NP[sing,obj] Proper[sing]
 1  NP[sing,obj] Det[sing] Proper[sing,det]
 0.1  NP[sing,obj] Modifier[sing] Proper[sing]
 
@@ -457,7 +458,7 @@
 1  NP[plur,nom] Det[plur] Noun[plur]
 1  NP[plur,nom] Noun[plur]
 1  NP[plur,nom] Pronoun[plur,nom]
-1  NP[plur,nom] Proper[plur]
+0.01  NP[plur,nom] Proper[plur]
 1  NP[plur,nom] Det[plur] Proper[plur,det]
 0.1  NP[plur,nom] Modifier[plur] Proper[plur]
 
@@ -466,7 +467,7 @@
 1  NP[plur,obj] Det[plur] Noun[plur]
 1  NP[plur,obj] Noun[plur]
 1  NP[plur,obj] Pronoun[plur,obj]
-1  NP[plur,obj] Proper[plur]
+0.01  NP[plur,obj] Proper[plur]
 1  NP[plur,obj] Det[plur] Proper[plur,det]
 0.1  NP[plur,obj] Modifier[plur] Proper[plur]
 
@@ -540,7 +541,7 @@
 # GerundEmpty, GerundInfin, GerundThat, GerundLocPrep
 
 1  GerundS      GerundNP NP[obj]
-1  GerundS      Gerund2Obj NP[obj] 2OBJ
+0.01  GerundS      Gerund2Obj NP[obj] 2OBJ
 1  GerundS      GerundProp AllProper
 1  GerundS      GerundPP PP
 1  GerundS      GerundEmpty
@@ -574,17 +575,17 @@
 
 # Complementizer Phrases
 1   CP_generic  SC_generic S
-1   CP_that     SC_that S
-1   CP_that     S  #dropped "that" case
+10   CP_that     SC_that S
+0.01   CP_that     S  #dropped "that" case
 1   CP_that[inf]     SC_that NP[sing,nom] VP[inf] # TODO: change NP/VP to S[inf]??
 1   CP_that[inf]     SC_that NP[plur,nom] VP[inf]
-1   CP_that[inf]     NP[sing,nom] VP[inf]  #dropped "that" case
-1   CP_that[inf]     NP[plur,nom] VP[inf]  #dropped "that" case
+0.01   CP_that[inf]     NP[sing,nom] VP[inf]  #dropped "that" case
+0.01   CP_that[inf]     NP[plur,nom] VP[inf]  #dropped "that" case
 1   CP_if   SC_if S
 1   CP_who   who S[intrans]
 1   CP_what   what S[intrans]
 1   CP_intrans  SC_that S[intrans]
-1   CP_intrans  S[intrans] # dropped "that" case
+0.01   CP_intrans  S[intrans] # dropped "that" case
 
 0.01   S[intrans]   S[intrans] CC[positive] S[intrans]
 0.01   S[intrans]   S[intrans] CC[negative] S[intrans]

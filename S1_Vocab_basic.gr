@@ -87,7 +87,6 @@
 1	GerundNP	    carrying
 1	Gerund2Obj	    carrying
 
-1	GerundNP    	migrating
 1	GerundPP    	migrating
 1	GerundProper    migrating
 
@@ -109,7 +108,8 @@
 1	Det[sing]	no
 1	Det[sing]	that
 1  Det[distinguishing]    that
-1  Det[distinguishing]    who #TODO: maybe make different non-terminal?
+1  Det[distinguishing]    who
+1  Det[distinguishing]    which
 1	Det[sing]	the
 1	Det[sing]	this
 
@@ -550,7 +550,6 @@
 1	PresPartT	growing
 1	PresPartT	carrying
 1	PresPartT	suggesting
-1	PresPartT	migrating
 1	PresPartT	knowing
 
 # PresPart that can take ...that 
@@ -679,7 +678,7 @@
 # Wh-determiners.
 1	Misc	that
 1	WH[det]	what
-1	WH[det]	which #TODO: change to Det[distinguishing] and make sure we distinguish "which" from "who"
+1	WH[det]	which
 
 # Wh-pronouns.
 1	WH[pronoun]	what
