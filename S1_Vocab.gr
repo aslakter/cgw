@@ -12,38 +12,112 @@
 
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
-1	Noun	castle
-1	Noun	king
-1	Noun	defeater
-1	Noun	sovereign
-1	Noun	servant
-1	Noun	corner
-1	Noun	land
-1	Noun	quest
-1	Noun	chalice
-1	Noun	master
-1	Noun	horse
-1	Noun	fruit
-1	Noun	swallow
-1	Noun	sun
-1	Noun	winter
-1	Noun	coconut
-1	Noun	pound
-1	Noun	husk
-1	Noun	home
-1	Noun	weight
-1	Noun	story
+1	Noun[sing]	castle
+1	Noun[sing]	king
+1	Noun[sing]	defeater
+1	Noun[sing]	sovereign
+1	Noun[sing]	servant
+1	Noun[sing]	corner
+1	Noun[sing]	land
+1	Noun[sing]	quest
+1	Noun[sing]	chalice
+1	Noun[sing]	master
+1	Noun[sing]	horse
+1	Noun[sing]	fruit
+1	Noun[sing]	swallow
+1	Noun[sing]	sun
+1	Noun[sing]	winter
+1	Noun[sing]	coconut
+1	Noun[sing]	pound
+1	Noun[sing]	husk
+1	Noun[sing]	home
+1	Noun[sing]	weight
+1	Noun[sing]	story
+
+# Plural nouns.
+1	Noun[plur]	coconuts
+1	Noun[plur]	halves
+1	Noun[plur]	snows
+1	Noun[plur]	mountains
+1	Noun[plur]	areas
+1	Noun[plur]	strangers
+1	Noun[plur]	inches
+1	Noun[plur]	snakes
+1	Noun[plur]	ants
+1	Noun[plur]	nights
+# TODO: judgement calls below (updated from other team's generated sentences)
+1   Noun[plur]  fruit
+
+# Gerunds
+# TODO: take out proper noun for some NP
+# GerundNP
+# Gerund2Obj
+# GerundProp
+# GerundPP
+# Gerunds that don't require an object
+# Ex: speaking is hard
+# GerundEmpty
+# GerundInfin
+# GerundThat
+# GerundLocPrep
+
+1   GerundNP        having
+1	GerundInfin 	having
+
+1   GerundEmpty     speaking
+1   GerundPP        speaking
+
+1	GerundNP	    covering
+
+1	GerundNP    	being
+1   GerundLocPrep   being
+
+1	GerundEmpty 	riding
+1	GerundNP    	riding
+1	GerundPP    	riding
+1	GerundProper 	riding
+1	Gerund2Obj	riding
+
+1	GerundNP    	drinking
+1	GerundPP    	drinking
+
+1	GerundNP    	growing
+1	GerundPP    	growing
+
+1	GerundNP	    carrying
+1	Gerund2Obj	    carrying
+
+1	GerundPP    	migrating
+1	GerundProper    migrating
+
+# TODO: need to handle "Suggesting to the king"
+1	GerundThat	    suggesting
+# TODO: check this?
+1   GerundNP        suggesting
+
+1	GerundThat  	knowing
+
+
 
 # Determiners.
-1	Det	a
-1	Det	another
-1	Det	any
-1	Det	each
-1	Det	every
-1	Det	no
-1	Det	that
-1	Det	the
-1	Det	this
+1	Det[sing]	a
+1	Det[sing]	another
+1	Det[sing]	any
+1	Det[sing]	each
+1	Det[sing]	every
+1	Det[sing]	no
+1	Det[sing]	that
+1  Det[distinguishing]    that
+1  Det[distinguishing]    who
+1  Det[distinguishing]    which
+1	Det[sing]	the
+1	Det[sing]	this
+
+1	Det[plur]	the
+1	Det[plur]	no
+#1   Det[plur]   those
+#1   Det[plur]   many
+
 
 # Prepositions.
 1	Prep	above
@@ -61,29 +135,78 @@
 1	Prep	through
 1	Prep	with
 
+# Location Prepositions
+# to do
+
 # Proper nouns.  Note that our Proper tag is just for people.
-1	Proper	Arthur
-1	Proper	Guinevere
-1	Proper	Sir Lancelot
-1	Proper	Sir Bedevere
-1	Proper	Zoot
-1	Proper	Dingo
-1	Proper	Patsy
-1	Proper	Uther Pendragon
+1	Proper[sing]	Arthur
+1	Proper[sing]	Guinevere
+1	Proper[sing]	Sir Lancelot
+1	Proper[sing]	Sir Bedevere
+1	Proper[sing]	Bedevere
+1	Proper[sing]	Lancelot
+1	Proper[sing]	Sir
+1	Proper[sing]	Zoot
+1	Proper[sing]	Dingo
+1	Proper[sing]	Patsy
+1	Proper[sing]	Uther Pendragon
+1	Proper[sing]	Uther
+1	Proper[sing]	Pendragon
+
+
+
+# More proper nouns, not people.
+
+1	Proper[sing]	Camelot
+1	Proper[sing]	England
+1	Proper[sing]	Holy Grail
+1	Proper[sing]	Round Table
+1	Proper[sing]	Table
+1	Proper[sing]	Grail
+
+1	Proper[sing,det]	Holy Grail
+1	Proper[sing,det]	Grail
+
+1	Proper[sing,det]	Round Table
+1	Proper[sing,det]	Table
+
+
+# Plural proper nouns.
+1	Proper[plur]	Britons
+1	Proper[plur]	Saxons
+
+1	Proper[plur,det]	Britons
+1	Proper[plur,det]	Saxons
+
+
+1   AllProper    Proper[sing]
+1   AllProper    Proper[plur]
+1   AllProper    Proper[plur,det]
+1   AllProper    Proper[sing,det]
 
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,
 # and some of those could also function as intransitives!
-1	VerbT	has
-1	VerbT	covers
-1	VerbT	is
-1	VerbT	drinks
-1	VerbT	carries
-1	VerbT	rides
+1	VerbT[pres,sing,3rd]	has
+1	VerbT[pres,sing,3rd]	covers
+1	VerbT[pres,sing,3rd]	drinks
+1	VerbT[pres,sing,3rd]	carries
+1	VerbT[pres,sing,3rd]	rides
+
+1	VerbL[pres,sing,3rd]	is
+
+1	VerbI[pres,sing,3rd]	drinks
+1	VerbI[pres,sing,3rd]	covers
+1	VerbI[pres,sing,3rd]	drinks
+1	VerbI[pres,sing,3rd]	carries
+1	VerbI[pres,sing,3rd]	rides
+
+1   VerbT[2object,pres,sing,3rd]       carries
+1   VerbT[2object,pres,sing,3rd]       rides
 
 # End-of-sentence.
-1	Misc	!
-1	Misc	.
+1	END	!
+1	END	.
 1	Misc	?
 
 # Pauses.
@@ -94,236 +217,481 @@
 1	Misc	:
 
 # Coordinating conjunctions.
-1	Misc	and
-1	Misc	but
-1	Misc	or
-1	Misc	either
-1	Misc	nor
-1	Misc	neither
-1	Misc	so
+# defining subcategories as subcategories:
+# Understanding note: positive implies including / combining; negative implies excluding / rejecting
+1   CC[positive]    CC[end,positive]
+1   CC[negative]    CC[end,negative]
+
+1	CC[positive]  and
+1	CC[negative]  but
+1	CC[end,positive]	or
+1	CC[start,positive]	either
+1	CC[end,negative]	nor
+1	CC[start,negative]	neither
+1	CC[explanatory]	so # TODO: definitely needs to be special cased
 
 # Numbers.
-1	Misc	eight
-1	Misc	five
-1	Misc	one
-1	Misc	5.5
-1	Misc	sixty
-1	Misc	5,000
+1	Adj[plur]	eight
+1	Adj[plur]	five
+1	Adj[sing]	one
+1	Adj[plur]	5.5
+1	Adj[plur]	sixty
+1	Adj[plur]	5,000
 
 # Expletive.
 1	Misc	there
 
 # Subordinating conjunctions.
-1	Misc	that
-1	Misc	so
-1	Misc	while
-1	Misc	because
-1	Misc	if
+1   SC  SC_generic
+
+1	SC_that	that # TODO: "the horse that wanted the crown VP" (IS NEEDED!!)
+1	SC_generic	so # TODO: can always occur at end of a VP? (acting as "so that" aka: in order to)
+1   SC_generic  so that # More specific case of above
+1	SC_generic	while   # TODO: can always occur at end of a VP?
+1	SC_generic	because # TODO: can always occur at end of a VP?
+1   SC_generic  SC_if
+1	SC_if	if # TODO: can always occur at end of a VP?
 
 # Modals.
-1	Misc	can
-1	Misc	could
-1	Misc	may
-1	Misc	might
-1	Misc	must
-1	Misc	ought
-1	Misc	shall
-1	Misc	should
-1	Misc	will
-1	Misc	would
+#1   Modal   Modal[past]
+1   Modal   ModalPositive
+1   Modal   ModalNegated
+1   Modal[future] ModalWord[future]
+1   Modal[future] ModalWord[future] Negation
+
+####### TODO DECIDE ABOUT BELOW
+1   ModalPositive   ModalWord[future]
+1   ModalPositive   ModalWord
+1   ModalNegated   ModalWord Negation
+1   ModalNegated   ModalWord[future] Negation
+
+####### TODO DECIDE ABOUT ABOVE
+
+1	ModalWord[future]	can
+1	ModalWord	could
+1	ModalWord	may
+1	ModalWord	might
+1	ModalWord	must
+1	Semi_Modal	ought
+0.01   ModalWord ought to
+1	ModalWord[future]	shall
+1	ModalWord	should
+1	ModalWord[future]	will
+1	ModalWord	would
+
+
+1   Qword ModalPositive
+1   Qword[sing] does
+1   Qword[plur] do
+
+
+# Modals for infinitive
+1   Modal_pre_infinitive[present]    Semi_Modal
+1   Modal_pre_infinitive[present]    Modal have
+1   Modal_pre_infinitive[past]    Modal have had
 
 
 # Adjectives.
-1	Misc	bloody
-1	Misc	weary
-1	Misc	unable
-1	Misc	trusty
-1	Misc	further
-1	Misc	sacred
-1	Misc	tropical
-1	Misc	indigenous
-1	Misc	temperate
-1	Misc	hot
-1	Misc	lucky
-1	Misc	simple
-1	Misc	tiny
-1	Misc	hard	
-1	Misc	sensational
-1	Misc	comparable
-1	Misc	angolian
-1	Misc	yellow
-1	Misc	plodding
+1	Adj[gen]    bloody
+1	Adj[gen]	   weary
+1	Adj[gen]	   unable
+1	Adj[gen]	   trusty
+1	Adj[gen]	   further
+1	Adj[gen]	   sacred
+1	Adj[gen]	   tropical
+1	Adj[gen]	   indigenous
+1	Adj[gen]	   temperate
+1	Adj[gen]	   hot
+1	Adj[gen]	   lucky
+1	Adj[gen]	   simple
+1	Adj[gen]	   tiny
+1	Adj[gen]	   hard
+1	Adj[gen]	   sensational
+1	Adj[gen]	   comparable
+1	Adj[gen]	   angolian
+1	Adj[gen]	   yellow
+1	Adj[gen]	   plodding
+1   Adj[gen]    south
 
 # Comparative adjectives.
-1	Misc	bloodier
-1	Misc	wearier
-1	Misc	trustier
-1	Misc	hotter
-1	Misc	simpler
-1	Misc	tinier
-1	Misc	harder
+# TODO: HANDLE MORE ELEGANTLY
+0.1	Adj[gen]	bloodier
+0.1	Adj[gen]	wearier
+0.1	Adj[gen]	trustier
+0.1	Adj[gen]	hotter
+0.1	Adj[gen]	simpler
+0.1	Adj[gen]	tinier
+0.1	Adj[gen]	harder
 
 # Superlative adjectives.
-1	Misc	bloodiest
-1	Misc	weariest
-1	Misc	trustiest
-1	Misc	hottest
-1	Misc	simplest
-1	Misc	tiniest
-1	Misc	hardest
+0.1	Adj[gen]	bloodiest
+0.1	Adj[gen]	weariest
+0.1	Adj[gen]	trustiest
+0.1	Adj[gen]	hottest
+0.1	Adj[gen]	simplest
+0.1	Adj[gen]	tiniest
+0.1	Adj[gen]	hardest
 
-# Plural nouns.
-1	Misc	coconuts
-1	Misc	halves
-1	Misc	snows
-1	Misc	mountains
-1	Misc	areas
-1	Misc	strangers
-1	Misc	inches
-1	Misc	snakes
-1	Misc	ants
-1	Misc	nights
-
-# More proper nouns, not people.
-
-1	Misc	Camelot
-1	Misc	England
-1	Misc	Holy Grail
-1	Misc	Round Table
-
-# Plural proper nouns.
-1	Misc	Britons
-1	Misc	Saxons
 
 # Personal pronouns.
-1	Misc	he
-1	Misc	her
-1	Misc	him
-1	Misc	it
-1	Misc	one
-1	Misc	she
-1	Misc	them
-1	Misc	they
+# 1	Noun[sing]	he
+# 1	Noun[sing]	her
+# 1	Noun[sing]	him
+# 1	Noun[sing]	it
+# 1	Noun[sing]	one
+# 1	Noun[sing]	she
+# 1	Noun[plur]	them
+# 1	Noun[plur]	they
+
+1  Pronoun[nom,sing,masc] he
+1  Pronoun[nom,sing,fem] she
+1  Pronoun[obj,sing,masc] him
+1  Pronoun[obj,sing,fem] her
+1  Pronoun[obj,sing,neut] it
+1  Pronoun[nom,sing,neut] it
+#1  Pronoun[obj,plur,neut] it
+#1  Pronoun[nom,plur,neut] it
+1  Pronoun[obj,sing,neut] one
+1  Pronoun[nom,sing,neut] one
+1  Pronoun[obj,plur,neut] them
+1  Pronoun[nom,plur,neut] they
 
 
 # Possessive personal pronouns
-1	Misc	her
-1	Misc	his
-1	Misc	its
-1	Misc	their
+1	Det[sing]	her
+1	Det[sing]	his
+1	Det[sing]	its
+1	Det[plur]	their
+
+# TODO: maybe implement this properly?
+# 1  ProDet[sing,fem] her
+# 1  ProDet[sing,masc] his
+# 1  ProDet[sing,neut] its
+# 1  ProDet[plur,neut] their
+
+
 
 # Adverbs.
-1	Misc	again
-1	Misc	already
-1	Misc	currently
-1	Misc	frequently
-1	Misc	precisely
-1	Misc	south
-1	Misc	successfully
-1	Misc	unfortunately
+1	Adv	   again
+1	Adv	   already
+1	Adv	   currently
+1	Adv	   frequently
+1	Adv	   precisely
+#1	Adv	   south #TODO: moved to Adj[gen]
+1	Adv	   successfully
+1	Adv	   unfortunately
 
 # 'do'/'does'
 1	Misc	do
 1	Misc	does
+# TODO: make final choice about below
+1   VerbI[pres,sing,3rd]   does
 
 # 'to'
-1	Misc	to
+# To Do: this is over simplifying
+1	Prep	to
 
-# 'not'
-1	Misc	not
+# 'not' #TODO: decide about below
+1	Negation	not
+
+# Verb + Conjunction Strategy:
+# Verbs will have addendums of SC to their non-terminal on whichever side(s)
+# that verb is able to take an SC
+# TODO: there will likely be sub-categories of SC in future (currently working with
+# TODO: simplifying assumption that all SCs work like "that")
 
 # Verbs (base form).
-1	Misc	have
-1	Misc	speak
-1	Misc	cover
-1	Misc	be
-1	Misc	ride
-1	Misc	drink
-1	Misc	grow
-1	Misc	carry
-1	Misc	suggest
-1	Misc	migrate
-1	Misc	know
+1	VerbT[inf]	have        # that (iff participle) _ NONE
+1	VerbT[inf]	speak       # NONE _ that (if speak == say), if(?x) (if speak == "fortells")
+1	VerbT[inf]	cover       # NONE? _ that, if, while? (covering a period of time like "Arthur covers while Gwen eats in his lecture")
+
+1	VerbT[inf]	have        # that (iff participle) _ NONE
+1	VerbT[inf]	speak       # NONE _ that (if speak == say), if(?x) (if speak == "fortells")
+1	VerbT[inf]	cover
+
+
+
+# be: that, if (if Arthur rides is a good question.), because (because Arthur rides is a reason), while (while Arthur rides is when we go)
+# be: _ NONE?
+1	VerbL[inf]	be
+
+1	VerbT[inf]	ride        # NONE _ NONE
+1	VerbT[inf]	drink       # NONE _ NONE
+1	VerbT[inf]	grow        # that? ("(silent "the idea") that Arthur rode grew on her") _ NONE  (??? because, if, while, so [that] (aka: in order to))   (NOT: that)
+1	VerbT[inf]	carry       # NONE _ (so [that] (enabling), if (condition for carry): if the direct object is dropped)
+1	VerbT[inf]	suggest     # that (NOT: because, if, so, while) _ that (No others) TODO: I think this requires 'that', but can be silent/dropped
+1	VerbT[inf]	migrate     # NONE _ NONE? (while, if, so, so that, because) (NOT: that)
+1	VerbT[inf]	know        # NONE _ that, if (NOT: knows X because/so/while --> no)
+
+
+1   VerbC[inf] suggest
+1   VerbC[inf] know
+
+1   VerbT[2object,base]       carry
+1   VerbT[2object,base]       ride
+#1   VerbT[2object,base]       be #TODO: Decide if true
 
 # Verbs (past tense).
-1	Misc	had
-1	Misc	spoke
-1	Misc	covered
-1	Misc	was
-1	Misc	were
-1	Misc	rode
-1	Misc	drank
-1	Misc	grew
-1	Misc	carried
-1	Misc	suggested
-1	Misc	migrated
-1	Misc	knew
+1	VerbT[past,sing,3rd]	had
+1	VerbT[past,sing,3rd]	spoke
+1	VerbT[past,sing,3rd]	covered
+1	VerbT[past,sing,3rd]	ate
+1	VerbT[past,sing,3rd]	rode
+1	VerbT[past,sing,3rd]	drank
+1	VerbT[past,sing,3rd]	grew
+1	VerbT[past,sing,3rd]	carried
+1	VerbT[past,sing,3rd]	suggested
+1	VerbT[past,sing,3rd]	migrated
+1	VerbT[past,sing,3rd]	knew
+
+1	VerbT[past,plur,3rd]	had
+1	VerbT[past,plur,3rd]	spoke
+1	VerbT[past,plur,3rd]	covered
+1	VerbT[past,plur,3rd]	rode
+1	VerbT[past,plur,3rd]	drank
+1	VerbT[past,plur,3rd]	grew
+1	VerbT[past,plur,3rd]	carried
+1	VerbT[past,plur,3rd]	suggested
+1	VerbT[past,plur,3rd]	migrated
+1	VerbT[past,plur,3rd]	knew
+1	VerbT[past,plur,3rd]	ate
+
+
+# Verbs that can precede specific subordinating clauses
+# ____ that
+1   VerbT[past,sing,3rd,that] spoke
+1   VerbT[past,sing,3rd,that] covered
+1   VerbT[past,sing,3rd,that] suggested
+1   VerbT[past,sing,3rd,that] knew
+1   VerbT[past,sing,3rd,that,inf] suggested
+
+# _____ what
+1   VerbT[past,sing,3rd,what] knew
+1   VerbT[past,sing,3rd,what] covered
+1   VerbT[past,sing,3rd,what] spoke
+
+# _____ who
+1   VerbT[past,sing,3rd,who] knew
+1   VerbT[past,sing,3rd,who] covered
+
+# ____ that
+1   VerbT[past,plur,3rd,that] spoke
+1   VerbT[past,plur,3rd,that] covered
+1   VerbT[past,plur,3rd,that] suggested
+1   VerbT[past,plur,3rd,that] knew
+1   VerbT[past,plur,3rd,that,inf] suggested
+
+# _____ what
+1   VerbT[past,plur,3rd,what] knew
+1   VerbT[past,plur,3rd,what] covered
+1   VerbT[past,plur,3rd,what] spoke
+
+# _____ who
+1   VerbT[past,plur,3rd,who] knew
+1   VerbT[past,plur,3rd,who] covered
+
+# Verbs that can follow specific subordinating clauses
+1   VerbT[that,past,sing,3rd] suggested
+1   VerbT[that,past,sing,3rd] grew
+
+
+1	VerbI[past,sing,3rd]	spoke  ## TODO: fix these verb categories
+1	VerbI[past,sing,3rd]	rode
+1	VerbI[past,sing,3rd]	drank
+1	VerbI[past,sing,3rd]	grew
+1	VerbI[past,sing,3rd]	suggested
+1	VerbI[past,sing,3rd]	migrated
+1	VerbI[past,sing,3rd]	knew
+1	VerbI[past,sing,3rd]	ate
+
+
+1	VerbI[past,plur,3rd]	spoke  ## TODO: fix these verb categories
+1	VerbI[past,plur,3rd]	rode
+1	VerbI[past,plur,3rd]	drank
+1	VerbI[past,plur,3rd]	grew
+1	VerbI[past,plur,3rd]	suggested
+1	VerbI[past,plur,3rd]	migrated
+1	VerbI[past,plur,3rd]	knew
+1	VerbI[past,plur,3rd]	ate
+
+1	VerbL[past,sing,3rd]	was
+1	VerbL[past,plur,3rd]	were
+
+1   VerbT[2object,past,sing,3rd] rode
+1   VerbT[2object,past,plur,3rd] rode
+1   VerbT[2object,past,sing,3rd] carried
+1   VerbT[2object,past,plur,3rd] carried
+
+# Infinitive
+# TODO: not sure handling suggested, know properly
+1   VerbT[infin,base]            to VerbT[inf]
+1   VerbT[infin,base]            to VerbL[inf]
+1   VerbT[2Object,infin,base]    to VerbT[2object,base]
+1   VerbT[infin,pres]            Modal_pre_infinitive[present] VerbT[infin,base]
+1   VerbT[infin,past]            Modal_pre_infinitive[past] VerbT[infin,base]
+1   VerbT[2Object,infin,pres]    Modal_pre_infinitive[present] VerbT[2Object,infin,base]
+1   VerbT[2Object,infin,past]    Modal_pre_infinitive[past] VerbT[2Object,infin,base]
+
+1   Verb[trans,plur]             VerbT[infin,past]
+1   Verb[trans,plur]             VerbT[infin,pres]
 
 # Verbs (present participles).
-1	Misc	having
-1	Misc	speaking
-1	Misc	covering
-1	Misc	being
-1	Misc	riding
-1	Misc	drinking
-1	Misc	growing
-1	Misc	carrying
-1	Misc	suggesting
-1	Misc	migrating
-1	Misc	knowing
+1   PresPart    PresPartT
+1   PresPart    PresPartL
+1   PresPart    PresPartI
+
+1	PresPartL	being
+
+1	PresPartT 	having
+1	PresPartT 	speaking
+1	PresPartT	covering
+1	PresPartT	riding
+1	PresPartT	drinking
+1	PresPartT	growing
+1	PresPartT	carrying
+1	PresPartT	suggesting
+1	PresPartT	knowing
+
+# PresPart that can take ...that
+1	PresPart[that]	    suggesting
+1	PresPart[that,inf]	suggesting
+1	PresPart[that]	    knowing
+
+1	PresPartI 	speaking
+1	PresPartI	riding
+1	PresPartI	drinking
+1	PresPartI	growing
+1	PresPartI	suggesting
+1	PresPartI	migrating
+1	PresPartI	knowing
+
+1	PresPart2Obj	riding
+1	PresPart2Obj	carrying
 
 # Verbs (past participle).
-1	Misc	had
-1	Misc	spoken
-1	Misc	covered
-1	Misc	been
-1	Misc	ridden
-1	Misc	drunk
-1	Misc	grown
-1	Misc	carried
-1	Misc	suggested
-1	Misc	migrated
-1	Misc	known
+1   PrePastPerfect  had
+1   PrePastPerfect  have
+
+1	PastPartT	had
+1	PastPartT	spoken
+1	PastPartT	covered
+1	PastPartT	ridden
+1	PastPartT	drunk
+1	PastPartT	grown
+1	PastPartT	carried
+1	PastPartT	suggested
+1	PastPartT	migrated
+1	PastPartT	known
+
+1	PastPartI	spoken
+1	PastPartI	ridden
+1	PastPartI	drunk
+1	PastPartI	grown
+1	PastPartI	suggested
+1	PastPartI	migrated
+1	PastPartI	known
+
+1   PastPart2Obj    ridden
+1   PastPart2Obj    carried
+
+1	PastPartL	been        # L
 
 # More third person singular verbs.
-1	Misc	speaks
-1	Misc	grows
-1	Misc	goes
-1	Misc	migrates
-1	Misc	suggests
-1	Misc	knows
+1	VerbT[pres,sing,3rd]	speaks
+1	VerbT[pres,sing,3rd]	grows
+1	VerbT[pres,sing,3rd]	goes
+1	VerbT[pres,sing,3rd]	migrates
+1	VerbT[pres,sing,3rd]	suggests
+1	VerbT[pres,sing,3rd]	knows
+
+# Verbs that can precede specific subordinating clauses
+# ____ that
+1   VerbT[pres,sing,3rd,that] speaks
+1   VerbT[pres,sing,3rd,that] covers
+1   VerbT[pres,sing,3rd,that] suggests
+1   VerbT[pres,sing,3rd,that] knows
+1   VerbT[pres,sing,3rd,that,inf] suggests
+
+# _____ what
+1   VerbT[pres,sing,3rd,what] knows
+1   VerbT[pres,sing,3rd,what] covers
+1   VerbT[pres,sing,3rd,what] speaks
+
+# _____ who
+1   VerbT[pres,sing,3rd,who] knows
+1   VerbT[pres,sing,3rd,who] covers
+
+# Verbs that can follow specific subordinating clauses
+1   VerbT[that,pres,sing,3rd] suggests
+1   VerbT[that,pres,sing,3rd] grows
+
+1	VerbI[pres,sing,3rd]	speaks
+1	VerbI[pres,sing,3rd]	grows
+1	VerbI[pres,sing,3rd]	goes
+1	VerbI[pres,sing,3rd]	migrates
+1	VerbI[pres,sing,3rd]	suggests
+1	VerbI[pres,sing,3rd]	knows
+
 
 # Verbs (present, plural, third person).
-1	Misc	have
-1	Misc	speak
-1	Misc	cover
-1	Misc	are
-1	Misc	ride
-1	Misc	drink
-1	Misc	grow
-1	Misc	carry
-1	Misc	suggest
-1	Misc	migrate
-1	Misc	know
+1	VerbT[pres,plur,3rd]	have
+1	VerbT[pres,plur,3rd]	speak
+1	VerbT[pres,plur,3rd]	cover
+1	VerbT[pres,plur,3rd]	ride
+1	VerbT[pres,plur,3rd]	drink
+1	VerbT[pres,plur,3rd]	grow
+1	VerbT[pres,plur,3rd]	carry
+1	VerbT[pres,plur,3rd]	suggest
+1	VerbT[pres,plur,3rd]	migrate
+1	VerbT[pres,plur,3rd]	know
+
+# Verbs that can precede specific subordinating clauses
+# ____ that
+1   VerbT[pres,plur,3rd,that] speak
+1   VerbT[pres,plur,3rd,that] cover
+1   VerbT[pres,plur,3rd,that] suggest
+1   VerbT[pres,plur,3rd,that] know
+1   VerbT[pres,plur,3rd,that,inf] suggest
+
+# _____ what
+1   VerbT[pres,plur,3rd,what] know
+1   VerbT[pres,plur,3rd,what] cover
+1   VerbT[pres,plur,3rd,what] speak
+
+# _____ who
+1   VerbT[pres,plur,3rd,who] know
+1   VerbT[pres,plur,3rd,who] cover
+
+1	VerbI[pres,plur,3rd]	speak
+1	VerbI[pres,plur,3rd]	ride
+1	VerbI[pres,plur,3rd]	drink
+1	VerbI[pres,plur,3rd]	grow
+1	VerbI[pres,plur,3rd]	migrate
+1	VerbI[pres,plur,3rd]	know
+
+1	VerbL[pres,plur,3rd]	are
+
+# Verbs that take two objects
+1   VerbT[2object,pres,plur,3rd]     carry
+1   VerbT[2object,pres,plur,3rd]     ride
 
 # Wh-determiners.
 1	Misc	that
-1	Misc	what
-1	Misc	which
+1	WH[det]	what
+1	WH[det]	which
 
 # Wh-pronouns.
-1	Misc	what
-1	Misc	who
+1	WH[pronoun]	what
+1	WH[pronoun]	who
 
 # Wh possessive pronoun.
-1	Misc	whose
+1	WH[poss]	whose
 
 # Wh-adverbs
-1	Misc	how
-1	Misc	when
-1	Misc	where
-1	Misc	why
-
+1	WH[adverb]	how
+1	WH[adverb]	when
+1	WH[adverb]	where
+1	WH[adverb]	why
 
 # Possessive marker.
 1	Misc	's
