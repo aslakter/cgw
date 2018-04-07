@@ -167,7 +167,7 @@
 0.01 VP[sing] is PresPart2Obj 2OBJ
 1 VP[sing] is PresPart NP[obj]
 
-10 VP[plur] Verb[trans,plur] NP[obj]
+3 VP[plur] Verb[trans,plur] NP[obj]
 1 VP[plur] VerbT[pres,plur,3rd,that] CP_that
 1 VP[plur] VerbT[pres,plur,3rd,that,inf] CP_that[inf]
 1 VP[plur] VerbT[pres,plur,3rd,that] CP_what
@@ -372,15 +372,15 @@
 
 
 # Verb Phrases with conjunctions
-0.01   VP[sing]    VP[sing] CC[positive] VP[sing]
-0.01   VP[sing]    VP[sing] CC[negative] VP[sing]
-0.01   VP[sing]    CC[start,positive] VP[sing] CC[end,positive] VP[sing]
-0.01   VP[sing]    CC[start,negative] VP[sing] CC[end,negative] VP[sing]
+0.2   VP[sing]    VP[sing] CC[positive] VP[sing]
+0.2   VP[sing]    VP[sing] CC[negative] VP[sing]
+0.07   VP[sing]    CC[start,positive] VP[sing] CC[end,positive] VP[sing]
+0.07   VP[sing]    CC[start,negative] VP[sing] CC[end,negative] VP[sing]
 
-0.01   VP[plur]    VP[plur] CC[positive] VP[plur]
-0.01   VP[plur]    VP[plur] CC[negative] VP[plur]
-0.01   VP[plur]    CC[start,positive] VP[plur] CC[end,positive] VP[plur]
-0.01   VP[plur]    CC[start,negative] VP[plur] CC[end,negative] VP[plur]
+0.2   VP[plur]    VP[plur] CC[positive] VP[plur]
+0.2   VP[plur]    VP[plur] CC[negative] VP[plur]
+0.07   VP[plur]    CC[start,positive] VP[plur] CC[end,positive] VP[plur]
+0.07   VP[plur]    CC[start,negative] VP[plur] CC[end,negative] VP[plur]
 
 
 # Pronouns
@@ -541,7 +541,7 @@
 # GerundEmpty, GerundInfin, GerundThat, GerundLocPrep
 
 1  GerundS      GerundNP NP[obj]
-0.01  GerundS      Gerund2Obj NP[obj] 2OBJ
+0.3  GerundS      Gerund2Obj NP[obj] 2OBJ
 1  GerundS      GerundProp AllProper
 1  GerundS      GerundPP PP
 1  GerundS      GerundEmpty
@@ -555,11 +555,11 @@
 # To do: Location Prep Phrase
 # 1  GerundS      GerundLocPrep LocPrepP
 
-0.01  S   GerundSentence
+0.1  S   GerundSentence
 
-0.01  GerundSentence   GerundS is Adj[sing]
-0.01  GerundSentence   GerundS suggests S
-0.01  GerundSentence   GerundS suggests that S
+0.1  GerundSentence   GerundS is Adj[sing]
+0.1  GerundSentence   GerundS suggests S
+0.1  GerundSentence   GerundS suggests that S
 
 # Modifiers
 # TODO: currently modifiers can come after the noun/verb, but adj need to come before them??
@@ -587,8 +587,8 @@
 1   CP_intrans  SC_that S[intrans]
 0.01   CP_intrans  S[intrans] # dropped "that" case
 
-0.01   S[intrans]   S[intrans] CC[positive] S[intrans]
-0.01   S[intrans]   S[intrans] CC[negative] S[intrans]
+0.3   S[intrans]   S[intrans] CC[positive] S[intrans]
+0.3   S[intrans]   S[intrans] CC[negative] S[intrans]
 1   S[intrans]   NP[sing,nom] Verb[intrans,sing]
 1   S[intrans]   NP[plur,nom] Verb[intrans,plur]
 
@@ -659,11 +659,11 @@
 0.01   NP[plur,obj] NP[plur,obj] Aside[obj]
 
 1   Aside[nom] , NP[nom] ,
-0.01   Aside[nom] , NP[nom]
+0.1   Aside[nom] , NP[nom]
 1   Aside[nom] , Adv ,
-0.01   Aside[nom] , Adv
+0.1   Aside[nom] , Adv
 
 1   Aside[obj] , NP[obj] ,
-0.01   Aside[obj] , NP[obj]
+0.1   Aside[obj] , NP[obj]
 1   Aside[obj] , Adv ,
-0.01   Aside[obj] , Adv
+0.1   Aside[obj] , Adv
