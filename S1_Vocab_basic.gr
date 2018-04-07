@@ -143,10 +143,17 @@
 1	Proper[sing]	Guinevere
 1	Proper[sing]	Sir Lancelot
 1	Proper[sing]	Sir Bedevere
+1	Proper[sing]	Bedevere
+1	Proper[sing]	Lancelot
+1	Proper[sing]	Sir
 1	Proper[sing]	Zoot
 1	Proper[sing]	Dingo
 1	Proper[sing]	Patsy
 1	Proper[sing]	Uther Pendragon
+1	Proper[sing]	Uther
+1	Proper[sing]	Pendragon
+
+
 
 # More proper nouns, not people.
 
@@ -154,9 +161,15 @@
 1	Proper[sing]	England
 1	Proper[sing]	Holy Grail
 1	Proper[sing]	Round Table
+1	Proper[sing]	Table
+1	Proper[sing]	Grail
 
 1	Proper[sing,det]	Holy Grail
+1	Proper[sing,det]	Grail
+
 1	Proper[sing,det]	Round Table
+1	Proper[sing,det]	Table
+
 
 # Plural proper nouns.
 1	Proper[plur]	Britons
@@ -422,6 +435,7 @@
 1	VerbT[past,sing,3rd]	had
 1	VerbT[past,sing,3rd]	spoke
 1	VerbT[past,sing,3rd]	covered
+1	VerbT[past,sing,3rd]	ate
 1	VerbT[past,sing,3rd]	rode
 1	VerbT[past,sing,3rd]	drank
 1	VerbT[past,sing,3rd]	grew
@@ -440,6 +454,8 @@
 1	VerbT[past,plur,3rd]	suggested
 1	VerbT[past,plur,3rd]	migrated
 1	VerbT[past,plur,3rd]	knew
+1	VerbT[past,plur,3rd]	ate
+
 
 # Verbs that can precede specific subordinating clauses
 # ____ that
@@ -486,6 +502,8 @@
 1	VerbI[past,sing,3rd]	suggested
 1	VerbI[past,sing,3rd]	migrated
 1	VerbI[past,sing,3rd]	knew
+1	VerbI[past,sing,3rd]	ate
+
 
 1	VerbI[past,plur,3rd]	spoke  ## TODO: fix these verb categories
 1	VerbI[past,plur,3rd]	rode
@@ -494,6 +512,7 @@
 1	VerbI[past,plur,3rd]	suggested
 1	VerbI[past,plur,3rd]	migrated
 1	VerbI[past,plur,3rd]	knew
+1	VerbI[past,plur,3rd]	ate
 
 1	VerbL[past,sing,3rd]	was
 1	VerbL[past,plur,3rd]	were

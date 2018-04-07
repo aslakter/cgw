@@ -563,9 +563,9 @@
 # Modifiers
 # TODO: currently modifiers can come after the noun/verb, but adj need to come before them??
 3  Modifier[sing]    Adj[sing]
-1  Modifier[sing]    Adv Modifier[sing]
+# 1  Modifier[sing]    Adv Modifier[sing]  TODO: which adverbs can modify adjectives?
 3  Modifier[plur]    Adj[plur]
-1  Modifier[plur]    Adv Modifier[plur]
+# 1  Modifier[plur]    Adv Modifier[plur]
 1  Adj[plur] Adj[gen]
 1  Adj[sing] Adj[gen]
 
@@ -658,11 +658,11 @@
 0.01   NP[plur,obj] NP[plur,obj] Aside[obj]
 
 1   Aside[nom] , NP[nom] ,
-1   Aside[nom] , NP[nom]
+0.01   Aside[nom] , NP[nom]
 1   Aside[nom] , Adv ,
-1   Aside[nom] , Adv
+0.01   Aside[nom] , Adv
 
 1   Aside[obj] , NP[obj] ,
-1   Aside[obj] , NP[obj]
+0.01   Aside[obj] , NP[obj]
 1   Aside[obj] , Adv ,
-1   Aside[obj] , Adv
+0.01   Aside[obj] , Adv
