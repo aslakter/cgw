@@ -173,37 +173,37 @@
 1	Misc	hardest
 
 # Plural nouns.
-1	Misc	coconuts
-1	Misc	halves
-1	Misc	snows
-1	Misc	mountains
-1	Misc	areas
-1	Misc	strangers
-1	Misc	inches
-1	Misc	snakes
-1	Misc	ants
-1	Misc	nights
+1	Noun	coconuts
+1	Noun	halves
+1	Noun	snows
+1	Noun	mountains
+1	Noun	areas
+1	Noun	strangers
+1	Noun	inches
+1	Noun	snakes
+1	Noun	ants
+1	Noun	nights
 
 # More proper nouns, not people.
 
-1	Misc	Camelot
-1	Misc	England
-1	Misc	Holy Grail
-1	Misc	Round Table
+1	Proper	Camelot
+1	Proper	England
+1	Proper	Holy Grail
+1	Proper	Round Table
 
 # Plural proper nouns.
-1	Misc	Britons
-1	Misc	Saxons
+1	Proper	Britons
+1	Proper	Saxons
 
 # Personal pronouns.
-1	Misc	he
-1	Misc	her
-1	Misc	him
-1	Misc	it
-1	Misc	one
-1	Misc	she
-1	Misc	them
-1	Misc	they
+1	Noun	he
+1	Noun	her
+1	Noun	him
+1	Noun	it
+1	Noun	one
+1	Noun	she
+1	Noun	them
+1	Noun	they
 
 
 # Possessive personal pronouns
@@ -294,17 +294,17 @@
 1	Misc	knows
 
 # Verbs (present, plural, third person).
-1	Misc	have
-1	Misc	speak
-1	Misc	cover
-1	Misc	are
-1	Misc	ride
-1	Misc	drink
-1	Misc	grow
-1	Misc	carry
-1	Misc	suggest
-1	Misc	migrate
-1	Misc	know
+1	VerbT	have
+1	VerbT	speak
+1	VerbT	cover
+1	VerbT	are
+1	VerbT	ride
+1	VerbT	drink
+1	VerbT	grow
+1	VerbT	carry
+1	VerbT	suggest
+1	VerbT	migrate
+1	VerbT	know
 
 # Wh-determiners.
 1	Misc	that
