@@ -1,20 +1,19 @@
 
-100	S1	S END
-1   S1  S_CC END
+10	S1	S END
+3   S1  S_CC END
 1   S1  CMD VP[inf] END
-1   S1  when S , S END
-50  S1  Q ?
-
+2   S1  when S , S END
+8  S1  Q ?
 
 1   S   S[sing]
 1   S   S[plur]
 
 # questions parsings
-10     Q            Q[yesno]
-0.1    Q            Q[pronoun]
-10     Q            Q[adverb]
-0.1    Q            Q[det]
-0.1    Q            Q[poss]
+3      Q            Q[yesno]
+0.7    Q            Q[pronoun]
+2      Q            Q[adverb]
+0.7    Q            Q[det]
+0.7    Q            Q[poss]
 1      Q            Q[be]
 
 # yes/no questions
@@ -33,11 +32,11 @@
 1       Q[adverb]    WH[adverb] Q[yesno]
 
 # questions starting with BE (are, is)
-0.01    Q[be]        are NP[plur,nom] PresPart2Obj 2OBJ
+0.3     Q[be]        are NP[plur,nom] PresPart2Obj 2OBJ
 1       Q[be]        are NP[plur,nom] PresPart NP[obj]
 1       Q[be]        are NP[plur,nom] PresPart[that] CP_that
 1       Q[be]        are NP[plur,nom] PresPart[that,inf] CP_that[inf]
-0.01    Q[be]        is  NP[sing,nom] PresPart2Obj 2OBJ
+0.3     Q[be]        is  NP[sing,nom] PresPart2Obj 2OBJ
 1       Q[be]        is  NP[sing,nom] PresPart NP[obj]
 1       Q[be]        is  NP[sing,nom] PresPart[that] CP_that
 1       Q[be]        is  NP[sing,nom] PresPart[that,inf] CP_that[inf]
@@ -83,10 +82,10 @@
 1       Q[link,plur]     Qword NP[nom] VerbL[inf]
 
 
-# Compound / complex sentence structures: TODO: maybe LHS should be S?
-0.1   S1   S CC[positive] S
-0.1   S1   S CC[negative] S
-0.1   S1   S CC[explanatory] S #TODO: MAKE SURE TENSES OF SENTENCES MAKE SENSE
+# Compound / complex sentence structures:
+0.03   S   S CC[positive] S
+0.01   S   S CC[negative] S
+0.01   S   S CC[explanatory] S #TODO: MAKE SURE TENSES OF SENTENCES MAKE SENSE
 
 # sentences wrapped by CCs (either/or neither/nor)
 0.01   S_CC    CC[start,positive] S CC[end,positive] S
@@ -100,106 +99,105 @@
 #1   END .
 #1   END !
 
-1   CMD do
+3   CMD do
 1   CMD do not
 
 # Verb Phrases
-1 VP[sing] Verb[trans,sing] NP[obj]
-1 VP[sing] VerbT[pres,sing,3rd,that] CP_that
-1 VP[sing] VerbT[pres,sing,3rd,that,inf] CP_that[inf]
-1 VP[sing] VerbT[pres,sing,3rd,that] CP_what
-1 VP[sing] VerbT[pres,sing,3rd,that] CP_who
-1 VP[sing] VerbT[past,sing,3rd,that] CP_that
-1 VP[sing] VerbT[past,sing,3rd,that,inf] CP_that[inf]
-1 VP[sing] VerbT[past,sing,3rd,that] CP_what
-1 VP[sing] VerbT[past,sing,3rd,that] CP_who
-1 VP[sing] Verb[intrans,sing]
-1 VP[sing] Verb[linking,sing] NP[sing,nom]
+7 VP[sing] Verb[trans,sing] NP[obj]
+0.3 VP[sing] VerbT[pres,sing,3rd,that] CP_that
+0.3 VP[sing] VerbT[pres,sing,3rd,that,inf] CP_that[inf]
+0.3 VP[sing] VerbT[pres,sing,3rd,that] CP_what
+0.3 VP[sing] VerbT[pres,sing,3rd,that] CP_who
+0.3 VP[sing] VerbT[past,sing,3rd,that] CP_that
+0.3 VP[sing] VerbT[past,sing,3rd,that,inf] CP_that[inf]
+0.3 VP[sing] VerbT[past,sing,3rd,that] CP_what
+0.3 VP[sing] VerbT[past,sing,3rd,that] CP_who
+5 VP[sing] Verb[intrans,sing]
+3 VP[sing] Verb[linking,sing] NP[sing,nom]
 0.1 VP[sing] Verb[linking,sing] NP[plur,obj] # TODO: IS THIS CORRECT?
 0.1 VP[sing] Verb[linking,sing] Modifier[sing]
-1 VP[sing] Verb[linking,sing]
-0.01 VP[sing] VP[sing] PP
-0.01 VP[sing] VP[sing] Adv
+3 VP[sing] Verb[linking,sing]
+0.03 VP[sing] VP[sing] PP
+0.03 VP[sing] VP[sing] Adv
 
-1 VP[sing] Adv Verb[trans,sing] NP[obj]
-1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_that
-1 VP[sing] Adv VerbT[pres,sing,3rd,that,inf] CP_that[inf]
-1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_what
-1 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_who
-1 VP[sing] Adv VerbT[past,sing,3rd,that] CP_that
-1 VP[sing] Adv VerbT[past,sing,3rd,that,inf] CP_that[inf]
-1 VP[sing] Adv VerbT[past,sing,3rd,that] CP_what
-1 VP[sing] Adv VerbT[past,sing,3rd,that] CP_who
-1 VP[sing] Adv Verb[intrans,sing]
+0.7 VP[sing] Adv Verb[trans,sing] NP[obj]
+0.03 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_that
+0.03 VP[sing] Adv VerbT[pres,sing,3rd,that,inf] CP_that[inf]
+0.03 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_what
+0.03 VP[sing] Adv VerbT[pres,sing,3rd,that] CP_who
+0.03 VP[sing] Adv VerbT[past,sing,3rd,that] CP_that
+0.03 VP[sing] Adv VerbT[past,sing,3rd,that,inf] CP_that[inf]
+0.03 VP[sing] Adv VerbT[past,sing,3rd,that] CP_what
+0.03 VP[sing] Adv VerbT[past,sing,3rd,that] CP_who
+0.5 VP[sing] Adv Verb[intrans,sing]
 #1 VP[sing] Adv Verb[linking,sing] NP[sing,nom] #TODO: this produces weird/incorrect sentences. is this needed??
-0.1 VP[sing] Adv Verb[linking,sing] Adv # Modifier[sing] #TODO: decide if modifier or adv because I don't think adj can go here...?
-1 VP[sing] Adv Verb[linking,sing]
+0.01 VP[sing] Adv Verb[linking,sing] Adv # Modifier[sing] #TODO: decide if modifier or adv because I don't think adj can go here...?
+0.3 VP[sing] Adv Verb[linking,sing]
 0.01 VP[sing] Adv VP[sing] PP
 
 # Verb Phrase Base (infinitive)
-1 VP[inf] VerbT[inf]
-1 VP[inf] VerbT[inf] PP
-1 VP[inf] VerbT[inf] Adv
+5 VP[inf] VerbT[inf]
+2 VP[inf] VerbT[inf] PP
+3 VP[inf] VerbT[inf] Adv
 1 VP[inf] Adv VerbT[inf]
 # TODO: I think below are correct, but want second opinion.
 1 VP[inf] be PastPartT
 1 VP[inf] be PastPartT PP
 1 VP[inf] be PastPartT Adv
-1 VP[inf] Adv be PastPartT
-
+0.1 VP[inf] Adv be PastPartT
 
 
 # Complementizer phrases post VP
 0.01 VP[sing] VP[sing] CP_generic
 
 # 2 object verbs plural
-1 2OBJ NP[obj] PP
-1 2OBJ NP[obj] home
+8 2OBJ NP[obj] PP
+0.2 2OBJ NP[obj] home
 
 # Infinitive
-0.01 VP[sing] VerbT[2Object,infin,pres] 2OBJ
-0.01 VP[sing] VerbT[2Object,infin,past] 2OBJ
+0.06 VP[sing] VerbT[2Object,infin,pres] 2OBJ
+0.03 VP[sing] VerbT[2Object,infin,past] 2OBJ
 
 # 2 object verbs
 0.1 VP[sing] VerbT[2object,pres,sing,3rd] 2OBJ
 
 # Present Participle
-0.01 VP[sing] is PresPart2Obj 2OBJ
+0.3 VP[sing] is PresPart2Obj 2OBJ
 1 VP[sing] is PresPart NP[obj]
 
-3 VP[plur] Verb[trans,plur] NP[obj]
-1 VP[plur] VerbT[pres,plur,3rd,that] CP_that
-1 VP[plur] VerbT[pres,plur,3rd,that,inf] CP_that[inf]
-1 VP[plur] VerbT[pres,plur,3rd,that] CP_what
-1 VP[plur] VerbT[pres,plur,3rd,that] CP_who
-1 VP[plur] Verb[intrans,plur]
-1 VP[plur] Verb[linking,plur] NP[plur,obj]
-0.1 VP[plur] Verb[linking,plur] Modifier[plur]
-1 VP[plur] Verb[linking,plur]
-0.01 VP[plur] VP[plur] PP
-0.01 VP[plur] VP[plur] Adv
+7 VP[plur] Verb[trans,plur] NP[obj]
+0.3 VP[plur] VerbT[pres,plur,3rd,that] CP_that
+0.3 VP[plur] VerbT[pres,plur,3rd,that,inf] CP_that[inf]
+0.3 VP[plur] VerbT[pres,plur,3rd,that] CP_what
+0.3 VP[plur] VerbT[pres,plur,3rd,that] CP_who
+5 VP[plur] Verb[intrans,plur]
+2 VP[plur] Verb[linking,plur] NP[plur,obj]
+0.5 VP[plur] Verb[linking,plur] Modifier[plur]
+0.3 VP[plur] Verb[linking,plur]
+0.03 VP[plur] VP[plur] PP
+0.03 VP[plur] VP[plur] Adv
 
-1 VP[plur] Adv Verb[trans,plur] NP[obj]
-1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_that
-1 VP[plur] Adv VerbT[pres,plur,3rd,that,inf] CP_that[inf]
-1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_what
-1 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_who
-1 VP[plur] Adv Verb[intrans,plur]
-1 VP[plur] Adv Verb[linking,plur] NP[plur,obj]
+0.7 VP[plur] Adv Verb[trans,plur] NP[obj]
+0.03 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_that
+0.03 VP[plur] Adv VerbT[pres,plur,3rd,that,inf] CP_that[inf]
+0.03 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_what
+0.03 VP[plur] Adv VerbT[pres,plur,3rd,that] CP_who
+0.5 VP[plur] Adv Verb[intrans,plur]
+0.2 VP[plur] Adv Verb[linking,plur] NP[plur,obj]
 0.1 VP[plur] Adv Verb[linking,plur] Modifier[plur]
-1 VP[plur] Adv Verb[linking,plur]
-0.01 VP[plur] Adv VP[plur] PP
+0.03 VP[plur] Adv Verb[linking,plur]
+0.03 VP[plur] Adv VP[plur] PP
 
 # Complementizer phrases post VP
-0.01 VP[plur] VP[plur] CP_generic
+0.03 VP[plur] VP[plur] CP_generic
 
 # Infinitive
-0.01 VP[plur] VerbT[2Object,infin,pres] 2OBJ
-0.01 VP[plur] VerbT[2Object,infin,past] 2OBJ
+0.03 VP[plur] VerbT[2Object,infin,pres] 2OBJ
+0.03 VP[plur] VerbT[2Object,infin,past] 2OBJ
 
 # Two Objects
-0.01 VP[plur] VerbT[2object,pres,plur,3rd] 2OBJ
-0.01 VP[plur] VerbT[2object,base] 2OBJ
+0.03 VP[plur] VerbT[2object,pres,plur,3rd] 2OBJ
+0.03 VP[plur] VerbT[2object,base] 2OBJ
 
 # Modal Not Participle (Simple future?)
 1 Verb[trans,sing] Modal VerbT[inf]
@@ -209,11 +207,11 @@
 1 Verb[intrans,plur] Modal VerbT[inf]
 
 # Present Participle
-0.01 VP[plur] are PresPart2Obj 2OBJ
+0.3 VP[plur] are PresPart2Obj 2OBJ
 1 VP[plur] are PresPart NP[obj]
 
 # Past Participle
-0.01 VerbT[2object,past,sing,3rd]  had PastPart2Obj
+0.3 VerbT[2object,past,sing,3rd]  had PastPart2Obj
 1 Verb[trans,sing] had PastPartT
 1 Verb[intrans,sing] had PastPartI
 
@@ -232,7 +230,7 @@
 1 Verb[trans,plur] PrePastPerfect PastPartT
 1 Verb[intrans,plur] PrePastPerfect PastPartI
 # Linking TODO: check. I think all the ones ending in partT should be trans??
-0.01 Verb[intrans,plur] PrePastPerfect PastPartL PresPart2Obj 2OBJ
+0.3 Verb[intrans,plur] PrePastPerfect PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,plur] PrePastPerfect PastPartL PresPartT #NP[obj]
 1 Verb[intrans,plur] PrePastPerfect PastPartL PresPartT PP
 1 Verb[intrans,plur] PrePastPerfect PastPartL PresPartI
@@ -243,12 +241,12 @@
 1 Verb[linking,plur] PrePastPerfect PastPartL
 
 # Modal Past Participles
-0.01 VerbT[2object,past,sing,3rd]  Modal have PastPart2Obj
+0.3 VerbT[2object,past,sing,3rd]  Modal have PastPart2Obj
 1 Verb[trans,sing] Modal have PastPartT
 1 Verb[intrans,sing] Modal have PastPartI
 
 # Past progressive
-0.01 Verb[intrans,sing] Modal have PastPartL PresPart2Obj 2OBJ
+0.3 Verb[intrans,sing] Modal have PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,sing] Modal have PastPartL PresPartT #NP[obj]
 1 Verb[intrans,sing] Modal have PastPartL PresPartT PP
 1 Verb[intrans,sing] Modal have PastPartL PresPartI
@@ -259,12 +257,12 @@
 1 Verb[intrans,sing] Modal have PastPartL PastPartT
 1 Verb[linking,sing] Modal have PastPartL
 
-0.01 VerbT[2object,past,plur,3rd]  Modal have PastPart2Obj
+0.3 VerbT[2object,past,plur,3rd]  Modal have PastPart2Obj
 1 Verb[trans,plur] Modal have PastPartT
 1 Verb[intrans,plur] Modal have PastPartI
 
 # Past Progressing
-0.01 Verb[intrans,plur] Modal have PastPartL PresPart2Obj 2OBJ
+0.3 Verb[intrans,plur] Modal have PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,plur] Modal have PastPartL PresPartT #NP[obj]
 1 Verb[intrans,plur] Modal have PastPartL PresPartT PP
 1 Verb[intrans,plur] Modal have PastPartL PresPartI
@@ -276,13 +274,13 @@
 1 Verb[linking,plur] Modal have PastPartL
 
 # Modal Future Past Participles
-0.01 VerbT[2object,past,sing,3rd]  Modal[future] have PastPart2Obj
+0.3 VerbT[2object,past,sing,3rd]  Modal[future] have PastPart2Obj
 1 Verb[trans,sing] Modal[future] have PastPartT
 1 Verb[intrans,sing] Modal[future] have PastPartI
 
 
 # Future Past Progressive
-0.01 Verb[intrans,sing] Modal[future] have PastPartL PresPart2Obj 2OBJ
+0.3 Verb[intrans,sing] Modal[future] have PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,sing] Modal[future] have PastPartL PresPartT #NP[obj]
 1 Verb[intrans,sing] Modal[future] have PastPartL PresPartT PP
 1 Verb[intrans,sing] Modal[future] have PastPartL PresPartI
@@ -294,12 +292,12 @@
 1 Verb[intrans,sing] Modal[future] have PastPartL PastPartT
 1 Verb[linking,sing] Modal[future] have PastPartL
 
-0.01 VerbT[2object,past,plur,3rd]  Modal[future] have PastPart2Obj
+0.3 VerbT[2object,past,plur,3rd]  Modal[future] have PastPart2Obj
 1 Verb[trans,plur] Modal[future] have PastPartT
 1 Verb[intrans,plur] Modal[future] have PastPartI
 
 # Future Past progressive
-0.01 Verb[intrans,plur] Modal[future] have PastPartL PresPart2Obj 2OBJ
+0.3 Verb[intrans,plur] Modal[future] have PastPartL PresPart2Obj 2OBJ
 1 Verb[trans,plur] Modal[future] have PastPartL PresPartT #NP[obj]
 1 Verb[intrans,plur] Modal[future] have PastPartL PresPartT PP
 1 Verb[intrans,plur] Modal[future] have PastPartL PresPartI
@@ -589,62 +587,66 @@
 
 0.3   S[intrans]   S[intrans] CC[positive] S[intrans]
 0.3   S[intrans]   S[intrans] CC[negative] S[intrans]
-1   S[intrans]   NP[sing,nom] Verb[intrans,sing]
-1   S[intrans]   NP[plur,nom] Verb[intrans,plur]
+10   S[intrans]   NP[sing,nom] Verb[intrans,sing]
+10   S[intrans]   NP[plur,nom] Verb[intrans,plur]
+1   S[intrans]   NP[sing,nom] Adv Verb[intrans,sing]
+1   S[intrans]   NP[plur,nom] Adv Verb[intrans,plur]
+1   S[intrans]   NP[sing,nom] Verb[intrans,sing] Adv
+1   S[intrans]   NP[plur,nom] Verb[intrans,plur] Adv
 
-1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_that
-1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that,inf] CP_that[inf]
-1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_what
-1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_who
-1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_that
-1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that,inf] CP_that[inf]
-1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_what
-1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_who
+#1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_that
+#1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that,inf] CP_that[inf]
+#1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_what
+#1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] CP_who
+#1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_that
+#1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that,inf] CP_that[inf]
+#1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_what
+#1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] CP_who
 
-1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_that
-1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that,inf] CP_that[inf]
-1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_what
-1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_who
-1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_that
-1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that,inf] CP_that[inf]
-1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_what
-1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_who
+#1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_that
+#1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that,inf] CP_that[inf]
+#1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_what
+#1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] CP_who
+#1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_that
+#1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that,inf] CP_that[inf]
+#1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_what
+#1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] CP_who
 
-1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_that
-1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that,inf] CP_that[inf]
-1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_what
-1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_who
-1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_that
-1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that,inf] CP_that[inf]
-1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_what
-1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_who
+#1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_that
+#1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that,inf] CP_that[inf]
+#1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_what
+#1 S[intrans]     NP[sing,nom] Adv VerbT[pres,sing,3rd,that] CP_who
+#1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_that
+#1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that,inf] CP_that[inf]
+#1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_what
+#1 S[intrans]     NP[sing,nom] Adv VerbT[past,sing,3rd,that] CP_who
 
-1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_that
-1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that,inf] CP_that[inf]
-1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_what
-1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_who
-1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_that
-1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that,inf] CP_that[inf]
-1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_what
-1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_who
+#1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_that
+#1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that,inf] CP_that[inf]
+#1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_what
+#1 S[intrans]     NP[plur,nom] Adv VerbT[pres,plur,3rd,that] CP_who
+#1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_that
+#1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that,inf] CP_that[inf]
+#1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_what
+#1 S[intrans]     NP[plur,nom] Adv VerbT[past,plur,3rd,that] CP_who
 
-1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_that
-1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that,inf] Adv CP_that[inf]
-1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_what
-1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_who
-1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_that
-1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that,inf] Adv CP_that[inf]
-1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_what
-1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_who
+#1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_that
+#1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that,inf] Adv CP_that[inf]
+#1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_what
+#1 S[intrans]     NP[sing,nom] VerbT[pres,sing,3rd,that] Adv CP_who
+#1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_that
+#1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that,inf] Adv CP_that[inf]
+#1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_what
+#1 S[intrans]     NP[sing,nom] VerbT[past,sing,3rd,that] Adv CP_who
 
-1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_that
-1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that,inf] Adv CP_that[inf]
-1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_what
-1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_who
-1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_that
-1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that,inf] Adv CP_that[inf]
-1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_what
-1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_who
+#1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_that
+#1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that,inf] Adv CP_that[inf]
+#1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_what
+#1 S[intrans]     NP[plur,nom] VerbT[pres,plur,3rd,that] Adv CP_who
+#1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_that
+#1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that,inf] Adv CP_that[inf]
+#1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_what
+#1 S[intrans]     NP[plur,nom] VerbT[past,plur,3rd,that] Adv CP_who
 
 #1   VI[sing] VerbI[past,sing,3rd]
 #1   VI[sing] VerbI[pres,sing,3rd]
