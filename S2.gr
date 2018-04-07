@@ -1,18 +1,18 @@
 0.0001	S2
 2	    S2	_Det
-1	    S2	_Misc
+7	    S2	_Misc
 4	    S2	_Noun
 1	    S2	_Prep
-3	    S2	_Proper
+2	    S2	_Proper
 1	    S2	_VerbT
-0.01	_Det	Det
+0.001	_Det	Det
 0.01	_Det	Det _Det
 5    	_Det	Det _Misc
 10	    _Det	Det _Noun
 0.01	_Det	Det _Prep
 0.01	_Det	Det _Proper
 0.01	_Det	Det _VerbT
-5	    _Misc	Misc
+8	    _Misc	Misc
 0.8	    _Misc	Misc _Det
 3	    _Misc	Misc _Misc
 3	    _Misc	Misc _Noun
@@ -33,7 +33,7 @@
 0.01	_Prep	Prep _Prep
 1	    _Prep	Prep _Proper
 0.03	_Prep	Prep _VerbT
-0.3	    _Proper	Proper
+1	    _Proper	Proper
 0.01	_Proper	Proper _Det
 5	    _Proper	Proper _Misc
 0.01	_Proper	Proper _Noun
