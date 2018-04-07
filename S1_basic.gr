@@ -440,8 +440,8 @@
 1  NP[sing,nom] Det[sing] Noun[sing]
 1  NP[sing,nom] Noun[sing]
 1  NP[sing,nom] Pronoun[sing,nom]
-0.01  NP[sing,nom] Proper[sing]
-1  NP[sing,nom] Det[sing] Proper[sing,det]
+0.1  NP[sing,nom] Proper[sing]
+0.1  NP[sing,nom] Det[sing] Proper[sing,det]
 0.1  NP[sing,nom] Modifier[sing] Proper[sing]
 
 0.1  NP[sing,obj] Det[sing] Modifier[sing] Noun[sing]
@@ -449,8 +449,8 @@
 1  NP[sing,obj] Det[sing] Noun[sing]
 1  NP[sing,obj] Noun[sing]
 1  NP[sing,obj] Pronoun[sing,obj]
-0.01  NP[sing,obj] Proper[sing]
-1  NP[sing,obj] Det[sing] Proper[sing,det]
+0.1  NP[sing,obj] Proper[sing]
+0.1  NP[sing,obj] Det[sing] Proper[sing,det]
 0.1  NP[sing,obj] Modifier[sing] Proper[sing]
 
 0.1  NP[plur,nom] Det[plur] Modifier[plur] Noun[plur]
@@ -458,8 +458,8 @@
 1  NP[plur,nom] Det[plur] Noun[plur]
 1  NP[plur,nom] Noun[plur]
 1  NP[plur,nom] Pronoun[plur,nom]
-0.01  NP[plur,nom] Proper[plur]
-1  NP[plur,nom] Det[plur] Proper[plur,det]
+0.1  NP[plur,nom] Proper[plur]
+0.1  NP[plur,nom] Det[plur] Proper[plur,det]
 0.1  NP[plur,nom] Modifier[plur] Proper[plur]
 
 0.1  NP[plur,obj] Det[plur] Modifier[plur] Noun[plur]
@@ -467,8 +467,8 @@
 1  NP[plur,obj] Det[plur] Noun[plur]
 1  NP[plur,obj] Noun[plur]
 1  NP[plur,obj] Pronoun[plur,obj]
-0.01  NP[plur,obj] Proper[plur]
-1  NP[plur,obj] Det[plur] Proper[plur,det]
+0.1  NP[plur,obj] Proper[plur]
+0.1  NP[plur,obj] Det[plur] Proper[plur,det]
 0.1  NP[plur,obj] Modifier[plur] Proper[plur]
 
 # NP with CC TODO: decide on requiring non-terminals or not
