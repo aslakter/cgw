@@ -345,11 +345,11 @@
 1 Verb[trans,sing] VerbT[2object,past,sing,3rd]
 1 Verb[intrans,sing] VerbI[pres,sing,3rd]
 1 Verb[intrans,sing] VerbI[past,sing,3rd]
-1 Verb[linking,sing] VerbL[pres,sing,3rd] PresPart PP #TODO: ADD T VS I VS L
-1 Verb[linking,sing] VerbL[pres,sing,3rd] PresPart
+1 Verb[intrans,sing] VerbL[pres,sing,3rd] PresPart PP #TODO: ADD T VS I VS L
+1 Verb[trans,sing] VerbL[pres,sing,3rd] PresPartT
 1 Verb[linking,sing] VerbL[pres,sing,3rd]
-1 Verb[linking,sing] VerbL[past,sing,3rd] PastPartI PP
-1 Verb[linking,sing] VerbL[past,sing,3rd] PastPartI
+1 Verb[intrans,sing] VerbL[past,sing,3rd] PastPartT PP
+1 Verb[trans,sing] VerbL[past,sing,3rd] PastPartI
 1 Verb[linking,sing] VerbL[past,sing,3rd]
 
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
@@ -584,7 +584,7 @@
 # GerundEmpty, GerundInfin, GerundThat, GerundLocPrep
 
 1  GerundS      GerundNP NP[obj]
-0.3  GerundS      Gerund2Obj NP[obj] 2OBJ
+0.3  GerundS      Gerund2Obj 2OBJ
 1  GerundS      GerundProper AllProper
 1  GerundS      GerundPP PP
 1  GerundS      GerundEmpty
