@@ -623,6 +623,7 @@
 1	PresPartT	growing
 1	PresPartT	carrying
 1	PresPartT	suggesting
+1	PresPartT	migrating
 1	PresPartT	knowing
 
 # PresPart that can take ...that
@@ -631,9 +632,11 @@
 1	PresPart[that]	    knowing
 
 1	PresPartI 	speaking
+1	PresPartI	covering
 1	PresPartI	riding
 1	PresPartI	drinking
 1	PresPartI	growing
+1	PresPartI	carrying
 1	PresPartI	suggesting
 1	PresPartI	migrating
 1	PresPartI	knowing
@@ -657,9 +660,11 @@
 1	PastPartT	known
 
 1	PastPartI	spoken
+1	PastPartI	covered
 1	PastPartI	ridden
 1	PastPartI	drunk
 1	PastPartI	grown
+1	PastPartT	carried
 1	PastPartI	suggested
 1	PastPartI	migrated
 1	PastPartI	known
