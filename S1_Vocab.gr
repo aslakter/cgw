@@ -35,27 +35,27 @@
 1	Noun[sing]	story
 
 # Nouns that can possess
-1	Noun[sing,poss]	castle
-1	Noun[sing,poss]	king
-1	Noun[sing,poss]	defeater
-1	Noun[sing,poss]	sovereign
-1	Noun[sing,poss]	servant
-1	Noun[sing,poss]	corner
-1	Noun[sing,poss]	land
-1	Noun[sing,poss]	quest
-1	Noun[sing,poss]	chalice
-1	Noun[sing,poss]	master
-1	Noun[sing,poss]	horse
-1	Noun[sing,poss]	fruit
-1	Noun[sing,poss]	swallow
-1	Noun[sing,poss]	sun
-1	Noun[sing,poss]	winter
-1	Noun[sing,poss]	coconut
-1	Noun[sing,poss]	pound
-1	Noun[sing,poss]	husk
-1	Noun[sing,poss]	home
-1	Noun[sing,poss]	weight
-1	Noun[sing,poss]	story
+#1	Noun[sing,poss]	castle
+#1	Noun[sing,poss]	king
+#1	Noun[sing,poss]	defeater
+#1	Noun[sing,poss]	sovereign
+#1	Noun[sing,poss]	servant
+#1	Noun[sing,poss]	corner
+#1	Noun[sing,poss]	land
+#1	Noun[sing,poss]	quest
+#1	Noun[sing,poss]	chalice
+#1	Noun[sing,poss]	master
+#1	Noun[sing,poss]	horse
+#1	Noun[sing,poss]	fruit
+#1	Noun[sing,poss]	swallow
+#1	Noun[sing,poss]	sun
+#1	Noun[sing,poss]	winter
+#1	Noun[sing,poss]	coconut
+#1	Noun[sing,poss]	pound
+#1	Noun[sing,poss]	husk
+#1	Noun[sing,poss]	home
+#1	Noun[sing,poss]	weight
+#1	Noun[sing,poss]	story
 
 
 # Plural nouns.
@@ -71,16 +71,16 @@
 1	Noun[plur]	nights
 
 # plural possessive nouns 
-1	Noun[plur,poss]	coconuts
-1	Noun[plur,poss]	halves
-1	Noun[plur,poss]	snows
-1	Noun[plur,poss]	mountains
-1	Noun[plur,poss]	areas
-1	Noun[plur,poss]	strangers
-1	Noun[plur,poss]	inches
-1	Noun[plur,poss]	snakes
-1	Noun[plur,poss]	ants
-1	Noun[plur,poss]	nights
+#1	Noun[plur,poss]	coconuts
+#1	Noun[plur,poss]	halves
+#1	Noun[plur,poss]	snows
+#1	Noun[plur,poss]	mountains
+#1	Noun[plur,poss]	areas
+#1	Noun[plur,poss]	strangers
+#1	Noun[plur,poss]	inches
+#1	Noun[plur,poss]	snakes
+#1	Noun[plur,poss]	ants
+#1	Noun[plur,poss]	nights
 
 # TODO: judgement calls below (updated from other team's generated sentences)
 1   Noun[plur]  fruit
@@ -192,19 +192,19 @@
 
 
 # Possessive
-1	Proper[sing,poss]	Arthur
-1	Proper[sing,poss]	Guinevere
-1	Proper[sing,poss]	Sir Lancelot
-1	Proper[sing,poss]	Sir Bedevere
-1	Proper[sing,poss]	Bedevere
-1	Proper[sing,poss]	Lancelot
-1	Proper[sing,poss]	Sir
-1	Proper[sing,poss]	Zoot
-1	Proper[sing,poss]	Dingo
-1	Proper[sing,poss]	Patsy
-1	Proper[sing,poss]	Uther Pendragon
-1	Proper[sing,poss]	Uther
-1	Proper[sing,poss]	Pendragon
+#1	Proper[sing,poss]	Arthur
+#1	Proper[sing,poss]	Guinevere
+#1	Proper[sing,poss]	Sir Lancelot
+#1	Proper[sing,poss]	Sir Bedevere
+#1	Proper[sing,poss]	Bedevere
+#1	Proper[sing,poss]	Lancelot
+#1	Proper[sing,poss]	Sir
+#1	Proper[sing,poss]	Zoot
+#1	Proper[sing,poss]	Dingo
+#1	Proper[sing,poss]	Patsy
+#1	Proper[sing,poss]	Uther Pendragon
+#1	Proper[sing,poss]	Uther
+#1	Proper[sing,poss]	Pendragon
 
 
 # More proper nouns, not people.
@@ -218,12 +218,18 @@
 
 # possessive More proper nouns, not people.
 
-1	Proper[sing,poss]	Camelot
-1	Proper[sing,poss]	England
-1	Proper[sing,poss]	Holy Grail
-1	Proper[sing,poss]	Round Table
-1	Proper[sing,poss]	Table
-1	Proper[sing,poss]	Grail
+#1	Proper[sing,poss]	Camelot
+#1	Proper[sing,poss]	England
+#1	Proper[sing,poss]	Holy Grail
+#1	Proper[sing,poss]	Round Table
+#1	Proper[sing,poss]	Table
+#1	Proper[sing,poss]	Grail
+# allows for "The Holy Grail's xx..."
+#1	Noun[sing,poss]	Holy Grail
+#1	Noun[sing,poss]	Grail
+#1	Noun[sing,poss]	Round Table
+#1	Noun[sing,poss]	Table
+
 
 1	Proper[sing,det]	Holy Grail
 1	Proper[sing,det]	Grail
@@ -237,8 +243,10 @@
 1	Proper[plur]	Saxons
 
 # Possessive Plural proper nouns.
-1	Proper[plur,poss]	Britons
-1	Proper[plur,poss]	Saxons
+#1	Proper[plur,poss]	Britons
+#1	Proper[plur,poss]	Saxons
+#1	Noun[plur,poss]	Britons
+#1	Noun[plur,poss]	Saxons
 
 1	Proper[plur,det]	Britons
 1	Proper[plur,det]	Saxons

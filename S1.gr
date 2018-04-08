@@ -426,27 +426,63 @@
 # Possesive beginnings 
 #TODO: check this makes sense -- only allowing GerundS at end 
 
-1  PossessiveNoun[sing]  Noun[sing,poss]  SingPoss  Noun[sing,poss]
-1  PossessiveNoun[sing]  Noun[plur,poss]  PlurPoss  Noun[sing,poss]
-1  PossessiveNoun[sing]  Noun[sing,poss]  SingPoss  GerundS
-1  PossessiveNoun[sing]  Noun[plur,poss]  PlurPoss  GerundS
-1  PossessiveNoun[plur]  Noun[sing,poss]  SingPoss  Noun[plur,poss]
-1  PossessiveNoun[plur]  Noun[plur,poss]  PlurPoss  Noun[plur,poss]
+#1  PossessiveNoun[sing]  Noun[sing,poss]  SingPoss  Noun[sing,poss]
+#1  PossessiveNoun[sing]  Noun[plur,poss]  PlurPoss  Noun[sing,poss]
+#1  PossessiveNoun[sing]  Noun[sing,poss]  SingPoss  GerundS
+#1  PossessiveNoun[sing]  Noun[plur,poss]  PlurPoss  GerundS
+#1  PossessiveNoun[plur]  Noun[sing,poss]  SingPoss  Noun[plur,poss]
+#1  PossessiveNoun[plur]  Noun[plur,poss]  PlurPoss  Noun[plur,poss]
 
-1  PossessiveProper[sing]  Proper[sing,poss]  SingPoss  Noun[sing,poss]
-1  PossessiveProper[sing]  Proper[plur,poss]  PlurPoss  Noun[sing,poss]
-1  PossessiveProper[sing]  Proper[sing,poss]  SingPoss  GerundS
-1  PossessiveProper[sing]  Proper[plur,poss]  PlurPoss  GerundS
+#1  PossessiveProper[sing]  Proper[sing,poss]  SingPoss  Noun[sing,poss]
+#1  PossessiveProper[sing]  Proper[plur,poss]  PlurPoss  Noun[sing,poss]
+#1  PossessiveProper[sing]  Proper[sing,poss]  SingPoss  GerundS
+#1  PossessiveProper[sing]  Proper[plur,poss]  PlurPoss  GerundS
 
-1  PossessiveProper[plur]  Proper[sing,poss]  SingPoss  Noun[plur,poss]
-1  PossessiveProper[plur]  Proper[plur,poss]  PlurPoss  Noun[plur,poss]
+#1  PossessiveProper[plur]  Proper[sing,poss]  SingPoss  Noun[plur,poss]
+#1  PossessiveProper[plur]  Proper[plur,poss]  PlurPoss  Noun[plur,poss]
 
+### Possessive Additons:
+# Singular  
+#0.1  NP[sing,nom] Det[sing] Modifier[sing] PossessiveNoun[sing]
+#0.1  NP[sing,nom] Modifier[sing] PossessiveNoun[sing]
+#0.1  NP[sing,nom] Modifier[sing] PossessiveProper[sing]
+#1  NP[sing,nom] Det[sing] PossessiveNoun[sing]
+#1  NP[sing,nom] PossessiveNoun[sing]
+#1  NP[sing,nom] PossessiveProper[sing]
+
+
+#0.1  NP[sing,obj] Det[sing] Modifier[sing] PossessiveNoun[sing]
+#0.1  NP[sing,obj] Modifier[sing] PossessiveNoun[sing]
+#0.1  NP[sing,obj] Modifier[sing] PossessiveProper[sing]
+#1  NP[sing,obj] Det[sing] PossessiveNoun[sing]
+#1  NP[sing,obj] PossessiveNoun[sing]
+#1  NP[sing,obj] PossessiveProper[sing]
+
+# Plural Possessive
+#0.1  NP[plur,nom] Det[plur] Modifier[plur] PossessiveNoun[plur]
+#0.1  NP[plur,nom] Modifier[plur] PossessiveNoun[plur]
+#0.1  NP[plur,nom] Modifier[plur] PossessiveProper[plur]
+#1  NP[plur,nom] Det[plur] PossessiveNoun[plur]
+#1  NP[plur,nom] PossessiveNoun[plur]
+#1  NP[plur,nom] PossessiveProper[plur]
+
+
+#0.1  NP[plur,obj] Det[plur] Modifier[plur] PossessiveNoun[plur]
+#0.1  NP[plur,obj] Modifier[plur] PossessiveNoun[plur]
+#0.1  NP[plur,obj] Modifier[plur] PossessiveProper[plur]
+#1  NP[plur,obj] Det[plur] PossessiveNoun[plur]
+#1  NP[plur,obj] PossessiveNoun[plur]
+#1  NP[plur,obj] PossessiveProper[plur]
+
+####
 
 0.1  NP[sing,nom] Det[sing] Modifier[sing] Noun[sing]
 0.1  NP[sing,nom] Modifier[sing] Noun[sing]
 1  NP[sing,nom] Det[sing] Noun[sing]
 1  NP[sing,nom] Noun[sing]
 1  NP[sing,nom] Pronoun[sing,nom]
+
+
 0.1  NP[sing,nom] Proper[sing]
 0.1  NP[sing,nom] Det[sing] Proper[sing,det]
 0.1  NP[sing,nom] Modifier[sing] Proper[sing]
