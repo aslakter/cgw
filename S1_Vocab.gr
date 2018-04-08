@@ -649,9 +649,11 @@
 1	PastPartT	known
 
 1	PastPartI	spoken
+1	PastPartI	covered
 1	PastPartI	ridden
 1	PastPartI	drunk
 1	PastPartI	grown
+1	PastPartT	carried
 1	PastPartI	suggested
 1	PastPartI	migrated
 1	PastPartI	known
