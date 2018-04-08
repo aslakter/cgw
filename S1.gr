@@ -424,10 +424,22 @@
 0.01   NP[plur,obj]    NP[plur,obj] Det[distinguishing] S[sing]
 
 # Possesive beginnings 
-1  PossessiveNoun[sing]  Noun[sing]  OWN  Noun[sing]
-1  PossessiveNoun[sing]  Noun[plur]  OWN  Noun[sing]
-1  PossessiveNoun[plur]  Noun[sing]  OWN  Noun[plur]
-1  PossessiveNoun[plur]  Noun[plur]  OWN  Noun[plur]
+#TODO: check this makes sense -- only allowing GerundS at end 
+
+1  PossessiveNoun[sing]  Noun[sing,poss]  SingPoss  Noun[sing,poss]
+1  PossessiveNoun[sing]  Noun[plur,poss]  PlurPoss  Noun[sing,poss]
+1  PossessiveNoun[sing]  Noun[sing,poss]  SingPoss  GerundS
+1  PossessiveNoun[sing]  Noun[plur,poss]  PlurPoss  GerundS
+1  PossessiveNoun[plur]  Noun[sing,poss]  SingPoss  Noun[plur,poss]
+1  PossessiveNoun[plur]  Noun[plur,poss]  PlurPoss  Noun[plur,poss]
+
+1  PossessiveProper[sing]  Proper[sing,poss]  SingPoss  Noun[sing,poss]
+1  PossessiveProper[sing]  Proper[plur,poss]  PlurPoss  Noun[sing,poss]
+1  PossessiveProper[sing]  Proper[sing,poss]  SingPoss  GerundS
+1  PossessiveProper[sing]  Proper[plur,poss]  PlurPoss  GerundS
+
+1  PossessiveProper[plur]  Proper[sing,poss]  SingPoss  Noun[plur,poss]
+1  PossessiveProper[plur]  Proper[plur,poss]  PlurPoss  Noun[plur,poss]
 
 
 0.1  NP[sing,nom] Det[sing] Modifier[sing] Noun[sing]
