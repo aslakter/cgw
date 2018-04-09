@@ -1,7 +1,7 @@
 
 10	S1	S END
 3   S1  S_CC END
-1   S1  CMD VP[inf] END
+1   S1  CMD END
 2   S1  when S , S END
 8   S1  Q ?
 
@@ -96,8 +96,11 @@
 1   S[plur]   NP[plur,nom] VP[plur]
 
 
-3   CMD do
-1   CMD do not
+3   CMD   do VP[inf]
+1   CMD   do not VP[inf]
+1   CMD   VP[inf]
+1   CMD   Proper[sing] Pause VP[inf]
+1   CMD   Proper[plur] Pause VP[inf]
 
 # Verb Phrases
 7 VP[sing] Verb[trans,sing] NP[obj]

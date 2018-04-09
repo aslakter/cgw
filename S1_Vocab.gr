@@ -265,8 +265,8 @@
 1	Misc	?
 
 # Pauses.
-1	Misc	,
-1	Misc	...
+1	Pause	,
+1	Pause	...
 1	Misc	--
 1	CC[positive]	;
 1	Misc	:
