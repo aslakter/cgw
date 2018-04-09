@@ -28,6 +28,7 @@
 2       Q[yesno]     Q[link,plur] Modifier[plur]
 0.3       Q[yesno]     Q[link,sing]
 0.3       Q[yesno]     Q[link,plur]
+0.1       Q[yesno]     Q[participle]
 
 # questions starting with adverbs (i.e. "where" / "when")
 1       Q[adverb]    WH[adverb] Q[yesno]
