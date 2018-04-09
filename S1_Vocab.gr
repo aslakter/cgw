@@ -416,6 +416,11 @@
 1	Det[sing]	her
 1	Det[sing]	his
 1	Det[sing]	its
+1	Det[sing]	their
+
+1	Det[plur]	her
+1	Det[plur]	his
+1	Det[plur]	its
 1	Det[plur]	their
 
 # TODO: maybe implement this properly?
