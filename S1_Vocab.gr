@@ -73,6 +73,20 @@
 # TODO: judgement calls below (updated from other team's generated sentences)
 1   Noun[plur]  fruit
 
+1	Noun[plur,poss]	coconuts
+1	Noun[plur,poss]	halves
+1	Noun[plur,poss]	snows
+1	Noun[plur,poss]	mountains
+1	Noun[plur,poss]	areas
+1	Noun[plur,poss]	strangers
+1	Noun[plur,poss]	inches
+1	Noun[plur,poss]	snakes
+1	Noun[plur,poss]	ants
+1	Noun[plur,poss]	nights
+
+# TODO: judgement calls below (updated from other team's generated sentences)
+1   Noun[plur,poss]  fruit
+
 # Gerunds
 # TODO: take out proper noun for some NP
 # GerundNP
@@ -232,6 +246,9 @@
 
 1	Proper[plur,det]	Britons
 1	Proper[plur,det]	Saxons
+
+1	Proper[plur,poss]	Britons
+1	Proper[plur,poss]	Saxons
 
 
 1   AllProper    Proper[sing]

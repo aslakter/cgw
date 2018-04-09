@@ -65,10 +65,10 @@
 
 
 # questions starting with "which" / "what" (determiners)
-1       Q[det]   WH[det] S
+0.3       Q[det]   WH[det] S
 
 # questions starting with "whose"
-1       Q[poss]  WH[poss] S
+0.3       Q[poss]  WH[poss] S
 
 # questions starting with had / have / has
 1       Q[participle]   have NP[plur,nom] been PastPartI
@@ -254,7 +254,7 @@
 1 Verb[intrans,plur] PrePastPerfect PastPartI
 # Linking TODO: check. I think all the ones ending in partT should be trans??
 0.3 Verb[intrans,plur] PrePastPerfect PastPartL PresPart2Obj 2OBJ
-1 Verb[trans,plur] PrePastPerfect PastPartL PresPartT #NP[obj]
+1 Verb[trans,plur] PrePastPerfect PastPartL PresPartT # NP[obj]
 1 Verb[intrans,plur] PrePastPerfect PastPartL PresPartT PP
 1 Verb[intrans,plur] PrePastPerfect PastPartL PresPartI
 1 Verb[linking,plur] PrePastPerfect PastPartL PresPartL
@@ -270,7 +270,7 @@
 
 # Past progressive
 0.3 Verb[intrans,sing] Modal have PastPartL PresPart2Obj 2OBJ
-1 Verb[trans,sing] Modal have PastPartL PresPartT #NP[obj]
+1 Verb[trans,sing] Modal have PastPartL PresPartT # NP[obj]
 1 Verb[intrans,sing] Modal have PastPartL PresPartT PP
 1 Verb[intrans,sing] Modal have PastPartL PresPartI
 1 Verb[linking,sing] Modal have PastPartL PresPartL
@@ -286,7 +286,7 @@
 
 # Past Progressing
 0.3 Verb[intrans,plur] Modal have PastPartL PresPart2Obj 2OBJ
-1 Verb[trans,plur] Modal have PastPartL PresPartT #NP[obj]
+1 Verb[trans,plur] Modal have PastPartL PresPartT # NP[obj]
 1 Verb[intrans,plur] Modal have PastPartL PresPartT PP
 1 Verb[intrans,plur] Modal have PastPartL PresPartI
 1 Verb[linking,plur] Modal have PastPartL PresPartL
@@ -304,7 +304,7 @@
 
 # Future Past Progressive
 0.3 Verb[intrans,sing] Modal[future] have PastPartL PresPart2Obj 2OBJ
-1 Verb[trans,sing] Modal[future] have PastPartL PresPartT #NP[obj]
+1 Verb[trans,sing] Modal[future] have PastPartL PresPartT # NP[obj]
 1 Verb[intrans,sing] Modal[future] have PastPartL PresPartT PP
 1 Verb[intrans,sing] Modal[future] have PastPartL PresPartI
 1 Verb[linking,sing] Modal[future] have PastPartL PresPartL
@@ -321,7 +321,7 @@
 
 # Future Past progressive
 0.3 Verb[intrans,plur] Modal[future] have PastPartL PresPart2Obj 2OBJ
-1 Verb[trans,plur] Modal[future] have PastPartL PresPartT #NP[obj]
+1 Verb[trans,plur] Modal[future] have PastPartL PresPartT # NP[obj]
 1 Verb[intrans,plur] Modal[future] have PastPartL PresPartT PP
 1 Verb[intrans,plur] Modal[future] have PastPartL PresPartI
 1 Verb[linking,plur] Modal[future] have PastPartL PresPartL
@@ -468,33 +468,33 @@
 0.1  NP[sing,nom] Det[sing] Modifier[sing] PossessiveNoun[sing]
 0.1  NP[sing,nom] Modifier[sing] PossessiveNoun[sing]
 0.1  NP[sing,nom] Modifier[sing] PossessiveProper[sing]
-1  NP[sing,nom] Det[sing] PossessiveNoun[sing]
-1  NP[sing,nom] PossessiveNoun[sing]
-1  NP[sing,nom] PossessiveProper[sing]
+0.1  NP[sing,nom] Det[sing] PossessiveNoun[sing]
+0.1  NP[sing,nom] PossessiveNoun[sing]
+0.1  NP[sing,nom] PossessiveProper[sing]
 
 
 0.1  NP[sing,obj] Det[sing] Modifier[sing] PossessiveNoun[sing]
 0.1  NP[sing,obj] Modifier[sing] PossessiveNoun[sing]
 0.1  NP[sing,obj] Modifier[sing] PossessiveProper[sing]
-1  NP[sing,obj] Det[sing] PossessiveNoun[sing]
-1  NP[sing,obj] PossessiveNoun[sing]
-1  NP[sing,obj] PossessiveProper[sing]
+0.1  NP[sing,obj] Det[sing] PossessiveNoun[sing]
+0.1  NP[sing,obj] PossessiveNoun[sing]
+0.1  NP[sing,obj] PossessiveProper[sing]
 
 # Plural Possessive
 0.1  NP[plur,nom] Det[plur] Modifier[plur] PossessiveNoun[plur]
 0.1  NP[plur,nom] Modifier[plur] PossessiveNoun[plur]
 0.1  NP[plur,nom] Modifier[plur] PossessiveProper[plur]
-1  NP[plur,nom] Det[plur] PossessiveNoun[plur]
-1  NP[plur,nom] PossessiveNoun[plur]
-1  NP[plur,nom] PossessiveProper[plur]
+0.1  NP[plur,nom] Det[plur] PossessiveNoun[plur]
+0.1  NP[plur,nom] PossessiveNoun[plur]
+0.1  NP[plur,nom] PossessiveProper[plur]
 
 
 0.1  NP[plur,obj] Det[plur] Modifier[plur] PossessiveNoun[plur]
 0.1  NP[plur,obj] Modifier[plur] PossessiveNoun[plur]
 0.1  NP[plur,obj] Modifier[plur] PossessiveProper[plur]
-1  NP[plur,obj] Det[plur] PossessiveNoun[plur]
-1  NP[plur,obj] PossessiveNoun[plur]
-1  NP[plur,obj] PossessiveProper[plur]
+0.1  NP[plur,obj] Det[plur] PossessiveNoun[plur]
+0.1  NP[plur,obj] PossessiveNoun[plur]
+0.1  NP[plur,obj] PossessiveProper[plur]
 
 ####
 
