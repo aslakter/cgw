@@ -554,6 +554,7 @@
 1	VerbI[past,sing,3rd]	rode
 1	VerbI[past,sing,3rd]	drank
 1	VerbI[past,sing,3rd]	grew
+1	VerbI[past,sing,3rd]	carried
 1	VerbI[past,sing,3rd]	suggested
 1	VerbI[past,sing,3rd]	migrated
 1	VerbI[past,sing,3rd]	knew
@@ -564,6 +565,7 @@
 1	VerbI[past,plur,3rd]	rode
 1	VerbI[past,plur,3rd]	drank
 1	VerbI[past,plur,3rd]	grew
+1	VerbI[past,plur,3rd]	carried
 1	VerbI[past,plur,3rd]	suggested
 1	VerbI[past,plur,3rd]	migrated
 1	VerbI[past,plur,3rd]	knew
@@ -646,7 +648,7 @@
 1	PastPartI	ridden
 1	PastPartI	drunk
 1	PastPartI	grown
-1	PastPartT	carried
+1	PastPartI	carried
 1	PastPartI	suggested
 1	PastPartI	migrated
 1	PastPartI	known
@@ -723,6 +725,7 @@
 1   VerbT[pres,plur,3rd,who] cover
 
 1	VerbI[pres,plur,3rd]	speak
+1	VerbI[pres,plur,3rd]	carry
 1	VerbI[pres,plur,3rd]	ride
 1	VerbI[pres,plur,3rd]	drink
 1	VerbI[pres,plur,3rd]	grow
