@@ -15,6 +15,7 @@
 0.7    Q            Q[det]
 0.7    Q            Q[poss]
 1      Q            Q[be]
+0.7    Q            Q[participle]
 
 # yes/no questions
 12       Q[yesno]     Q[trans] NP[obj]
@@ -67,6 +68,27 @@
 
 # questions starting with "whose"
 1       Q[poss]  WH[poss] S
+
+# questions starting with had / have / has
+1       Q[participle]   have NP[plur] been PastPartI
+1       Q[participle]   had NP[plur] been PastPartI
+1       Q[participle]   had NP[sing] been PastPartI
+1       Q[participle]   has NP[sing] been PastPartI
+
+1       Q[participle]   have NP[plur] been PastPartI PP
+1       Q[participle]   had NP[plur] been PastPartI PP
+1       Q[participle]   had NP[sing] been PastPartI PP
+1       Q[participle]   has NP[sing] been PastPartI PP
+
+1       Q[participle]   have NP[plur] been PresPartI
+1       Q[participle]   had NP[plur] been PresPartI
+1       Q[participle]   had NP[sing] been PresPartI
+1       Q[participle]   has NP[sing] been PresPartI
+
+1       Q[participle]   have NP[plur] been PresPartI PP
+1       Q[participle]   had NP[plur] been PresPartI PP
+1       Q[participle]   had NP[sing] been PresPartI PP
+1       Q[participle]   has NP[sing] been PresPartI PP
 
 # building blocks of questions
 1       Q[comp]      Qword NP[nom] VerbC[inf]
