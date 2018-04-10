@@ -44,7 +44,8 @@
 1       Q[be]        is  NP[sing,nom] PresPart[that,inf] CP_that[inf]
 
 # questions starting with "who" / "what" can take their own objects
-1       Q[pronoun]   WH[pronoun] VP
+1       Q[pronoun]   WH[pronoun] VP[sing]
+1       Q[pronoun]   WH[pronoun] VP[plur]
 1       Q[pronoun]   WH[pronoun] Q[comp]
 1       Q[pronoun]   WH[pronoun] Q[comp] CP_that
 
