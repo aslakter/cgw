@@ -68,7 +68,7 @@
 0.3       Q[det]   WH[det] S
 
 # questions starting with "whose"
-0.3       Q[poss]  WH[poss] S
+0.1       Q[poss]  WH[poss] S
 
 # questions starting with had / have / has
 1       Q[participle]   have NP[plur,nom] been PastPartI
