@@ -50,7 +50,7 @@
 1       Q[pronoun]   WH[pronoun] Q[comp] CP_that
 
 1       Q[pronoun]   WH[pronoun] Q[transWithThat]
-1       Q[pronoun]   WH[pronoun] Q[trans] CP_intrans
+# 1       Q[pronoun]   WH[pronoun] Q[trans] CP_intrans
 1       Q[pronoun]   WH[pronoun] Q[trans] NP[obj] Prep
 1       Q[pronoun]   WH[pronoun] Q[trans] Prep
 
@@ -99,7 +99,7 @@
 1       Q[transWithThat]    Q[trans,that]
 
 1       Q[trans]     Qword[sing] NP[sing,nom] VerbT[inf]
-1       Q[trans,that]     Qword[sing] NP[sing,nom] VerbT[inf] CP_that[inf]
+1       Q[trans,that]     Qword[sing] NP[sing,nom] VerbT[inf,that] CP_that[inf]
 1       Q[trans]     Qword[plur] NP[plur,nom] VerbT[inf]
 1       Q[trans]     Qword NP[nom] VerbT[inf]
 

@@ -508,6 +508,12 @@
 1   VerbT[2object,base]       ride
 #1   VerbT[2object,base]       be #TODO: Decide if true
 
+# ____ that
+1   VerbT[inf,that] speak
+1   VerbT[inf,that] cover
+1   VerbT[inf,that] suggest
+1   VerbT[inf,that] know
+
 # Verbs (past tense).
 1	VerbT[past,sing,3rd]	had
 1	VerbT[past,sing,3rd]	spoke
