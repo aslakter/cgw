@@ -19,7 +19,7 @@
 
 # yes/no questions
 12       Q[yesno]     Q[trans] NP[obj]
-3      Q[yesno]     Q[trans]
+3      Q[yesno]     Q[transWithThat]
 2       Q[yesno]     Q[comp] CP_that
 3       Q[yesno]     Q[comp]
 0.5       Q[yesno]     Q[link,sing] NP[sing,nom]
@@ -48,7 +48,7 @@
 1       Q[pronoun]   WH[pronoun] Q[comp]
 1       Q[pronoun]   WH[pronoun] Q[comp] CP_that
 
-1       Q[pronoun]   WH[pronoun] Q[trans]
+1       Q[pronoun]   WH[pronoun] Q[transWithThat]
 1       Q[pronoun]   WH[pronoun] Q[trans] CP_intrans
 1       Q[pronoun]   WH[pronoun] Q[trans] NP[obj] Prep
 1       Q[pronoun]   WH[pronoun] Q[trans] Prep
@@ -68,7 +68,7 @@
 0.3       Q[det]   WH[det] S
 
 # questions starting with "whose"
-0.1       Q[poss]  WH[poss] S
+0.05       Q[poss]  WH[poss] S
 
 # questions starting with had / have / has
 1       Q[participle]   have NP[plur,nom] been PastPartI
@@ -94,8 +94,11 @@
 # building blocks of questions
 1       Q[comp]      Qword NP[nom] VerbC[inf]
 
+1       Q[transWithThat]    Q[trans]
+1       Q[transWithThat]    Q[trans,that]
+
 1       Q[trans]     Qword[sing] NP[sing,nom] VerbT[inf]
-1       Q[trans]     Qword[sing] NP[sing,nom] VerbT[inf] CP_that[inf]
+1       Q[trans,that]     Qword[sing] NP[sing,nom] VerbT[inf] CP_that[inf]
 1       Q[trans]     Qword[plur] NP[plur,nom] VerbT[inf]
 1       Q[trans]     Qword NP[nom] VerbT[inf]
 
@@ -372,10 +375,10 @@
 1 Verb[intrans,sing] VerbI[pres,sing,3rd]
 1 Verb[intrans,sing] VerbI[past,sing,3rd]
 1 Verb[intrans,sing] VerbL[pres,sing,3rd] PresPart PP #TODO: ADD T VS I VS L
-1 Verb[trans,sing] VerbL[pres,sing,3rd] PresPartT
+1 Verb[intrans,sing] VerbL[pres,sing,3rd] PresPartT
 1 Verb[linking,sing] VerbL[pres,sing,3rd]
 1 Verb[intrans,sing] VerbL[past,sing,3rd] PastPartT PP
-1 Verb[trans,sing] VerbL[past,sing,3rd] PastPartI
+1 Verb[intrans,sing] VerbL[past,sing,3rd] PastPartI
 1 Verb[linking,sing] VerbL[past,sing,3rd]
 
 1 Verb[trans,plur] VerbT[pres,plur,3rd]
@@ -385,10 +388,10 @@
 1 Verb[intrans,plur] VerbI[pres,plur,3rd]
 1 Verb[intrans,plur] VerbI[past,plur,3rd]
 1 Verb[intrans,plur] VerbL[pres,plur,3rd] PresPartT PP # TODO: can all pres part take PP?
-1 Verb[trans,plur] VerbL[pres,plur,3rd] PresPartT
+1 Verb[intrans,plur] VerbL[pres,plur,3rd] PresPartT
 1 Verb[linking,plur] VerbL[pres,plur,3rd]
 1 Verb[intrans,plur] VerbL[past,plur,3rd] PastPartT PP # TODO: can all past part verbs take PP?
-1 Verb[trans,plur] VerbL[past,plur,3rd] PastPartT
+1 Verb[intrans,plur] VerbL[past,plur,3rd] PastPartT
 1 Verb[linking,plur] VerbL[past,plur,3rd]
 
 
